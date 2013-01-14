@@ -6,19 +6,19 @@
 
     ------------------------------------------------------------------------*/
     requirejs.config({
-        baseUrl: "js/lib",
+        baseUrl : "js/lib",
 
         // 各JSファイルのパスの設定
         paths: {
-            jQuery: "jquery-1.8.3.min",
-            modernizr: "modernizr-2.6.2.min",
-            myLibrary: "myLibrary"
+            jQuery    : "jquery-1.8.3.min",
+            modernizr : "modernizr-2.6.2.min",
+            myLibrary : "myLibrary"
         },
 
         // AMD非対応プラグインに対する依存設定
         shim: {
             myLibrary: {
-                "deps": ["jQuery"]
+                "deps" : ["jQuery"]
             }
         }
 
