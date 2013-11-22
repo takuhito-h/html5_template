@@ -1,5 +1,16 @@
 @import "compass";
 @import "reset";
+
+$imgPath: "images";
+
+$default-textSize: 12px;
+
+$default-linkColor: #fff;
+$default-visitedColor: #fff;
+$default-activeColor: #fff;
+
+$wrapper-width: 1000px;
+
 @import "common";
 
 /*----------------------------------------------------------------------------------

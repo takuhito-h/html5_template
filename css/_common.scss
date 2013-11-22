@@ -1,5 +1,3 @@
-@import "compass";
-
 /*----------------------------------------------------------------------------------
 
     基本設定
@@ -9,14 +7,14 @@ body{
     background: #fff;
     text-rendering: optimizeLegibility;
     color: #333;
-    font-size: small;
-    font-family: "メイリオ","Meiryo",verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+    font-size: $default-textSize;
+    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
     line-height: 1.5;
 }
 
 /* for IE6 */
 * html body{
-    font-family: "ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
 }
 
 img, abbr, acronym, fieldset{
@@ -34,6 +32,7 @@ th{
 
 .clearfix{
     zoom: 1;
+
     &:after{
         content: ""; 
         display: block; 
@@ -45,9 +44,11 @@ th{
     リンク設定
 ------------------------------------------------------*/
 a:link{
+    color: $default-linkColor;
 }
 
 a:visited{
+    color: $default-visitedColor;
 }
 
 a:hover,
@@ -58,6 +59,7 @@ button:hover{
 
 a:active,
 a:focus{
+    color: $default-activeColor;
 }
 
 /*----------------------------------------------------------------------------------
@@ -72,6 +74,7 @@ a:focus{
 
 ------------------------------------------------------------------------*/
 .l-wrapper{
+    width: $wrapper-width;
 }
 
 /*----------------------------------------------------------------
