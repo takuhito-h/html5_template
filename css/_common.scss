@@ -1,4 +1,4 @@
-@charset "utf-8";
+@import "compass";
 
 /*----------------------------------------------------------------------------------
 
@@ -6,7 +6,7 @@
 
 ----------------------------------------------------------------------------------*/
 body{
-	background: #fff;
+    background: #fff;
     text-rendering: optimizeLegibility;
     color: #333;
     font-size: small;
@@ -16,30 +16,29 @@ body{
 
 /* for IE6 */
 * html body{
-	font-family: "ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
+    font-family: "ＭＳ Ｐゴシック","MS PGothic",Sans-Serif;
 }
 
 img, abbr, acronym, fieldset{
-	border: 0;
+    border: 0;
 }
 
 ul{
-	list-style: none;
+    list-style: none;
 }
 
 th{
-	text-align: left;
-	vertical-align: top;
+    text-align: left;
+    vertical-align: top;
 }
 
 .clearfix{
-    zoom:1;
-}
-
-.clearfix:after{
-    content: ""; 
-    display: block; 
-    clear: both;
+    zoom: 1;
+    &:after{
+        content: ""; 
+        display: block; 
+        clear: both;        
+    }
 }
 
 /*------------------------------------------------------
@@ -54,9 +53,7 @@ a:visited{
 a:hover,
 input[type="submit"]:hover,
 button:hover{
-    opacity: 0.7;
-    -moz-opacity: 0.7;
-    filter:alpha(opacity=70);
+    @include opacity(.7);
 }
 
 a:active,

@@ -2,9 +2,11 @@
 
 個人的なhtml5制作の為のテンプレートファイル。
 
-##使用ライブラリ
+##使用アーキテクチャ 
 ### css
-*   HTML5 Reset
+*   Reset HTML5
+*   SCSS
+*   Compass
 
 ###javascript
 *   jQuery (1.9.1)
