@@ -1,7 +1,7 @@
 module.exports = function(grunt){
   grunt.initConfig({
     compass : {
-      sp : { 
+      pc : { 
         options : {
           specify: "sass/style.scss",
           sassDir   : "sass",
@@ -15,7 +15,7 @@ module.exports = function(grunt){
     },
 
     uglify : {
-      sp : {
+      pc : {
         files : {
           "js/script.min.js" : [
             "js_src/vendor/*.js",
@@ -25,24 +25,52 @@ module.exports = function(grunt){
       }
     },
 
+    styleguide : {
+      pc : {
+        name : "Style Guide",
+        options : {
+          framework : {
+            name : "styledocco",
+            options : {
+              preprocessor : 'sass'
+            }
+          }
+        },
+        files : {
+          'docs/styledocco': 'sass/**/*.scss'
+        }
+      }
+    },
+
+    clean : {
+      pc : ['docs/styledocco']
+    },
+
     watch : {
-      sp_js : {
+      pc_js : {
         files : ["js_src/*.js", 'js_src/*/*.js'],
         tasks : ["uglify"]
       },
 
-      sp_css : {
+      pc_css : {
         files : ["sass/*.scss", 'sass/*/*.scss'],
         tasks : ["compass"]
+      },
+
+      pc_styleguide : {
+        files : ['sass/**/*.scss'],
+        tasks : ['clean', 'styleguide']        
       }
     }
   });
 
+  grunt.loadNpmTasks("grunt-styleguide");
+  grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
   grunt.registerTask("default", ["compass", "uglify"]);
-  grunt.registerTask("sp", ["compass:sp", "uglify:sp"]);
+  grunt.registerTask("pc", ["compass:pc", "uglify:pc"]);
 
 }
