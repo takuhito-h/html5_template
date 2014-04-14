@@ -54,7 +54,6 @@ a:visited{
 a:hover,
 input[type="submit"]:hover,
 button:hover{
-    @include opacity(.7);
 }
 
 a:active,
