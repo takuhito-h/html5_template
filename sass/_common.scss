@@ -61,6 +61,25 @@ a:focus{
     color: $default-activeColor;
 }
 
+/*------------------------------------------------------
+    プレイスホルダー設定
+------------------------------------------------------*/
+.is-placeholder{
+    color: #AAA;
+}
+
+:-ms-input-placeholder{
+    color: #AAA;
+}
+
+:-webkit-input-placeholder{
+    color: #AAA;
+}
+
+:-moz-placeholder{
+    color: #AAA;
+}
+
 /*----------------------------------------------------------------------------------
 
     共通エレメント
