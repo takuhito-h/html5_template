@@ -1,4 +1,5 @@
 module.exports = function(grunt){
+
   grunt.initConfig({
     compass : {
       pc : { 
@@ -10,17 +11,6 @@ module.exports = function(grunt){
           httpGeneratedImagesPath  : "/img",
           outputStyle : "expanded",
           noLineComments: true
-        }
-      }
-    },
-
-    uglify : {
-      pc : {
-        files : {
-          "js/script.min.js" : [
-            "js_src/vendor/*.js",
-            "js_src/application.js",
-          ]
         }
       }
     },
@@ -38,6 +28,30 @@ module.exports = function(grunt){
         },
         files : {
           'docs/styledocco': 'sass/**/*.scss'
+        }
+      }
+    },
+
+    uglify : {
+      pc : {
+        files : {
+          "js/script.min.js" : [
+            "js_src/vendor/*.js",
+            "js_src/application.js",
+          ]
+        }
+      }
+    },
+
+    bower : {
+      install : {
+        options : {
+          targetDir: "js_src/vendor",
+          layout: "byType",
+          install: true,
+          verbose: false,
+          cleanTargetDir: false,
+          cleanBowerDir: false
         }
       }
     },
@@ -65,6 +79,7 @@ module.exports = function(grunt){
   });
 
   grunt.loadNpmTasks("grunt-styleguide");
+  grunt.loadNpmTasks("grunt-bower-task");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-contrib-watch");
@@ -73,4 +88,4 @@ module.exports = function(grunt){
   grunt.registerTask("default", ["compass", "uglify"]);
   grunt.registerTask("pc", ["compass:pc", "uglify:pc"]);
 
-}
+};
