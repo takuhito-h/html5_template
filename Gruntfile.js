@@ -20,10 +20,7 @@ module.exports = function(grunt){
         name : "Style Guide",
         options : {
           framework : {
-            name : "styledocco",
-            options : {
-              preprocessor : 'sass'
-            }
+            name : "styledocco"
           }
         },
         files : {
