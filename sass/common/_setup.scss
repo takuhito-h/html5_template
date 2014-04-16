@@ -36,10 +36,10 @@ $radius_btn_modi: 3px;
   Mixin - button
 --------------------------------------------------------------------------------------*/
 @mixin button($padding, $color, $radius){
-  display: inline-block;
+  @include inline-block;
+  @include border-radius($radius);
+  
   background-color: $color;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  border-radius: $radius;
   padding: $padding;
+  -webkit-appearance: none;
 }
