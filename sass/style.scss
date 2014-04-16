@@ -13,8 +13,9 @@ $default-activeColor: #fff;
 
 $wrapper-width: 1000px;
 
-@import "common";
 @import "common/setup";
+
+@import "common";
 @import "common/button";
 @import "common/form";
 
