@@ -20,11 +20,15 @@ module.exports = function(grunt){
         name : "Style Guide",
         options : {
           framework : {
-            name : "styledocco"
+            name : "kss",
+            options: {
+              includeType: 'scss',
+              includePath: 'sass/**/*.scss'
+            }
           }
         },
         files : {
-          'docs/styledocco': 'sass/**/*.scss'
+          'docs/kss': 'css/style.css'
         }
       }
     },
@@ -82,7 +86,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
-  grunt.registerTask("default", ["compass", "uglify"]);
+  grunt.registerTask("default", ["compass", "uglify", "styleguide"]);
   grunt.registerTask("pc", ["compass:pc", "uglify:pc"]);
 
 };
