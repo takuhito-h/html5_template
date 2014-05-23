@@ -1,6 +1,6 @@
 @mixin pure-menus-core{
-    /*csslint adjoining-classes:false, outline-none:false*/
-    /*TODO: Remove this lint rule override after a refactor of this code.*/
+    //csslint adjoining-classes:false, outline-none:false*/
+    //TODO: Remove this lint rule override after a refactor of this code.*/
 
     .pure-menu ul {
         position: absolute;
@@ -65,7 +65,7 @@
     .pure-menu-can-have-children > .pure-menu-label:after {
         content: '\25B8';
         float: right;
-        /* These specific fonts have the Unicode char we need. */
+        // These specific fonts have the Unicode char we need. */
         font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
         margin-right: -20px;
         margin-top: -1px;
@@ -88,7 +88,7 @@
         display: none;
     }
 
-    /* FIXED MENU */
+    // FIXED MENU */
     .pure-menu-fixed {
         position: fixed;
         top: 0;
@@ -97,9 +97,9 @@
     }
 
 
-    /* HORIZONTAL MENU CODE */
+    // HORIZONTAL MENU CODE */
 
-    /* Initial menus should be inline-block so that they are horizontal */
+    // Initial menus should be inline-block so that they are horizontal */
     .pure-menu-horizontal li {
         display: inline-block;
         *display: inline;
@@ -107,28 +107,28 @@
         vertical-align: middle;
     }
 
-    /* Submenus should still be display: block; */
+    // Submenus should still be display: block; */
     .pure-menu-horizontal li li {
         display: block;
     }
 
-    /* Content after should be down arrow */
+    // Content after should be down arrow */
     .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
         content: "\25BE";
     }
-    /*Add extra padding to elements that have the arrow so that the hover looks nice */
+    //Add extra padding to elements that have the arrow so that the hover looks nice */
     .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
         padding-right: 30px;
     }
 
-    /* Adjusting separator for vertical menus */
+    // Adjusting separator for vertical menus */
     .pure-menu-horizontal li.pure-menu-separator {
         height: 50%;
         width: 1px;
         margin: 0 7px;
     }
 
-    /* Submenus should be horizontal separator again */
+    // Submenus should be horizontal separator again */
     .pure-menu-horizontal li li.pure-menu-separator {
         height: 1px;
         width: auto;
@@ -139,25 +139,25 @@
 
 @mixin pure-menus{
 
-    /*csslint adjoining-classes:false*/
-    /*TODO: Remove this lint rule override after a refactor of this code.*/
+    //csslint adjoining-classes:false*/
+    //TODO: Remove this lint rule override after a refactor of this code.*/
 
-    /* MAIN MENU STYLING */
+    // MAIN MENU STYLING */
 
     .pure-menu.pure-menu-open,
     .pure-menu.pure-menu-horizontal li .pure-menu-children {
-        background: #fff; /* Old browsers */
+        background: #fff; // Old browsers */
         border: 1px solid #b7b7b7;
     }
 
-    /* remove borders for horizontal menus */
+    // remove borders for horizontal menus */
     .pure-menu.pure-menu-horizontal,
     .pure-menu.pure-menu-horizontal .pure-menu-heading {
         border: none;
     }
 
 
-    /* LINK STYLES */
+    // LINK STYLES */
 
     .pure-menu a {
         border: 1px solid transparent;
@@ -175,7 +175,7 @@
         color: #fff;
     }
 
-    /* Focus style for a dropdown menu-item when the parent has been opened */
+    // Focus style for a dropdown menu-item when the parent has been opened */
     .pure-menu .pure-menu-open {
         background: #dedede;
     }
@@ -186,7 +186,7 @@
         background: #eee;
     }
 
-    /* DISABLED STATES */
+    // DISABLED STATES */
     .pure-menu li.pure-menu-disabled a:hover,
     .pure-menu li.pure-menu-disabled a:focus {
         background: #fff;
@@ -204,7 +204,7 @@
         color: #bfbfbf;
     }
 
-    /* HEADINGS */
+    // HEADINGS */
     .pure-menu .pure-menu-heading {
         color: #565d64;
         text-transform: uppercase;
@@ -215,12 +215,12 @@
         border-bottom-color: #dfdfdf;
     }
 
-    /* ACTIVE MENU ITEM */
+    // ACTIVE MENU ITEM */
     .pure-menu .pure-menu-selected a {
         color: #000;
     }
 
-    /* FIXED MENU */
+    // FIXED MENU */
     .pure-menu.pure-menu-open.pure-menu-fixed {
         border: none;
         border-bottom: 1px solid #b7b7b7;
@@ -229,18 +229,18 @@
 }
 
 @mixin pure-menus-paginator{
-    /*csslint box-model:false*/
-    /*TODO: Remove this lint rule override after a refactor of this code.*/
+    //csslint box-model:false*/
+    //TODO: Remove this lint rule override after a refactor of this code.*/
 
     .pure-paginator {
 
-        /* `pure-g` Grid styles */
-        letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-        *letter-spacing: normal; /* reset IE < 8 */
-        *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-        text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+        // `pure-g` Grid styles */
+        letter-spacing: -0.31em; // Webkit: collapse white-space between units */
+        *letter-spacing: normal; // reset IE < 8 */
+        *word-spacing: -0.43em; // IE < 8: collapse white-space between units */
+        text-rendering: optimizespeed; // Webkit: fixes text-rendering: optimizeLegibility */
 
-        /* `pure-paginator` Specific styles */
+        // `pure-paginator` Specific styles */
         list-style: none;
         margin: 0;
         padding: 0;
@@ -250,10 +250,10 @@
         word-spacing: -0.43em;
     }
 
-    /* `pure-u` Grid styles */
+    // `pure-u` Grid styles */
     .pure-paginator li {
         display: inline-block;
-        *display: inline; /* IE < 8: fake inline-block */
+        *display: inline; // IE < 8: fake inline-block */
         zoom: 1;
         letter-spacing: normal;
         word-spacing: normal;

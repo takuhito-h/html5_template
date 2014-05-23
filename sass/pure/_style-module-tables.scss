@@ -1,7 +1,7 @@
 @mixin pure-tables{
 
     .pure-table {
-        /* Remove spacing between table cells (from Normalize.css) */
+        // Remove spacing between table cells (from Normalize.css) */
         border-collapse: collapse;
         border-spacing: 0;
         empty-cells: show;
@@ -17,12 +17,12 @@
 
     .pure-table td,
     .pure-table th {
-        border-left: 1px solid #cbcbcb;/*  inner column border */
+        border-left: 1px solid #cbcbcb;//  inner column border */
         border-width: 0 0 0 1px;
         font-size: inherit;
         margin: 0;
-        overflow: visible; /*to make ths where the title is really long work*/
-        padding: 0.5em 1em; /* cell padding */
+        overflow: visible; //to make ths where the title is really long work*/
+        padding: 0.5em 1em; // cell padding */
     }
     .pure-table td:first-child,
     .pure-table th:first-child {
@@ -36,11 +36,11 @@
         vertical-align: bottom;
     }
 
-    /*
-    striping:
-       even - #fff (white)
-       odd  - #f2f2f2 (light gray)
-    */
+    //
+    // striping:
+    //    even - #fff (white)
+    //    odd  - #f2f2f2 (light gray)
+    //
     .pure-table td {
         background-color: transparent;
     }
@@ -48,12 +48,12 @@
         background-color: #f2f2f2;
     }
 
-    /* nth-child selector for modern browsers */
+    // nth-child selector for modern browsers */
     .pure-table-striped tr:nth-child(2n-1) td {
         background-color: #f2f2f2;
     }
 
-    /* BORDERED TABLES */
+    // BORDERED TABLES */
     .pure-table-bordered td {
         border-bottom: 1px solid #cbcbcb;
     }
@@ -63,7 +63,7 @@
     }
 
 
-    /* HORIZONTAL BORDERED TABLES */
+    // HORIZONTAL BORDERED TABLES */
 
     .pure-table-horizontal td,
     .pure-table-horizontal th {

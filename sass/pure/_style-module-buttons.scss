@@ -1,9 +1,9 @@
 @mixin pure-buttons-core{
 
     .pure-button {
-        /* Structure */
+        // Structure */
         display: inline-block;
-        *display: inline; /*IE 6/7*/
+        *display: inline; //IE 6/7*/
         zoom: 1;
         line-height: normal;
         white-space: nowrap;
@@ -17,7 +17,7 @@
         user-select: none;
     }
 
-    /* Firefox: Get rid of the inner focus border */
+    // Firefox: Get rid of the inner focus border */
     .pure-button::-moz-focus-inner {
         padding: 0;
         border: 0;
@@ -26,19 +26,19 @@
 }
 
 @mixin pure-buttons{
-    /*csslint outline-none:false*/
+    //csslint outline-none:false*/
 
     .pure-button {
         font-family: inherit;
         font-size: 100%;
-        *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
-        *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+        *font-size: 90%; //IE 6/7 - To reduce IE's oversized button text*/
+        *overflow: visible; //IE 6/7 - Because of IE's overly large left/right padding on buttons */
         padding: 0.5em 1em;
-        color: #444; /* rgba not supported (IE 8) */
-        color: rgba(0, 0, 0, 0.80); /* rgba supported */
-        *color: #444; /* IE 6 & 7 */
-        border: 1px solid #999;  /*IE 6/7/8*/
-        border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
+        color: #444; // rgba not supported (IE 8) */
+        color: rgba(0, 0, 0, 0.80); // rgba supported */
+        *color: #444; // IE 6 & 7 */
+        border: 1px solid #999;  //IE 6/7/8*/
+        border: none rgba(0, 0, 0, 0);  //IE9 + everything else*/
         background-color: #E6E6E6;
         text-decoration: none;
         border-radius: 2px;
@@ -82,7 +82,7 @@
         display: none;
     }
 
-    /* Firefox: Get rid of the inner focus border */
+    // Firefox: Get rid of the inner focus border */
     .pure-button::-moz-focus-inner{
         padding: 0;
         border: 0;

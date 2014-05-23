@@ -26,10 +26,10 @@
         box-sizing: border-box;
     }
 
-    /*
-    Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
-    since IE8 won't execute CSS that contains a CSS3 selector.
-    */
+    //
+    // Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+    // since IE8 won't execute CSS that contains a CSS3 selector.
+    //
     .pure-form input:not([type]) {
         padding: 0.5em 0.6em;
         display: inline-block;
@@ -42,8 +42,8 @@
     }
 
 
-    /* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
-    /* May be able to remove this tweak as color inputs become more standardized across browsers. */
+    // Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+    // May be able to remove this tweak as color inputs become more standardized across browsers. */
     .pure-form input[type="color"] {
         padding: 0.2em 0.5em;
     }
@@ -66,17 +66,17 @@
     .pure-form select:focus,
     .pure-form textarea:focus {
         outline: 0;
-        outline: thin dotted \9; /* IE6-9 */
+        outline: thin dotted \9; // IE6-9 */
         border-color: #129FEA;
     }
 
-    /*
-    Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
-    since IE8 won't execute CSS that contains a CSS3 selector.
-    */
+    //
+    // Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+    // since IE8 won't execute CSS that contains a CSS3 selector.
+    //
     .pure-form input:not([type]):focus {
         outline: 0;
-        outline: thin dotted \9; /* IE6-9 */
+        outline: thin dotted \9; // IE6-9 */
         border-color: #129FEA;
     }
 
@@ -113,10 +113,10 @@
         color: #cad2d3;
     }
 
-    /*
-    Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
-    since IE8 won't execute CSS that contains a CSS3 selector.
-    */
+    //
+    // Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+    // since IE8 won't execute CSS that contains a CSS3 selector.
+    //
     .pure-form input:not([type])[disabled] {
         cursor: not-allowed;
         background-color: #eaeded;
@@ -125,8 +125,8 @@
     .pure-form input[readonly],
     .pure-form select[readonly],
     .pure-form textarea[readonly] {
-        background: #eee; /* menu hover bg color */
-        color: #777; /* menu text color */
+        background: #eee; // menu hover bg color */
+        color: #777; // menu text color */
         border-color: #ccc;
     }
 
@@ -191,10 +191,10 @@
         margin: 0.25em 0;
     }
 
-    /*
-    Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
-    since IE8 won't execute CSS that contains a CSS3 selector.
-    */
+    //
+    // Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+    // since IE8 won't execute CSS that contains a CSS3 selector.
+    //
     .pure-form-stacked input:not([type]) {
         display: block;
         margin: 0.25em 0;
@@ -202,7 +202,7 @@
     .pure-form-aligned input,
     .pure-form-aligned textarea,
     .pure-form-aligned select,
-    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+    // NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
     .pure-form-aligned .pure-help-inline,
     .pure-form-message-inline {
         display: inline-block;
@@ -214,7 +214,7 @@
         vertical-align: top;
     }
 
-    /* Aligned Forms */
+    // Aligned Forms */
     .pure-form-aligned .pure-control-group {
         margin-bottom: 0.5em;
     }
@@ -229,14 +229,14 @@
         margin: 1.5em 0 0 10em;
     }
 
-    /* Rounded Inputs */
+    // Rounded Inputs */
     .pure-form input.pure-input-rounded,
     .pure-form .pure-input-rounded {
         border-radius: 2em;
         padding: 0.5em 1em;
     }
 
-    /* Grouped Inputs */
+    // Grouped Inputs */
     .pure-form .pure-group fieldset {
         margin-bottom: 10px;
     }
@@ -279,8 +279,8 @@
         width: 25%;
     }
 
-    /* Inline help for forms */
-    /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+    // Inline help for forms */
+    // NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
     .pure-form .pure-help-inline,
     .pure-form-message-inline {
         display: inline-block;
@@ -290,7 +290,7 @@
         font-size: 0.875em;
     }
 
-    /* Block help for forms */
+    // Block help for forms */
     .pure-form-message {
         display: block;
         color: #666;
@@ -355,13 +355,13 @@
             margin: 1.5em 0 0 0;
         }
 
-        /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+        // NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
         .pure-form .pure-help-inline,
         .pure-form-message-inline,
         .pure-form-message {
             display: block;
             font-size: 0.75em;
-            /* Increased bottom padding to make it group with its related input element. */
+            // Increased bottom padding to make it group with its related input element. */
             padding: 0.2em 0 0.8em;
         }
     }
