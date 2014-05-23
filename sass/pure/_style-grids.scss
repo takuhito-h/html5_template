@@ -1,4 +1,4 @@
-@mixin pure-grids{
+@mixin pure-grids-core{
     //csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 
     .pure-g {
@@ -67,4 +67,8 @@
         font-family: sans-serif;
     }
 
+}
+
+@mixin pure-grids{
+    // YUI GridBuilder(http://yui.github.io/gridbuilder/)で生成する。
 }
