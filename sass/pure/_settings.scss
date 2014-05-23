@@ -1,0 +1,34 @@
+// # Support
+$support-ie6: false;
+$support-ie7: false;
+$support-ie8: true;
+$support-ie9: true;
+$support-mozilla: true;
+$support-webkit : true; // Chrome, Safari
+$support-opera  : true;
+
+// # Vendor-prefixed CSS Property
+$use-prefix-webkit: true;
+$use-prefix-moz   : true;
+$use-prefix-ms    : true;
+$use-prefix-o     : true;
+
+// # IE
+$use-ie-filter    : false;
+$use-ie-expression: false;
+
+// # Path
+$path-pj : "*****";
+$path-img: "#{$path-pj}/img";
+$path-sprite: "#{$path-img}/sprite.png";
+
+// # DataURI
+$dataURI-btn: "data:image/png;base64,*****";
+
+//------------------------------------------------------------------
+//  variables
+//----------------------------------------------------------------*/
+$default-textSize: 12px;
+$default-linkColor: #fff;
+
+$wrapper-width: 1000px;

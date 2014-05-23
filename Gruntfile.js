@@ -4,7 +4,6 @@ module.exports = function(grunt){
     compass : {
       pc : { 
         options : {
-          specify: "sass/style.scss",
           sassDir   : "sass",
           cssDir    : "css",
           imageDir  : "img",
@@ -70,11 +69,6 @@ module.exports = function(grunt){
       pc_css : {
         files : ["sass/*.scss", 'sass/*/*.scss'],
         tasks : ["compass"]
-      },
-
-      pc_styleguide : {
-        files : ['sass/**/*.scss'],
-        tasks : ['clean', 'styleguide']        
       }
     }
   });
