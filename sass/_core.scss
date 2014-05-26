@@ -4,16 +4,22 @@
 //  Setting Import
 //----------------------------------------------------------------*/
 @import "compass";
-@import "pure/settings";
+@import "core/settings";
+@import "core/utility";
 
 //------------------------------------------------------------------
 //  Style Import
 //----------------------------------------------------------------*/
-@import "pure/style-normalize";
-@import "pure/style-base";
-@import "pure/style-grids";
-@import "pure/style-module-layout";
-@import "pure/style-module-buttons";
-@import "pure/style-module-forms";
-@import "pure/style-module-menus";
-@import "pure/style-module-tables";
+@import "core/style-normalize";
+@import "core/style-base";
+@import "core/style-grids";
+@import "core/style-layout";
+@import "core/style-helper";
+
+//------------------------------------------------------------------
+//  UI Import
+//----------------------------------------------------------------*/
+@import "ui/style-buttons";
+@import "ui/style-forms";
+@import "ui/style-menus";
+@import "ui/style-tables";

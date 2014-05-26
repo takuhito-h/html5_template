@@ -1,3 +1,8 @@
+//------------------------------------------------------------------------------------------------
+//
+//  メニュー用
+//
+//------------------------------------------------------------------------------------------------
 @mixin pure-menus-core{
     //csslint adjoining-classes:false, outline-none:false*/
     //TODO: Remove this lint rule override after a refactor of this code.*/
@@ -263,7 +268,7 @@
 
 
     .pure-paginator .pure-button {
-        border-radius: 0;
+        @include border-radius(0);
         padding: 0.8em 1.4em;
         vertical-align: top;
         height: 1.1em;
@@ -275,13 +280,13 @@
     .pure-paginator .prev,
     .pure-paginator .next {
         color: #C0C1C3;
-        text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
+        @include text-shadow(0 -1px 0 rgba(0,0,0, 0.45));
     }
     .pure-paginator .prev {
-        border-radius: 2px 0 0 2px;
+        @include border-radius(2px 0 0 2px);
     }
     .pure-paginator .next {
-        border-radius: 0 2px 2px 0;
+        @include border-radius(0 2px 2px 0);
     }
 
 }

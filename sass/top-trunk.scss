@@ -6,7 +6,10 @@
 //--------------------------------------------------
 //　Reset, Base
 //--------------------------------------------------
-@include nomalize-style;
+@include style-nomalize;
+@include style-base;
+@include pure-base;
+@include style-helper;
 
 //--------------------------------------------------
 //　Layout
@@ -14,11 +17,19 @@
 @include layout-main-structure;
 @include layout-site-header;
 @include layout-site-footer;
+@include pure-grids-core;
+@include pure-grids;
 
 //--------------------------------------------------
 //  Module
 //--------------------------------------------------
-
+@include pure-buttons-core;
+@include pure-buttons;
+@include pure-forms;
+@include pure-menus-core;
+@include pure-menus;
+@include pure-menus-paginator;
+@include pure-tables;
 
 //--------------------------------------------------
 //  ページ固有のスタイル
