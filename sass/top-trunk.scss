@@ -21,7 +21,7 @@
 @include pure-grids;
 
 //--------------------------------------------------
-//  Module
+//  UI
 //--------------------------------------------------
 @include pure-buttons-core;
 @include pure-buttons;
@@ -30,6 +30,11 @@
 @include pure-menus;
 @include pure-menus-paginator;
 @include pure-tables;
+
+//--------------------------------------------------
+//  UI - Module
+//--------------------------------------------------
+@include module-flash_message;
 
 //--------------------------------------------------
 //  ページ固有のスタイル
