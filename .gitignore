@@ -3,3 +3,7 @@ Thumbs.db
 .sass-cache
 node_modules
 bower_components
+
+# ビルド後のファイルを無視
+css/*.css
+js/*.js
