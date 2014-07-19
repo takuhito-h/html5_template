@@ -1,0 +1,169 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.hl_del-bt {
+  border-top: none !important;
+}
+
+.hl_del-bb {
+  border-bottom: none !important;
+}
+
+.hl_del-mt {
+  margin-top: 0 !important;
+}
+
+.hl_del-mr {
+  margin-right: 0 !important;
+}
+
+.hl_del-mb {
+  margin-bottom: 0 !important;
+}
+
+.hl_del-ml {
+  margin-left: 0 !important;
+}
+
+.hl_del-pt {
+  padding-top: 0 !important;
+}
+
+.hl_del-pr {
+  padding-right: 0 !important;
+}
+
+.hl_del-pb {
+  padding-bottom: 0 !important;
+}
+
+.hl_del-pl {
+  padding-left: 0 !important;
+}
+
+.hl_add-pt-8 {
+  padding-top: 8px !important;
+}
+
+.hl_add-pt-10 {
+  padding-top: 10px !important;
+}
+
+.hl_add-pt-11 {
+  padding-top: 11px !important;
+}
+
+.hl_add-pt-14 {
+  padding-top: 14px !important;
+}
+
+.hl_add-pt-17 {
+  padding-top: 17px !important;
+}
+
+.hl_add-pb-8 {
+  padding-bottom: 8px !important;
+}
+
+.hl_add-pb-10 {
+  padding-bottom: 10px !important;
+}
+
+.hl_add-pb-11 {
+  padding-bottom: 11px !important;
+}
+
+.hl_add-pb-12 {
+  padding-bottom: 12px !important;
+}
+
+.hl_add-pb-17 {
+  padding-bottom: 17px !important;
+}
+
+.hl_add-pb-20 {
+  padding-bottom: 20px !important;
+}
+
+.hl_add-mt-4 {
+  margin-top: 4px !important;
+}
+
+.hl_add-mt-6 {
+  margin-top: 6px !important;
+}
+
+.hl_add-mt-8 {
+  margin-top: 8px !important;
+}
+
+.hl_add-mt-9 {
+  margin-top: 9px !important;
+}
+
+.hl_add-mt-10 {
+  margin-top: 10px !important;
+}
+
+.hl_add-mt-14 {
+  margin-top: 14px !important;
+}
+
+.hl_add-mt-16 {
+  margin-top: 16px !important;
+}
+
+.hl_add-mt-20 {
+  margin-top: 20px !important;
+}
+
+.hl_add-mb-3 {
+  margin-bottom: 3px !important;
+}
+
+.hl_add-mb-4 {
+  margin-bottom: 4px !important;
+}
+
+.hl_add-mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.hl_add-mb-6 {
+  margin-bottom: 6px !important;
+}
+
+.hl_add-mb-8 {
+  margin-bottom: 8px !important;
+}
+
+.hl_add-mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.hl_add-mb-14 {
+  margin-bottom: 14px !important;
+}
+
+.hl_add-mb-16 {
+  margin-bottom: 16px !important;
+}
+
+.hl_add-mb-18 {
+  margin-bottom: 18px !important;
+}
+
+.hl_add-mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.hl_add-mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.hl_add-mb-40 {
+  margin-bottom: 40px !important;
+}

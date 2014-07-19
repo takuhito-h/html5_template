@@ -4,30 +4,12 @@ module.exports = function(grunt){
     compass : {
       pc : { 
         options : {
-          sassDir   : "sass",
+          sassDir   : "src/sass",
           cssDir    : "css",
           imageDir  : "img",
           httpGeneratedImagesPath  : "/img",
           outputStyle : "expanded",
           noLineComments: true
-        }
-      }
-    },
-
-    styleguide : {
-      pc : {
-        name : "Style Guide",
-        options : {
-          framework : {
-            name : "kss",
-            options: {
-              includeType: 'scss',
-              includePath: 'sass/**/*.scss'
-            }
-          }
-        },
-        files : {
-          'docs/kss': 'css/style.css'
         }
       }
     },
@@ -57,17 +39,17 @@ module.exports = function(grunt){
     },
 
     clean : {
-      pc : ['docs/styledocco']
+      pc : ["docs/styledocco"]
     },
 
     watch : {
       pc_js : {
-        files : ["js_src/*.js", 'js_src/*/*.js'],
+        files : ["src/js/*.js", "src/js/**/*.js"],
         tasks : ["uglify"]
       },
 
       pc_css : {
-        files : ["sass/*.scss", 'sass/*/*.scss'],
+        files : ["src/sass/*.scss", "src/sass/**/*.scss"],
         tasks : ["compass"]
       }
     }
