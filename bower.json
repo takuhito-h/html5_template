@@ -3,11 +3,6 @@
   "version": "0.0.0",
   "devDependencies": {
     "jquery": "1",
-    "modernizr": ""
-  },
-  "exportsOverride": {
-    "modernizr": {
-      "": "modernizr.js"
-    }
+    "html5shiv": "~3.7.2"
   }
 }
