@@ -25,19 +25,6 @@ module.exports = function(grunt){
       }
     },
 
-    bower : {
-      install : {
-        options : {
-          targetDir: "js_src/vendor",
-          layout: "byType",
-          install: true,
-          verbose: false,
-          cleanTargetDir: false,
-          cleanBowerDir: false
-        }
-      }
-    },
-
     clean : {
       pc : ["docs/styledocco"]
     },
@@ -63,6 +50,6 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
   grunt.registerTask("default", ["compass", "uglify", "styleguide"]);
-  grunt.registerTask("pc", ["compass:pc", "uglify:pc"]);
+  grunt.registerTask("build", ["compass:pc", "uglify:pc"]);
 
 };
