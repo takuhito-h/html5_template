@@ -23,6 +23,54 @@
     line-height: 1;
 }
 
+//--------------------------------------------------------------------------------------
+//  Mixin - CSSで作る矢印
+//--------------------------------------------------------------------------------------
+@mixin arrow($width: 20px, $height: 20px, $direction: up, $color: red){
+    width: 0;
+    height: 0;
+
+    // Right
+    @if $direction == "right"{
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-left: $width solid $color;
+    }
+
+    // Left
+    @if $direction == "left"{
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-right: $width solid $color;
+    }
+
+    // Up
+    @if $direction == "up"{
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-bottom: $height solid $color;
+    }
+
+    // Down
+    @if $direction == "down"{
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-top: $height solid $color;
+    }
+
+}
+
+//--------------------------------------------------------------------------------------
+//  Mixin - placeholder
+//--------------------------------------------------------------------------------------
+@mixin placeholder{
+    .is-placeholder             { @content }
+    ::-webkit-input-placeholder { @content }
+    :-moz-placeholder           { @content }
+    ::-moz-placeholder          { @content }
+    :-ms-input-placeholder      { @content }
+}
+
 //------------------------------------------------------------------------------------------------
 //
 //  Mixin - Sprites
@@ -63,41 +111,4 @@
         left: $left;
         @include sprite-background($name);
     }
-}
-
-//--------------------------------------------------------------------------------------
-//  Mixin - CSSで作る矢印
-//--------------------------------------------------------------------------------------
-@mixin arrow($width: 20px, $height: 20px, $direction: up, $color: red){
-    width: 0;
-    height: 0;
-
-    // Right
-    @if $direction == "right"{
-        border-top: $height/2 solid transparent;
-        border-bottom: $height/2 solid transparent;
-        border-left: $width solid $color;
-    }
-
-    // Left
-    @if $direction == "left"{
-        border-top: $height/2 solid transparent;
-        border-bottom: $height/2 solid transparent;
-        border-right: $width solid $color;
-    }
-
-    // Up
-    @if $direction == "up"{
-        border-left: $width/2 solid transparent;
-        border-right: $width/2 solid transparent;
-        border-bottom: $height solid $color;
-    }
-
-    // Down
-    @if $direction == "down"{
-        border-left: $width/2 solid transparent;
-        border-right: $width/2 solid transparent;
-        border-top: $height solid $color;
-    }
-
 }
