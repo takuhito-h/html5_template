@@ -1,42 +1,19 @@
 //------------------------------------------------------------------------------------------------
 //
-//  基本設定用（おそらく使わない）
+//  基本設定用
 //
 //------------------------------------------------------------------------------------------------
-
-//--------------------------------------------------------------------
-//  基本設定
-//--------------------------------------------------------------------
-body{
-    background: #f7f7f7;
-    text-rendering: optimizeLegibility;
-    color: #4b4b4b;;
-    font-size: $default-textSize;
-    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-    line-height: 1.5;
-    overflow-y: scroll;
-    min-height: 100%;
-}
-
-// for IE6 //
-* html body{
-    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-}
 
 //------------------------------------------------------------------
 //  リセット
 //------------------------------------------------------------------
-img{
-    vertical-align: top;
-}
-
-img, abbr, acronym, fieldset{
-    border: 0;
-}
-
 h1, h2, h3, h4, h5, h6{
     font-weight: normal;
     margin: 0;
+}
+
+img{
+    vertical-align: top;
 }
 
 p{
@@ -62,8 +39,27 @@ th{
     vertical-align: top;
 }
 
-label, button, select, option{
+label, select, option{
     cursor: pointer;
+}
+
+//--------------------------------------------------------------------
+//  基本設定
+//--------------------------------------------------------------------
+body{
+    background: #f7f7f7;
+    text-rendering: optimizeLegibility;
+    color: #4b4b4b;;
+    font-size: $default-textSize;
+    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    line-height: 1.5;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+// for IE6
+* html body{
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
 }
 
 //------------------------------------------------------------------
