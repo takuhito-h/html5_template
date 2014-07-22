@@ -14,6 +14,15 @@ module.exports = function(grunt){
       }
     },
 
+    autoprefixer : {
+      pc : {
+        options : {
+          browsers: ["last 3 versions", "ie 8"]          
+        },
+        src: "css/trunk-*.css"
+      }
+    },
+
     uglify : {
       pc : {
         files : {
@@ -37,11 +46,12 @@ module.exports = function(grunt){
 
       pc_css : {
         files : ["src/sass/*.scss", "src/sass/**/*.scss"],
-        tasks : ["compass"]
+        tasks : ["compass", "autoprefixer"]
       }
     }
   });
 
+  grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks("grunt-styleguide");
   grunt.loadNpmTasks("grunt-bower-task");
   grunt.loadNpmTasks("grunt-contrib-clean");
@@ -49,7 +59,6 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
-  grunt.registerTask("default", ["compass", "uglify", "styleguide"]);
-  grunt.registerTask("build", ["compass:pc", "uglify:pc"]);
+  grunt.registerTask("build", ["compass:pc", "autoprefixer:pc", "uglify:pc"]);
 
 };

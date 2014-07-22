@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "devDependencies": {
     "grunt": "",
+    "grunt-autoprefixer": "",
     "grunt-styleguide": "",
     "grunt-bower-task": "",
     "grunt-contrib-clean": "",

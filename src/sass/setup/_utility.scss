@@ -59,18 +59,6 @@
     }
 
 }
-
-//--------------------------------------------------------------------------------------
-//  Mixin - placeholder
-//--------------------------------------------------------------------------------------
-@mixin placeholder{
-    .is-placeholder             { @content }
-    ::-webkit-input-placeholder { @content }
-    :-moz-placeholder           { @content }
-    ::-moz-placeholder          { @content }
-    :-ms-input-placeholder      { @content }
-}
-
 //------------------------------------------------------------------------------------------------
 //
 //  Mixin - Sprites

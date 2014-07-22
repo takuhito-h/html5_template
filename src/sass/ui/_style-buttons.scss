@@ -15,10 +15,10 @@
 //  スマートフォン版への誘導ボタン
 //--------------------------------------------------------------------
 .button-smartphone{
-    @include box-sizing(border-box);
-    @include border-radius(12px);
-    @include background-image(linear-gradient(top, #b6b4b4 0%,#a4a2a2 100%));
-    @include text-shadow(0 -2px 0 rgba(0, 0, 0, 0.3));
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-image: linear-gradient(top, #b6b4b4 0%,#a4a2a2 100%);
+    text-shadow: 0 -2px 0 rgba(0, 0, 0, 0.3);
     position: relative;
     display: block;
     color: #FFF;
@@ -29,12 +29,12 @@
     padding: 0.5em 0 0.48em;
         
     &:hover{
-        @include background-image(linear-gradient(top, #918f8f 0%, #b0b0b0 100%));
+        background-image: linear-gradient(top, #918f8f 0%, #b0b0b0 100%);
     }
 
     &:before {
-        @include opacity(0.5);
-        @include border-radius(12px);            
+        opacity: 0.5;
+        border-radius: 12px;
         content: "";
         position: absolute;
         top: 0;
