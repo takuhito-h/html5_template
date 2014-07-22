@@ -4,6 +4,25 @@
 //
 //------------------------------------------------------------------------------------------------
 
+//--------------------------------------------------------------------
+//  基本設定
+//--------------------------------------------------------------------
+body{
+    background: #f7f7f7;
+    text-rendering: optimizeLegibility;
+    color: #4b4b4b;;
+    font-size: $default-textSize;
+    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    line-height: 1.5;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+// for IE6
+* html body{
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+}
+
 //------------------------------------------------------------------
 //  リセット
 //------------------------------------------------------------------
@@ -43,23 +62,9 @@ label, select, option{
     cursor: pointer;
 }
 
-//--------------------------------------------------------------------
-//  基本設定
-//--------------------------------------------------------------------
-body{
-    background: #f7f7f7;
-    text-rendering: optimizeLegibility;
-    color: #4b4b4b;;
-    font-size: $default-textSize;
-    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-    line-height: 1.5;
-    overflow-y: scroll;
-    min-height: 100%;
-}
-
-// for IE6
-* html body{
-    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+input[type=radio]{
+    vertical-align: middle;
+    margin-right: 0.3em;
 }
 
 //------------------------------------------------------------------
