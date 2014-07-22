@@ -23,6 +23,18 @@ module.exports = function(grunt){
       }
     },
 
+    sprite: {
+      pc : {
+        src: "src/img/sprites/*.png",
+        destImg: "img/sprite.png",
+        imgPath: "img/sprite.png",
+        destCSS: "src/sass/ui/_style-sprites_test.scss",
+        algorithm: "binary-tree",
+        padding: 2,
+        cssTemplate: "src/img/sprites/spritesmith.mustache"
+      }
+    },
+
     uglify : {
       pc : {
         files : {
@@ -47,18 +59,24 @@ module.exports = function(grunt){
       pc_css : {
         files : ["src/sass/*.scss", "src/sass/**/*.scss"],
         tasks : ["compass", "autoprefixer"]
+      },
+
+      pc_sprite : {
+        files: ["src/img/sprites/*.png"],
+        tasks: ["sprite:pc"]
       }
     }
   });
 
-  grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks("grunt-styleguide");
   grunt.loadNpmTasks("grunt-bower-task");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-compass");
+  grunt.loadNpmTasks("grunt-autoprefixer");
+  grunt.loadNpmTasks("grunt-spritesmith");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
-  grunt.registerTask("build", ["compass:pc", "autoprefixer:pc", "uglify:pc"]);
+  grunt.registerTask("build", ["sprite:pc", "compass:pc", "autoprefixer:pc", "uglify:pc"]);
 
 };
