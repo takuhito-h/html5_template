@@ -7,3 +7,4 @@ bower_components
 # ビルド後のファイルを無視
 css/*.css
 js/*.js
+img/sprites-*.png
