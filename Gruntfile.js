@@ -1,7 +1,20 @@
 module.exports = function(grunt){
 
   grunt.initConfig({
-    compass : {
+
+    sass : {
+      pc : {
+        files : [{
+          expand: true,
+          cwd: "src/sass",
+          src: ["*.scss"],
+          dest: "css",
+          ext: ".css"
+        }]
+      }
+    },
+
+    /*compass : {
       pc : { 
         options : {
           sassDir   : "src/sass",
@@ -12,7 +25,7 @@ module.exports = function(grunt){
           noLineComments: true
         }
       }
-    },
+    },*/
 
     autoprefixer : {
       pc : {
@@ -71,12 +84,12 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-styleguide");
   grunt.loadNpmTasks("grunt-bower-task");
   grunt.loadNpmTasks("grunt-contrib-clean");
-  grunt.loadNpmTasks("grunt-contrib-compass");
+  grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-autoprefixer");
   grunt.loadNpmTasks("grunt-spritesmith");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
-  grunt.registerTask("build", ["sprite:pc", "compass:pc", "autoprefixer:pc", "uglify:pc"]);
+  grunt.registerTask("build", ["sprite:pc", "sass:pc", "autoprefixer:pc", "uglify:pc"]);
 
 };

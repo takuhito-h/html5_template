@@ -6,7 +6,7 @@
     "grunt-styleguide": "",
     "grunt-bower-task": "",
     "grunt-contrib-clean": "",
-    "grunt-contrib-compass": "",
+    "grunt-contrib-sass": "",
     "grunt-autoprefixer": "",
     "grunt-spritesmith": "",
     "grunt-contrib-watch": "",
