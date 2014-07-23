@@ -27,8 +27,14 @@ module.exports = function(grunt){
       pc : {
         files : {
           "js/script.min.js" : [
-            "js_src/vendor/*.js",
-            "js_src/application.js",
+            "src/js/vendor/*.js",
+            "src/js/vendor/mock/*.js",
+            "src/js/modules/dependents/*.js",
+            "src/js/modules/*.js",
+            "src/js/module_manager.js",
+            "src/js/pages/*.js",
+            "src/js/application.js",
+            "src/js/init.js"
           ]
         }
       }
