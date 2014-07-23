@@ -8,3 +8,6 @@ bower_components
 css/*.css
 js/*.js
 img/sprite.png
+
+# sprite用の生成scssを除外
+src/sass/setup/_sprites.scss

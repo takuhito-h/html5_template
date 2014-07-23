@@ -27,8 +27,8 @@ module.exports = function(grunt){
       pc : {
         src: "src/img/sprites/*.png",
         destImg: "img/sprite.png",
-        imgPath: "img/sprite.png",
-        destCSS: "src/sass/ui/_style-sprites_test.scss",
+        imgPath: "../img/sprite.png",
+        destCSS: "src/sass/setup/_sprites.scss",
         algorithm: "binary-tree",
         padding: 2,
         cssTemplate: "src/img/sprites/spritesmith.mustache"
