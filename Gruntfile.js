@@ -66,12 +66,12 @@ module.exports = function(grunt){
     watch : {
       pc_js : {
         files : ["src/js/*.js", "src/js/**/*.js"],
-        tasks : ["uglify"]
+        tasks : ["uglify:pc"]
       },
 
       pc_css : {
         files : ["src/sass/*.scss", "src/sass/**/*.scss"],
-        tasks : ["compass", "autoprefixer"]
+        tasks : ["sass:pc", "autoprefixer:pc"]
       },
 
       pc_sprite : {
