@@ -1,6 +1,22 @@
 module.exports = function(grunt){
+  var mozjpeg = require("imagemin-mozjpeg");
 
   grunt.initConfig({
+
+    imagemin : {
+      pc : {
+        options: {
+          optimizationLevel: 3,
+          use: [mozjpeg()]
+        },
+        files: [{
+          expand: true,
+          cwd: "img/",
+          src: ["**/*.{png,jpg,gif}"],
+          dest: "img/"
+        }]
+      },
+    },
 
     sass : {
       pc : {
@@ -36,7 +52,7 @@ module.exports = function(grunt){
       }
     },
 
-    sprite: {
+    sprite : {
       pc : {
         src: "src/img/sprites/*.png",
         destImg: "img/sprite.png",
@@ -81,8 +97,8 @@ module.exports = function(grunt){
       },
 
       pc_sprite : {
-        files: ["src/img/sprites/*.png"],
-        tasks: ["sprite:pc"]
+        files : ["src/img/sprites/*.png"],
+        tasks : ["sprite:pc"]
       }
     }
   });
@@ -95,6 +111,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-spritesmith");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-contrib-imagemin");
 
   grunt.registerTask("build", ["sprite:pc", "sass:pc", "autoprefixer:pc", "uglify:pc"]);
 
