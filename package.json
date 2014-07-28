@@ -10,7 +10,7 @@
     "grunt-autoprefixer": "",
     "grunt-spritesmith": "",
     "grunt-contrib-imagemin": "",
-    "grunt-image": "",
+    "imagemin-mozjpeg": "",
     "grunt-contrib-watch": "",
     "grunt-contrib-uglify": ""
   }

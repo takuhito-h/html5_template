@@ -1,11 +1,13 @@
 module.exports = function(grunt){
+  var mozjpeg = require("imagemin-mozjpeg");
 
   grunt.initConfig({
 
     imagemin : {
       pc : {
         options: {
-          optimizationLevel: 3
+          optimizationLevel: 3,
+          use: [mozjpeg()]
         },
         files: [{
           expand: true,
