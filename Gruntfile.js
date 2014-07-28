@@ -2,6 +2,20 @@ module.exports = function(grunt){
 
   grunt.initConfig({
 
+    imagemin : {
+      pc : {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          cwd: "img/",
+          src: ["**/*.{png,jpg,gif}"],
+          dest: "img/"
+        }]
+      },
+    },
+
     sass : {
       pc : {
         files : [{
@@ -65,17 +79,6 @@ module.exports = function(grunt){
       }
     },
 
-    image : {
-      pc : {
-        files: [{
-          expand: true,
-          cwd: "img/", 
-          src: ["**/*.{png,jpg,gif}"],
-          dest: "img/"
-        }]
-      }
-    },
-
     clean : {
       pc : ["docs/styledocco"]
     },
@@ -106,7 +109,7 @@ module.exports = function(grunt){
   grunt.loadNpmTasks("grunt-spritesmith");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-uglify");
-  grunt.loadNpmTasks("grunt-image");
+  grunt.loadNpmTasks("grunt-contrib-imagemin");
 
   grunt.registerTask("build", ["sprite:pc", "sass:pc", "autoprefixer:pc", "uglify:pc"]);
 
