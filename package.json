@@ -9,6 +9,7 @@
     "grunt-contrib-sass": "",
     "grunt-autoprefixer": "",
     "grunt-spritesmith": "",
+    "grunt-image": "",
     "grunt-contrib-watch": "",
     "grunt-contrib-uglify": ""
   }
