@@ -1,8 +1,11 @@
 .DS_Store
 Thumbs.db
 .sass-cache
-node_modules
-bower_components
+
+.bundle/
+node_modules/
+bower_components/
+vendor/
 
 # ビルド後のファイルを無視
 css/*.css
