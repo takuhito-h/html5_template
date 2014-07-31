@@ -1,13 +1,11 @@
 module.exports = function(grunt){
-  var mozjpeg = require("imagemin-mozjpeg");
 
-  grunt.initConfig({
+  grunt.config.init({
 
     imagemin : {
       pc : {
         options: {
-          optimizationLevel: 3,
-          use: [mozjpeg()]
+          optimizationLevel: 3
         },
         files: [{
           expand: true,
@@ -102,6 +100,13 @@ module.exports = function(grunt){
       }
     }
   });
+
+  // mozjpegが存在したら、imageminにmozjpeg使用のオプションを追加
+  if(grunt.file.exists("node_modules/imagemin-mozjpeg")){
+    var mozjpeg = require("imagemin-mozjpeg");  
+
+    grunt.config.set(["imagemin", "pc", "options", "use"], [mozjpeg()]);
+  }
 
   grunt.loadNpmTasks("grunt-styleguide");
   grunt.loadNpmTasks("grunt-bower-task");
