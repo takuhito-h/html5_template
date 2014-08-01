@@ -18,6 +18,9 @@ module.exports = function(grunt){
 
     sass : {
       pc : {
+        options: {
+          sourcemap: true
+        },
         files : [{
           expand: true,
           cwd: "src/sass",
@@ -44,6 +47,7 @@ module.exports = function(grunt){
     autoprefixer : {
       pc : {
         options : {
+          map: true,
           browsers: ["last 3 versions", "ie 8"]          
         },
         src: "css/trunk-*.css"

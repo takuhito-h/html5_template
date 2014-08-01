@@ -9,6 +9,7 @@ vendor/
 
 # ビルド後のファイルを無視
 css/*.css
+css/*.map
 js/*.js
 img/sprite.png
 
