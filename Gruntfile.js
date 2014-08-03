@@ -2,31 +2,46 @@ module.exports = function(grunt){
 
   grunt.config.init({
 
+    dir : {
+      src : "src"
+    },
+
+    ect : {
+      options : {
+        root : "<%= dir.src %>/template"
+      },
+      pc : {
+        files : {
+          "index.html" : ["main/index.ect"]
+        }
+      }
+    },
+
     imagemin : {
       pc : {
-        options: {
-          optimizationLevel: 3
+        options : {
+          optimizationLevel : 3
         },
-        files: [{
-          expand: true,
-          cwd: "img/",
-          src: ["**/*.{png,jpg,gif}"],
-          dest: "img/"
+        files : [{
+          expand : true,
+          cwd    : "img/",
+          src    : ["**/*.{png,jpg,gif}"],
+          dest   : "img/"
         }]
       },
     },
 
     sass : {
       pc : {
-        options: {
-          sourcemap: true
+        options : {
+          sourcemap : true
         },
         files : [{
-          expand: true,
-          cwd: "src/sass",
-          src: ["*.scss"],
-          dest: "css",
-          ext: ".css"
+          expand : true,
+          cwd    : "<%= dir.src %>/sass",
+          src    : ["*.scss"],
+          dest   : "css",
+          ext    : ".css"
         }]
       }
     },
@@ -34,12 +49,12 @@ module.exports = function(grunt){
     /*compass : {
       pc : { 
         options : {
-          sassDir   : "src/sass",
-          cssDir    : "css",
-          imageDir  : "img",
-          httpGeneratedImagesPath  : "/img",
-          outputStyle : "expanded",
-          noLineComments: true
+          sassDir                 : "src/sass",
+          cssDir                  : "css",
+          imageDir                : "img",
+          httpGeneratedImagesPath : "/img",
+          outputStyle             : "expanded",
+          noLineComments          : true
         }
       }
     },*/
@@ -47,22 +62,22 @@ module.exports = function(grunt){
     autoprefixer : {
       pc : {
         options : {
-          map: true,
-          browsers: ["last 3 versions", "ie 8"]          
+          map      : true,
+          browsers : ["last 3 versions", "ie 8"]          
         },
-        src: "css/trunk-*.css"
+        src : "css/trunk-*.css"
       }
     },
 
     sprite : {
       pc : {
-        src: "src/img/sprites/*.png",
-        destImg: "img/sprite.png",
-        imgPath: "../img/sprite.png",
-        destCSS: "src/sass/setup/_sprites.scss",
-        algorithm: "binary-tree",
-        padding: 2,
-        cssTemplate: "src/img/sprites/spritesmith.mustache"
+        src         : "<%= dir.src %>/img/sprites/*.png",
+        destImg     : "img/sprite.png",
+        imgPath     : "../img/sprite.png",
+        destCSS     : "<%= dir.src %>/sass/setup/_sprites.scss",
+        algorithm   : "binary-tree",
+        padding     : 2,
+        cssTemplate : "src/img/sprites/spritesmith.mustache"
       }
     },
 
@@ -88,18 +103,23 @@ module.exports = function(grunt){
     },
 
     watch : {
+      pc_template : {
+        files : ["<%= dir.src %>/template/**/*.ect"],
+        tasks : ["ect:pc"]
+      },
+
       pc_js : {
-        files : ["src/js/*.js", "src/js/**/*.js"],
+        files : ["<%= dir.src %>/js/*.js", "<%= dir.src %>/js/**/*.js"],
         tasks : ["uglify:pc"]
       },
 
       pc_css : {
-        files : ["src/sass/*.scss", "src/sass/**/*.scss"],
+        files : ["<%= dir.src %>/sass/*.scss", "<%= dir.src %>/sass/**/*.scss"],
         tasks : ["sass:pc", "autoprefixer:pc"]
       },
 
       pc_sprite : {
-        files : ["src/img/sprites/*.png"],
+        files : ["<%= dir.src %>/img/sprites/*.png"],
         tasks : ["sprite:pc"]
       }
     }
@@ -114,6 +134,7 @@ module.exports = function(grunt){
 
   grunt.loadNpmTasks("grunt-styleguide");
   grunt.loadNpmTasks("grunt-bower-task");
+  grunt.loadNpmTasks("grunt-ect");
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-sass");
   grunt.loadNpmTasks("grunt-autoprefixer");
