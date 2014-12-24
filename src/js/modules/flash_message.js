@@ -33,10 +33,10 @@
     }
   }
 
-  if(global.comp == null){
-    global.comp = {};
+  if(global.component == null){
+    global.component = {};
   }
 
-  global.comp.flash_message = FlashMessage;
+  global.component.flash_message = FlashMessage;
 
 })(window);

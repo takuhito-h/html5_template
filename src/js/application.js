@@ -1,5 +1,7 @@
-(function(){
+(function(global){
 
-    "use strict";
+  "use strict";
 
-})();
+  global.hogehoge.components_run();
+
+})(window);

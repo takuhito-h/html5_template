@@ -95,10 +95,9 @@ module.exports = function(grunt){
             "src/js/vendor/mock/*.js",
             "src/js/modules/dependents/*.js",
             "src/js/modules/*.js",
-            "src/js/module_manager.js",
+            "src/js/component_manager.js",
             "src/js/pages/*.js",
-            "src/js/application.js",
-            "src/js/init.js"
+            "src/js/application.js"
           ]
         }
       }
