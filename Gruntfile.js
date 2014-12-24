@@ -1,9 +1,10 @@
 module.exports = function(grunt){
-  
+
+  "use strict";
+
   require("jit-grunt")(grunt, {
     sprite: "grunt-spritesmith"
   });
-
 
   grunt.config.init({
 
@@ -52,7 +53,7 @@ module.exports = function(grunt){
     },
 
     /*compass : {
-      pc : { 
+      pc : {
         options : {
           sassDir                 : "src/sass",
           cssDir                  : "css",
@@ -68,7 +69,7 @@ module.exports = function(grunt){
       pc : {
         options : {
           map      : true,
-          browsers : ["last 3 versions", "ie 8"]          
+          browsers : ["last 3 versions", "ie 8"]
         },
         src : "css/trunk-*.css"
       }
@@ -103,6 +104,22 @@ module.exports = function(grunt){
       }
     },
 
+    jshint: {
+
+      files: [
+        "Gruntfile.js",
+        ".jshintrc",
+        "src/js/*.js",
+        // 除外するファイル
+        "!src/js/modules/dependents",
+        "!src/js/vendor/"
+      ],
+
+      options: {
+        jshintrc: true
+      }
+    },
+
     clean : {
       pc : ["docs/styledocco"]
     },
@@ -132,7 +149,7 @@ module.exports = function(grunt){
 
   // mozjpegが存在したら、imageminにmozjpeg使用のオプションを追加
   if(grunt.file.exists("node_modules/imagemin-mozjpeg")){
-    var mozjpeg = require("imagemin-mozjpeg");  
+    var mozjpeg = require("imagemin-mozjpeg");
 
     grunt.config.set(["imagemin", "pc", "options", "use"], [mozjpeg()]);
   }
