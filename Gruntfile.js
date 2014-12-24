@@ -134,12 +134,7 @@ module.exports = function(grunt){
 
       pc_js : {
         files : ["<%= dir.src %>/js/*.js", "<%= dir.src %>/js/**/*.js"],
-        tasks : ["uglify:pc"]
-      },
-
-      pc_jshint : {
-        files : ["<%= dir.src %>/js/*.js", "<%= dir.src %>/js/**/*.js"],
-        tasks : ["jshint:pc"]
+        tasks : ["jshint:pc", "uglify:pc"]
       },
 
       pc_css : {
