@@ -106,18 +106,21 @@ module.exports = function(grunt){
 
     jshint: {
 
-      files: [
+      options: {
+        jshintrc: true
+      },
+
+      uses_defaults: [
         "Gruntfile.js",
-        ".jshintrc",
+        ".jshintrc"
+      ],
+
+      pc : [
         "src/js/*.js",
         // 除外するファイル
         "!src/js/modules/dependents",
         "!src/js/vendor/"
-      ],
-
-      options: {
-        jshintrc: true
-      }
+      ]
     },
 
     clean : {
@@ -133,6 +136,11 @@ module.exports = function(grunt){
       pc_js : {
         files : ["<%= dir.src %>/js/*.js", "<%= dir.src %>/js/**/*.js"],
         tasks : ["uglify:pc"]
+      },
+
+      pc_jshint : {
+        files : ["<%= dir.src %>/js/*.js", "<%= dir.src %>/js/**/*.js"],
+        tasks : ["jshint:pc"]
       },
 
       pc_css : {
