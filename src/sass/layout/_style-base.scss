@@ -10,6 +10,8 @@
 body{
     background: #f7f7f7;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
     color: #4b4b4b;;
     font-size: $default-textSize;
     font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka,"ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
@@ -94,7 +96,7 @@ button:focus{
 //  プレイスホルダー設定
 //--------------------------------------------------------------------
 .is-placeholder{
-    color: #AAA;    
+    color: #AAA;
 }
 
 ::placeholder{
