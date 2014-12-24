@@ -1,4 +1,7 @@
 (function(global){
+
+  "use strict";
+
   function FlashMessage(){
     var _$container;
 

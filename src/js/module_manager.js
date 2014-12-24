@@ -1,5 +1,7 @@
 (function(global){
 
+    "use strict";
+
     var MODULE_DEFS = {
         "flash_message": {
             query: ".js-flash_message",
