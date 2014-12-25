@@ -7,17 +7,17 @@
 //--------------------------------------------------------------------------------------
 //  Mixin - button
 //--------------------------------------------------------------------------------------
-@mixin button($padding, $bgColor, $radius, $blockFlag: false){
+@mixin button($padding, $bg-color, $radius, $block-flag: false){
     @if $radius != 0 {
         @include border-radius($radius);
     }
-    @if $bgColor != none{
-        background-color: $bgColor;
+    @if $bg-color != none {
+        background-color: $bg-color;
     }
-    @if $blockFlag != true{
+    @if $block-flag != true {
         display: inline-block;
     }
-    @if $blockFlag != 0px{
+    @if $block-flag != 0 {
         padding: $padding;
     }
     line-height: 1;
