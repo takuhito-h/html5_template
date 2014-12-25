@@ -3,7 +3,8 @@ module.exports = function(grunt){
   "use strict";
 
   require("jit-grunt")(grunt, {
-    sprite: "grunt-spritesmith"
+    sprite   : "grunt-spritesmith",
+    scsslint : "grunt-scss-lint"
   });
 
   grunt.config.init({
@@ -64,6 +65,22 @@ module.exports = function(grunt){
         }
       }
     },*/
+
+    scsslint : {
+      allFiles : [
+        "src/sass/**/*.scss",
+      ],
+      options : {
+        exclude: [
+          "src/sass/layout/_style-normalize.scss",
+          "src/sass/setup/_sprites.scss",
+        ],
+        bundleExec: true,
+        config: ".scss-lint.yml",
+        reporterOutput: "scss-lint-report.xml",
+        colorizeOutput: true
+      },
+    },
 
     autoprefixer : {
       pc : {
