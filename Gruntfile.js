@@ -129,7 +129,7 @@ module.exports = function(grunt){
         jshintrc: true
       },
 
-      uses_defaults: [
+      uses_defaults : [
         "Gruntfile.js",
         ".jshintrc"
       ],
