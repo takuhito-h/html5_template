@@ -67,19 +67,22 @@ module.exports = function(grunt){
     },*/
 
     scsslint : {
-      allFiles : [
-        "src/sass/**/*.scss",
-      ],
       options : {
-        exclude: [
-          "src/sass/layout/_style-normalize.scss",
-          "src/sass/setup/_sprites.scss",
-        ],
         bundleExec: true,
         config: ".scss-lint.yml",
-        reporterOutput: "scss-lint-report.xml",
         colorizeOutput: true
       },
+      pc : {
+        src : [
+          "src/sass/**/*.scss"
+        ],
+        options : {
+          exclude: [
+            "src/sass/layout/_style-normalize.scss",
+            "src/sass/setup/_sprites.scss"
+          ]
+        }
+      }
     },
 
     autoprefixer : {
