@@ -1,4 +1,5 @@
-var gulp         = require('gulp');
+var gulp = require('gulp');
+var path = require('path');
 
 var scsslint     = require('gulp-scss-lint');
 var sass         = require('gulp-ruby-sass');
@@ -7,6 +8,9 @@ var autoprefixer = require('gulp-autoprefixer');
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+
+var webpack   = require('webpack');
+var g_webpack = require('gulp-webpack');
 
 /*------------------------------------------------------------------
     scsslint
@@ -51,8 +55,8 @@ gulp.task('js', function() {
     return gulp.src([
         "src/js/vendor/*.js",
         "src/js/vendor/mock/*.js",
-        "src/js/modules/dependents/*.js",
-        "src/js/modules/*.js",
+        "src/js/components/dependents/*.js",
+        "src/js/components/*.js",
         "src/js/component_manager.js",
         "src/js/pages/*.js",
         "src/js/application.js"
@@ -60,6 +64,35 @@ gulp.task('js', function() {
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js'))
+    ;
+});
+
+/*------------------------------------------------------------------
+    webpack
+------------------------------------------------------------------*/
+gulp.task('webpack', function() {
+    return gulp.src('./src/js/application.js')
+        .pipe(g_webpack({
+            entry: './src/js/application.js',
+            output: {
+                filename: 'bundle.min.js'
+            },
+            resolve: {
+                root: [path.join(process.cwd(), 'bower_components')],
+                extensions: ['', '.js']
+            },
+            plugins: [
+                new webpack.ResolverPlugin(
+                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+                ),
+                new webpack.ProvidePlugin({
+                    jQuery: "jquery",
+                    $: 'jquery'
+                })
+            ]
+        }))
+        // .pipe(uglify())
+        .pipe(gulp.dest('./js/'))
     ;
 });
 

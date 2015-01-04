@@ -5,10 +5,6 @@
   function FlashMessage(){
     var _$container;
 
-    return{
-      destroy : destroy
-    };
-
     function initialize(container, params){
       _$container = $(container);
       _flash(4000);
@@ -31,12 +27,17 @@
     }
 
     initialize.apply(this, arguments);
+
+    return{
+      destroy : destroy
+    };
   }
 
-  if(global.component === null){
+  /*if(global.component === null){
     global.component = {};
-  }
+  }*/
 
-  global.component.flash_message = FlashMessage;
+  // global.component.flash_message = FlashMessage;
+  module.exports = FlashMessage;
 
 })(window);
