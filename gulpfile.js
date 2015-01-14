@@ -16,62 +16,77 @@ var g_webpack = require('gulp-webpack');
     scsslint
 ------------------------------------------------------------------*/
 gulp.task('scsslint', function() {
-    return gulp.src([
-        'src/sass/**/*.scss',
-        '!src/sass/layout/_style-normalize.scss',
-        '!src/sass/setup/_sprites.scss',
-    ])
-    .pipe(scsslint());
+
+    return gulp
+        .src([
+            'src/sass/**/*.scss',
+            '!src/sass/layout/_style-normalize.scss',
+            '!src/sass/setup/_sprites.scss',
+        ])
+        .pipe(scsslint())
+    ;
+
 });
 
 /*------------------------------------------------------------------
     css生成
 ------------------------------------------------------------------*/
 gulp.task('css', function() {
+
     return sass('src/sass/', {
-        style: 'expanded'
-    })
-    .on('error', function (err) {
-        console.error('Error', err.message);
-    })
-    .pipe(autoprefixer(['last 3 versions', "ie 8"]))
-    .pipe(gulp.dest('css/'));
+            style: 'expanded'
+        })
+        .on('error', function (err) {
+            console.error('Error', err.message);
+        })
+        .pipe(autoprefixer(['last 3 versions', "ie 8"]))
+        .pipe(gulp.dest('css/'))
+    ;
+
 });
 
 /*------------------------------------------------------------------
     jshint
 ------------------------------------------------------------------*/
 gulp.task('jshint', function() {
-    return gulp.src(['src/js/**/*.js', '!src/js/vendor/*.js'])
+
+    return gulp
+        .src(['src/js/**/*.js', '!src/js/vendor/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
     ;
+
 });
 
 /*------------------------------------------------------------------
     js結合
 ------------------------------------------------------------------*/
 gulp.task('js', function() {
-    return gulp.src([
-        "src/js/vendor/*.js",
-        "src/js/vendor/mock/*.js",
-        "src/js/components/dependents/*.js",
-        "src/js/components/*.js",
-        "src/js/component_manager.js",
-        "src/js/pages/*.js",
-        "src/js/application.js"
-    ])
+
+    return gulp
+        .src([
+            "src/js/vendor/*.js",
+            "src/js/vendor/mock/*.js",
+            "src/js/components/dependents/*.js",
+            "src/js/components/*.js",
+            "src/js/component_manager.js",
+            "src/js/pages/*.js",
+            "src/js/application.js"
+        ])
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('js'))
     ;
+
 });
 
 /*------------------------------------------------------------------
     webpack
 ------------------------------------------------------------------*/
 gulp.task('webpack', function() {
-    return gulp.src('./src/js/application.js')
+
+    return gulp
+        .src('./src/js/application.js')
         .pipe(g_webpack({
             entry: './src/js/application.js',
             output: {
@@ -94,8 +109,12 @@ gulp.task('webpack', function() {
         // .pipe(uglify())
         .pipe(gulp.dest('./js/'))
     ;
+
 });
 
+/*------------------------------------------------------------------
+    watch
+------------------------------------------------------------------*/
 gulp.task('watch', function () {
     gulp.watch('src/sass/**/*.scss', ['scsslint', 'css']);
     gulp.watch('src/js/**/*.js', ['jshint', 'js']);
