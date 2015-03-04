@@ -9,7 +9,8 @@
     }
   };
 
-  function components_run(){
+  function ComponentsRun(){
+    console.log(COMPONENT_DEFS);
     $.each(COMPONENT_DEFS, function(name, val){
       $(val.query).each(function(index, element){
         global.component[val.component](element);
@@ -17,10 +18,7 @@
     });
   }
 
-  if(!global.hogehoge){
-    global.hogehoge = {};
-  }
-
-  global.hogehoge.components_run = components_run;
+  // global.hogehoge.components_run = components_run;
+  module.exports = ComponentsRun;
 
 })(window);
