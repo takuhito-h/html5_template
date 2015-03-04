@@ -7,8 +7,15 @@
 @import "setup/utility";
 
 //--------------------------------------------------------------------
+//  Foundation Import
+//--------------------------------------------------------------------
+@import "foundation/style-normalize";
+@import "foundation/style-base";
+
+//--------------------------------------------------------------------
 //  Layout Import
 //--------------------------------------------------------------------
-@import "layout/style-normalize";
-@import "layout/style-base";
-@import "layout/style-layout";
+@import "layout/style-wrapper";
+@import "layout/style-header";
+@import "layout/style-main";
+@import "layout/style-footer";
