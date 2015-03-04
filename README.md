@@ -2,14 +2,17 @@
 
 個人的なhtml5制作の為のテンプレートファイル。
 
-##使用アーキテクチャ 
+##使用アーキテクチャ
 ### フロントエンドビルドツール
-*   Grunt
+*   Gulp
+
+### HTML
+*   ECT
 
 ### CSS
 *   Normalize.css
 *   SCSS
-*   Compass
+*   Autoprefixer
 
 ### Javascript
 *   jQuery
