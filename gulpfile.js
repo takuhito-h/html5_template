@@ -5,12 +5,15 @@ var scsslint     = require('gulp-scss-lint');
 var sass         = require('gulp-ruby-sass');
 var autoprefixer = require('gulp-autoprefixer');
 
-var jshint = require('gulp-jshint');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
+var jsvalidate = require('gulp-jsvalidate');
+var jshint     = require('gulp-jshint');
+var concat     = require('gulp-concat');
+var uglify     = require('gulp-uglify');
 
 var webpack   = require('webpack');
 var g_webpack = require('gulp-webpack');
+
+var ect = require('gulp-ect');
 
 /*------------------------------------------------------------------
     scsslint
@@ -41,6 +44,18 @@ gulp.task('css', function() {
         })
         .pipe(autoprefixer(['last 3 versions', "ie 8"]))
         .pipe(gulp.dest('css/'))
+    ;
+
+});
+
+/*------------------------------------------------------------------
+    jsvalidate
+------------------------------------------------------------------*/
+gulp.task('jsvalidate', function() {
+
+    return gulp
+        .src(['src/js/**/*.js', '!src/js/vendor/*.js'])
+        .pipe(jsvalidate())
     ;
 
 });
@@ -117,5 +132,5 @@ gulp.task('webpack', function() {
 ------------------------------------------------------------------*/
 gulp.task('watch', function () {
     gulp.watch('src/sass/**/*.scss', ['scsslint', 'css']);
-    gulp.watch('src/js/**/*.js', ['jshint', 'js']);
+    gulp.watch('src/js/**/*.js', ['jsvalidate', 'js']);
 });
