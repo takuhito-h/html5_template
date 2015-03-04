@@ -128,9 +128,23 @@ gulp.task('webpack', function() {
 });
 
 /*------------------------------------------------------------------
+    ect
+------------------------------------------------------------------*/
+gulp.task('ect', function(){
+
+    return gulp
+        .src('src/template/main/*.ect')
+        .pipe(ect())
+        .pipe(gulp.dest('./'))
+    ;
+
+});
+
+/*------------------------------------------------------------------
     watch
 ------------------------------------------------------------------*/
 gulp.task('watch', function () {
     gulp.watch('src/sass/**/*.scss', ['scsslint', 'css']);
     gulp.watch('src/js/**/*.js', ['jsvalidate', 'js']);
+    gulp.watch('src/template/**/*.ect', ['ect']);
 });

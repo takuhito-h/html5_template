@@ -1,4 +1,8 @@
 <% block "title": %>トップページ<% end %>
-<% extend "layout/default.ect" %>
-<h1><%= @projectName %></h1>
-ここはトップページです
+<% extend "../layout/default.ect" %>
+<% include "../partials/header.ect" %>
+<main class="l-container">
+    <h1><%= @projectName %></h1>
+    <p>ここはトップページです</p>
+</main>
+<% include "../partials/footer.ect" %>
