@@ -101,9 +101,9 @@ gulp.task('js', function() {
 gulp.task('webpack', function() {
 
     return gulp
-        .src('./src/js/application.js')
+        .src('src/js/application.js')
         .pipe(g_webpack({
-            entry: './src/js/application.js',
+            entry: 'src/js/application.js',
             output: {
                 filename: 'bundle.min.js'
             },
@@ -122,7 +122,7 @@ gulp.task('webpack', function() {
             ]
         }))
         // .pipe(uglify())
-        .pipe(gulp.dest('./js/'))
+        .pipe(gulp.dest('js/'))
     ;
 
 });
