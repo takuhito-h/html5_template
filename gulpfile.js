@@ -96,38 +96,6 @@ gulp.task('js', function() {
 });
 
 /*------------------------------------------------------------------
-    webpack
-------------------------------------------------------------------*/
-gulp.task('webpack', function() {
-
-    return gulp
-        .src('src/js/application.js')
-        .pipe(g_webpack({
-            entry: 'src/js/application.js',
-            output: {
-                filename: 'bundle.min.js'
-            },
-            resolve: {
-                root: [path.join(process.cwd(), 'bower_components')],
-                extensions: ['', '.js']
-            },
-            plugins: [
-                new webpack.ResolverPlugin(
-                    new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-                ),
-                new webpack.ProvidePlugin({
-                    jQuery: "jquery",
-                    $: 'jquery'
-                })
-            ]
-        }))
-        // .pipe(uglify())
-        .pipe(gulp.dest('js/'))
-    ;
-
-});
-
-/*------------------------------------------------------------------
     ect
 ------------------------------------------------------------------*/
 gulp.task('ect', function(){

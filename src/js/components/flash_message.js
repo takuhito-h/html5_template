@@ -1,43 +1,43 @@
 (function(global){
 
-  "use strict";
+    "use strict";
 
-  function FlashMessage(){
-    var _$container;
+    function FlashMessage(){
+        var _$container;
 
-    function initialize(container, params){
-      _$container = $(container);
-      _flash(4000);
+        function initialize(container, settings){
+            _$container = $(container);
+
+            _flash(settings);
+        }
+
+        function _flash(settings){
+            setTimeout(function(){
+
+                _$container.css({
+                    "-webkit-transform": "translate3d(0px,-66px,0px)",
+                    "-webkit-transition-duration": settings.speed + "ms"
+                }).one("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function(){
+                    _$container.css("display", "none");
+                });
+
+            }, settings.wait);
+        }
+
+        function destroy(){
+        }
+
+        initialize.apply(this, arguments);
+
+        return{
+            destroy : destroy
+        };
     }
 
-    function _flash(ms){
-      setTimeout(function(){
-        _$container.css({
-          "-webkit-transform": "translate3d(0px,-66px,0px)",
-          "-webkit-transition-duration": "0.5s"
-        }).on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd",
-          function(){
-            _$container.css("display", "none");
-          }
-        );
-      }, ms);
+    if(global.openers === undefined){
+        global.openers = {};
     }
 
-    function destroy(){
-    }
-
-    initialize.apply(this, arguments);
-
-    return{
-      destroy : destroy
-    };
-  }
-
-  /*if(global.component === null){
-    global.component = {};
-  }*/
-
-  // global.component.flash_message = FlashMessage;
-  module.exports = FlashMessage;
+    global.openers.flash_message = FlashMessage;
 
 })(window);

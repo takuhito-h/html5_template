@@ -1,24 +1,30 @@
 (function(global){
 
-  "use strict";
+    "use strict";
 
-  var COMPONENT_DEFS = {
-    "flash_message": {
-      query: ".js-flash_message",
-      component: "flash_message"
+    var COMPONENT_DEFS = {
+        "flash_message": {
+            query: ".js-flash_message",
+            component: "flash_message",
+            settings: {
+                wait  : 4000,
+                speed : 500
+            }
+        }
+    };
+
+    function ComponentsRun(){
+        _.each(COMPONENT_DEFS, function(val, name){
+            _.each(document.querySelectorAll(val.query), function(element, index){
+                global.openers[val.component](element, val.settings);
+            });
+        });
     }
-  };
 
-  function ComponentsRun(){
-    console.log(COMPONENT_DEFS);
-    $.each(COMPONENT_DEFS, function(name, val){
-      $(val.query).each(function(index, element){
-        global.component[val.component](element);
-      });
-    });
-  }
+    if(global.openers === undefined){
+        global.openers = {};
+    }
 
-  // global.hogehoge.components_run = components_run;
-  module.exports = ComponentsRun;
+    global.openers.components_run = ComponentsRun;
 
 })(window);
