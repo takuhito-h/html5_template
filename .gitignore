@@ -11,6 +11,7 @@ vendor/
 css/*.css
 css/*.map
 js/*.js
+js/*.map
 img/sprite.png
 
 # sprite用の生成scssを除外

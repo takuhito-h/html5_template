@@ -1,0 +1,44 @@
+$_icon-heart: 0px 0px 0px 0px 12px 12px 12px 12px '../img/sprite.png';
+
+// $list: <X> <Y> <Offset X> <Offset Y> <Width> <Height> <Total Width> <Total Height> <Image Path>
+
+//------------------------------------------------------------------------------------------------
+//
+//  Mixin - Sprites
+//
+//------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------------------------
+//  Mixin - 背景を表示（widthとheightが指定され、ブロックサイズが変わるので注意）
+//--------------------------------------------------------------------------------------
+@mixin sprite-background($sprite, $hidpiFlag: false) {
+    $imagePath: nth($sprite, 9);
+    display: inline-block;
+    background-image: url("#{$imagePath}");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    @if ($hidpiFlag == true){
+        width: nth($sprite, 5) / 2;
+        height: nth($sprite, 6) / 2;
+        background-position: round( nth($sprite, 3) / 2 ) round( nth($sprite, 4) / 2 );
+    }@else{
+        width: nth($sprite, 5);
+        height: nth($sprite, 6);
+        background-position: nth($sprite, 3) nth($sprite, 4);
+    }
+}
+
+
+//--------------------------------------------------------------------------------------
+//  Mixin - sprite-backgroundをafterに突っ込む（親要素は自身を包括ブロックにしておく必要あり）
+//--------------------------------------------------------------------------------------
+@mixin sprite-after($name, $left, $top){
+    &:after{
+        content: " ";
+        position: absolute;
+        display: block;
+        top: $top;
+        left: $left;
+        @include sprite-background($name);
+    }
+}
