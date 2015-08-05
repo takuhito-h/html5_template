@@ -8,11 +8,18 @@ bower_components/
 vendor/
 
 # ビルド後のファイルを無視
-css/*.css
-css/*.map
-js/*.js
-js/*.map
-img/sprite.png
+app-pc/css/*.css
+app-pc/css/*.map
+app-pc/js/*.js
+app-pc/js/*.map
+app-pc/img/sprite.png
+
+# ビルド後のファイルを無視
+app-sp/css/*.css
+app-sp/css/*.map
+app-sp/js/*.js
+app-sp/js/*.map
+app-sp/img/sprite.png
 
 # sprite用の生成scssを除外
 src/sass/setup/_sprites.scss
