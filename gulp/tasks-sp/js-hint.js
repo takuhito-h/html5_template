@@ -15,7 +15,7 @@ gulp.task('jshint:sp', function() {
     return gulp
         .src(config.src)
         .pipe(jshint())
-        .pipe(jshint.reporter('default'))
+        .pipe(jshint.reporter('jshint-stylish'))
     ;
 
 });

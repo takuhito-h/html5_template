@@ -18,6 +18,7 @@
     "gulp-util": "^3.0.6",
     "gulp-watch": "^3.0.0",
     "gulp.spritesmith": "^3.5.3",
+    "jshint-stylish": "^2.0.1",
     "lodash": "^3.3.1",
     "require-dir": "^0.3.0"
   },
