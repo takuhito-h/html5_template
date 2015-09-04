@@ -1,4 +1,4 @@
-(function(global){
+/*(function(global){
 
     "use strict";
 
@@ -15,4 +15,4 @@
 
     global.openers.model.templateModel = TemplateModel;
 
-})(window);
+})(window);*/
