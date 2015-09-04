@@ -9,8 +9,9 @@ var src = {
     font     : 'app-sp/src/img/font/template.scss',
     html     : 'app-sp/src/img/font/template.html',
     js       : [
-        'app-sp/src/js/vendor/*.js',
-        'app-sp/src/js/vendor/mock/*.js',
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/lodash/lodash.js',
+        'bower_components/underscore.string/dist/underscore.string.js',
         'app-sp/src/js/router/*.js',
         'app-sp/src/js/model/*.js',
         'app-sp/src/js/collection/*.js',

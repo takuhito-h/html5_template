@@ -9,8 +9,9 @@ var src = {
     font     : 'app-pc/src/img/font/template.scss',
     html     : 'app-pc/src/img/font/template.html',
     js       : [
-        'app-pc/src/js/vendor/*.js',
-        'app-pc/src/js/vendor/plugin/*.js',
+        'bower_components/jquery/dist/jquery.js',
+        'bower_components/lodash/lodash.js',
+        'bower_components/underscore.string/dist/underscore.string.js',
         'app-pc/src/js/router/*.js',
         'app-pc/src/js/model/*.js',
         'app-pc/src/js/collection/*.js',
