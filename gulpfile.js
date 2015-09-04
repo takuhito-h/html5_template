@@ -8,4 +8,4 @@ requireDir('./gulp/tasks-pc', { recurse: true });
 /*------------------------------------------------------------------
     tasks-sp
 ------------------------------------------------------------------*/
-// requireDir('./gulp/tasks-sp', { recurse: true });
+requireDir('./gulp/tasks-sp', { recurse: true });
