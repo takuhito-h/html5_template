@@ -1,0 +1,112 @@
+//------------------------------------------------------------------------------------------------
+//
+//  基礎設定
+//
+//------------------------------------------------------------------------------------------------
+
+//--------------------------------------------------------------------
+//  基礎
+//--------------------------------------------------------------------
+body{
+    background: #f7f7f7;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    color: #4b4b4b;;
+    font-size: $default-text-size;
+    font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+    line-height: 1.5;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+
+// for IE6
+* html body{
+    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+}
+
+//------------------------------------------------------------------
+//  リセット
+//------------------------------------------------------------------
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+    margin: 0;
+}
+
+img{
+    vertical-align: top;
+}
+
+p{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+dl{
+    margin: 0;
+}
+
+dd{
+    margin: 0;
+}
+
+th{
+    text-align: left;
+    vertical-align: top;
+}
+
+label, select, option{
+    cursor: pointer;
+}
+
+input[type=radio]{
+    vertical-align: middle;
+    margin-right: 0.3em;
+}
+
+//------------------------------------------------------------------
+//  リンク設定
+//------------------------------------------------------------------
+a{
+    color: inherit;
+}
+
+a:hover,
+input[type="submit"]:hover,
+button:hover{
+    @include opacity(0.6);
+}
+
+button:active,
+button:focus{
+    outline: none;
+}
+
+.is-focus_link{
+    position: relative;
+    top: 1px;
+}
+
+//--------------------------------------------------------------------
+//  プレイスホルダー設定
+//--------------------------------------------------------------------
+.is-placeholder{
+    color: #aaa;
+}
+
+::placeholder{
+    color: #aaa;
+}
+
+//--------------------------------------------------------------------
+//  Googleリマーケティングタグ隙間消去
+//--------------------------------------------------------------------
+iframe[name="google_conversion_frame"]{
+    position: absolute;
+    height: 0;
+}
