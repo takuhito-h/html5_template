@@ -10,16 +10,12 @@
 //  Foundation Import
 //--------------------------------------------------------------------
 @import "foundation/style-normalize";
-@import "foundation/myfonts";
 @import "foundation/style-base";
 
 //--------------------------------------------------------------------
 //  Layout Import
 //--------------------------------------------------------------------
-@import "layout/style-base";
 @import "layout/style-wrapper";
-@import "layout/style-offcanvas";
-@import "layout/style-overlay";
 @import "layout/style-header";
 @import "layout/style-main";
 @import "layout/style-footer";
@@ -27,17 +23,13 @@
 //------------------------------------------------------------------
 //  Page
 //----------------------------------------------------------------*/
-@import "pages/style-flagship";
-@import "pages/style-page";
-@import "pages/style-article";
-@import "pages/style-gallery";
-@import "pages/style-shoplist";
+@import "pages/style-top";
 
 //------------------------------------------------------------------
 //  UI Helper
 //----------------------------------------------------------------*/
 @import "ui/style-sprites";
-@import "ui/style-icon";
+// @import "ui/style-icon";
 @import "ui/style-helper";
 
 //------------------------------------------------------------------
