@@ -17,13 +17,13 @@
   /*------------------------------------------------------------------
     グローバル変数へのアクセス管理
   ------------------------------------------------------------------*/
-  "undef" : true,  // グローバル変数へのアクセスを禁止
+  "undef"   : true,  // グローバル変数へのアクセスを禁止
   "browser" : true,  // ブラウザ用のグローバル変数を許可
-  "node": true,  // node用のグローバル変数を許可
-  "jquery": true,  // jQuery用のグローバル変数を許可
-  "dojo" :  true,  // dojo tool kit用のグローバル変数を許可
-  "devel" : true,  //  consoleやalertを許可
-  "debug"    : true,  // debugger を許可
+  "node"    : true,  // node用のグローバル変数を許可
+  "jquery"  : true,  // jQuery用のグローバル変数を許可
+  "dojo"    : true,  // dojo tool kit用のグローバル変数を許可
+  "devel"   : true,  //  consoleやalertを許可
+  "debug"   : true,  // debugger を許可
   "globals": {
     "_": false,
     "Backbone": false
