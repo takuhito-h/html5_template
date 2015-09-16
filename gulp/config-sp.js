@@ -61,26 +61,26 @@ module.exports = {
         src  : src.iconfont,
         dest : dest.iconfont,
         options : {
-            fontName: 'icon',
-            startCodepoint: 0xF001,
+            fontName       : 'icon',
+            startCodepoint : 0xF001,
         },
         codepoint_options : {
-            fontName: 'icon',
-            fontPath: '../font/', // フォントパスをCSSからの相対パスで指定
-            className: 'icon', // CSSのフォントのクラス名を指定
-            timeStamp: Date.now()
+            fontName  : 'icon',
+            fontPath  : '../font/', // フォントパスをCSSからの相対パスで指定
+            className : 'icon', // CSSのフォントのクラス名を指定
+            timeStamp : Date.now()
         },
         font : {
             src : src.font,
             rename_options : {
-                basename: '_style-icon'
+                basename　: '_style-icon'
             },
             dest : dest.font
         },
         html : {
             src  : src.html,
             rename_options : {
-                basename: 'app-sp/src/img/font/font-preview'
+                basename　: 'app-sp/src/img/font/font-preview'
             },
             dest : dest.html
         }
