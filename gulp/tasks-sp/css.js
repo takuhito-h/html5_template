@@ -18,7 +18,7 @@ var isRelease = gutil.env.release ? gutil.env.release : false;
 gulp.task('css:sp', function() {
 
     return sass(config.src, {
-            style : 'compressed',
+            style     : 'compressed',
             sourcemap : isRelease ? false : true
         })
             .on('error', function (err) {
