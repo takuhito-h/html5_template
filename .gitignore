@@ -8,6 +8,7 @@ bower_components/
 vendor/
 
 # ビルド後のファイルを無視
+app-pc/*.html
 app-pc/css/*.css
 app-pc/css/*.map
 app-pc/js/*.js
@@ -15,6 +16,7 @@ app-pc/js/*.map
 app-pc/img/sprite.png
 
 # ビルド後のファイルを無視
+app-sp/*.html
 app-sp/css/*.css
 app-sp/css/*.map
 app-sp/js/*.js

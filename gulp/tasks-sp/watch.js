@@ -10,6 +10,10 @@ var watch = require('gulp-watch');
     task
 ------------------------------------------------------------------*/
 gulp.task('watch:sp', function () {
+    watch('app-sp/src/template/**/*.ect', function(){
+        gulp.start(['ect:sp']);
+    });
+
     watch('app-sp/src/img/font/*.svg', function(){
         gulp.start(['iconfont:sp']);
     });

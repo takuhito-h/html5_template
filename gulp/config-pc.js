@@ -4,6 +4,7 @@
 
 ------------------------------------------------------------------------------------------------*/
 var src = {
+    ect      : 'app-pc/src/template/main/*.ect',
     css      : 'app-pc/src/sass',
     iconfont : ['app-pc/src/img/font/*.svg'],
     font     : 'app-pc/src/img/font/template.scss',
@@ -35,6 +36,7 @@ var src = {
 };
 
 var dest = {
+    ect       : 'app-pc/',
     css       : 'app-pc/css/',
     iconfont  : 'app-pc/font/',
     font      : 'app-pc/src/sass/ui/',
@@ -46,6 +48,10 @@ var dest = {
     exports
 ------------------------------------------------------------------*/
 module.exports = {
+    ect : {
+        src  : src.ect,
+        dest : dest.ect
+    },
     css : {
         src          : src.css,
         autoprefixer : ['last 3 versions', "ie 8"],

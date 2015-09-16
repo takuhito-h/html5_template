@@ -9,6 +9,7 @@ var gulp = require('gulp');
     task
 ------------------------------------------------------------------*/
 gulp.task('build:sp', function() {
+    gulp.start(['build-ect:sp']);
     gulp.start(['build-iconfont:sp', 'build-css:sp']);
     gulp.start(['build-js:sp']);
 });

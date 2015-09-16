@@ -10,6 +10,10 @@ var watch = require('gulp-watch');
     task
 ------------------------------------------------------------------*/
 gulp.task('watch:pc', function () {
+    watch('app-pc/src/template/**/*.ect', function(){
+        gulp.start(['ect:pc']);
+    });
+
     watch('app-pc/src/img/font/*.svg', function(){
         gulp.start(['iconfont:pc']);
     });
