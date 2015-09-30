@@ -3,12 +3,12 @@
     css
 
 ------------------------------------------------------------------------------------------------*/
-var gulp         = require('gulp');
-var gutil        = require('gulp-util');
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps   = require('gulp-sourcemaps');
-var config       = require('../config-pc').css;
+var gulp       = require('gulp');
+var gutil      = require('gulp-util');
+var sass       = require('gulp-sass');
+var cssnext    = require('gulp-cssnext');
+var sourcemaps = require('gulp-sourcemaps');
+var config     = require('../config-pc').css;
 
 var isRelease = gutil.env.release ? gutil.env.release : false;
 
@@ -22,9 +22,9 @@ gulp.task('css:pc', function() {
             .pipe(sass({
                 outputStyle : 'compressed'
             }).on('error', sass.logError))
-            .pipe(autoprefixer(config.autoprefixer))
+            .pipe(cssnext(config.cssnext))
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))
-        .pipe(gulp.dest(config.dest))
+            .pipe(gulp.dest(config.dest))
     ;
 
 });

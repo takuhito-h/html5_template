@@ -54,7 +54,9 @@ module.exports = {
     },
     css : {
         src          : src.css,
-        autoprefixer : ['last 3 versions', "ie 8"],
+        cssnext      : {
+            autoprefixer : ['last 3 versions', "ie 8"]
+        },
         dest         : dest.css
     },
     iconfont : {
