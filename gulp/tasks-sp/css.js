@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 var gulp         = require('gulp');
 var gutil        = require('gulp-util');
-var sass         = require('gulp-ruby-sass');
+var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
 var config       = require('../config-sp').css;
@@ -17,16 +17,14 @@ var isRelease = gutil.env.release ? gutil.env.release : false;
 ------------------------------------------------------------------*/
 gulp.task('css:sp', function() {
 
-    return sass(config.src, {
-            style     : 'compressed',
-            sourcemap : isRelease ? false : true
-        })
-            .on('error', function (err) {
-                console.error('Error', err.message);
-            })
+    return gulp.src(config.src)
+        .pipe(sourcemaps.init())
+            .pipe(sass({
+                outputStyle : 'compressed'
+            }).on('error', sass.logError))
             .pipe(autoprefixer(config.autoprefixer))
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))
-            .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.dest))
     ;
 
 });

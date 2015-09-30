@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 var src = {
     ect      : 'app-sp/src/template/main/*.ect',
-    css      : 'app-sp/src/sass',
+    css      : 'app-sp/src/sass/**/*.scss',
     iconfont : ['app-sp/src/img/font/*.svg'],
     font     : 'app-sp/src/img/font/template.scss',
     html     : 'app-sp/src/img/font/template.html',
