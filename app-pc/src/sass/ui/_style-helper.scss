@@ -20,61 +20,63 @@
 //  削除系
 //--------------------------------------------------------------------
 // borderを削除
-.hl-del_bt{ border-top: none !important; }
-.hl-del_bb{ border-bottom: none !important; }
-
-// marginを削除
-.hl-del_mt{ margin-top: 0 !important; }
-.hl-del_mr{ margin-right: 0 !important; }
-.hl-del_mb{ margin-bottom: 0 !important; }
-.hl-del_ml{ margin-left: 0 !important; }
-
-// paddingを削除
-.hl-del_pt{ padding-top: 0 !important; }
-.hl-del_pr{ padding-right: 0 !important; }
-.hl-del_pb{ padding-bottom: 0 !important; }
-.hl-del_pl{ padding-left: 0 !important; }
-
+.space-del_bt{ border-top: none !important; }
+.space-del_bb{ border-bottom: none !important; }
 
 //--------------------------------------------------------------------
 //  追加系
 //--------------------------------------------------------------------
-// padding
-.hl-add_pt_8{ padding-top: 8px !important; }
-.hl-add_pt_10{ padding-top: 10px !important; }
-.hl-add_pt_11{ padding-top: 11px !important; }
-.hl-add_pt_14{ padding-top: 14px !important; }
-.hl-add_pt_17{ padding-top: 17px !important; }
+// padding top
+.space-pt_0{ padding-top: 0px !important; }
+.space-pt_5{ padding-top: 5px !important; }
+.space-pt_10{ padding-top: 10px !important; }
+.space-pt_15{ padding-top: 15px !important; }
+.space-pt_20{ padding-top: 20px !important; }
+.space-pt_25{ padding-top: 25px !important; }
+.space-pt_30{ padding-top: 30px !important; }
+.space-pt_35{ padding-top: 35px !important; }
+.space-pt_40{ padding-top: 40px !important; }
+.space-pt_45{ padding-top: 45px !important; }
+.space-pt_50{ padding-top: 50px !important; }
 
-.hl-add_pb_8{ padding-bottom: 8px !important; }
-.hl-add_pb_10{ padding-bottom: 10px !important; }
-.hl-add_pb_11{ padding-bottom: 11px !important; }
-.hl-add_pb_12{ padding-bottom: 12px !important; }
-.hl-add_pb_17{ padding-bottom: 17px !important; }
-.hl-add_pb_20{ padding-bottom: 20px !important; }
+// padding bottom
+.space-pb_0{ padding-bottom: 0px !important; }
+.space-pb_5{ padding-bottom: 5px !important; }
+.space-pb_10{ padding-bottom: 10px !important; }
+.space-pb_15{ padding-bottom: 15px !important; }
+.space-pb_20{ padding-bottom: 20px !important; }
+.space-pb_25{ padding-bottom: 25px !important; }
+.space-pb_30{ padding-bottom: 30px !important; }
+.space-pb_35{ padding-bottom: 35px !important; }
+.space-pb_40{ padding-bottom: 40px !important; }
+.space-pb_45{ padding-bottom: 45px !important; }
+.space-pb_50{ padding-bottom: 50px !important; }
 
-// margin
-.hl-add_mt_4{ margin-top: 4px !important; }
-.hl-add_mt_6{ margin-top: 6px !important; }
-.hl-add_mt_8{ margin-top: 8px !important; }
-.hl-add_mt_9{ margin-top: 9px !important; }
-.hl-add_mt_10{ margin-top: 10px !important; }
-.hl-add_mt_14{ margin-top: 14px !important; }
-.hl-add_mt_16{ margin-top: 16px !important; }
-.hl-add_mt_20{ margin-top: 20px !important; }
+// margin top
+.space-mt_0{ margin-top: 0px !important; }
+.space-mt_5{ margin-top: 5px !important; }
+.space-mt_10{ margin-top: 10px !important; }
+.space-mt_15{ margin-top: 15px !important; }
+.space-mt_20{ margin-top: 20px !important; }
+.space-mt_25{ margin-top: 25px !important; }
+.space-mt_30{ margin-top: 30px !important; }
+.space-mt_35{ margin-top: 35px !important; }
+.space-mt_40{ margin-top: 40px !important; }
+.space-mt_45{ margin-top: 45px !important; }
+.space-mt_50{ margin-top: 50px !important; }
 
-.hl-add_mb_3{ margin-bottom: 3px !important; }
-.hl-add_mb_4{ margin-bottom: 4px !important; }
-.hl-add_mb_5{ margin-bottom: 5px !important; }
-.hl-add_mb_6{ margin-bottom: 6px !important; }
-.hl-add_mb_8{ margin-bottom: 8px !important; }
-.hl-add_mb_10{ margin-bottom: 10px !important; }
-.hl-add_mb_14{ margin-bottom: 14px !important; }
-.hl-add_mb_16{ margin-bottom: 16px !important; }
-.hl-add_mb_18{ margin-bottom: 18px !important; }
-.hl-add_mb_20{ margin-bottom: 20px !important; }
-.hl-add_mb_30{ margin-bottom: 30px !important; }
-.hl-add_mb_40{ margin-bottom: 40px !important; }
+// margin bottom
+.space-mb_0{ margin-bottom: 0px !important; }
+.space-mb_5{ margin-bottom: 5px !important; }
+.space-mb_10{ margin-bottom: 10px !important; }
+.space-mb_15{ margin-bottom: 15px !important; }
+.space-mb_20{ margin-bottom: 20px !important; }
+.space-mb_25{ margin-bottom: 25px !important; }
+.space-mb_30{ margin-bottom: 30px !important; }
+.space-mb_35{ margin-bottom: 35px !important; }
+.space-mb_40{ margin-bottom: 40px !important; }
+.space-mb_45{ margin-bottom: 45px !important; }
+.space-mb_50{ margin-bottom: 50px !important; }
 
 //--------------------------------------------------------------------
 //  文章スタイルを有効化する
