@@ -19,9 +19,7 @@ gulp.task('css:sp', function() {
 
     return gulp.src(config.src)
         .pipe(sourcemaps.init())
-            .pipe(sass({
-                outputStyle : 'compressed'
-            }).on('error', sass.logError))
+            .pipe(sass(config.sass).on('error', sass.logError))
             .pipe(cssnext(config.cssnext))
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))
             .pipe(gulp.dest(config.dest))

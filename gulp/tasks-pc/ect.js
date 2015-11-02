@@ -14,10 +14,7 @@ var config   = require('../config-pc').ect;
 gulp.task('ect:pc', function(){
     gulp.src(config.src)
         .pipe(ect())
-        .pipe(prettify({
-            indent_size  : 4,
-            extra_liners : ''
-        }))
+        .pipe(prettify(config.prettify))
         .pipe(gulp.dest(config.dest))
     ;
 });

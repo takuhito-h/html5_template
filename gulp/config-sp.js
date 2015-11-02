@@ -61,11 +61,18 @@ var dest = {
 ------------------------------------------------------------------*/
 module.exports = {
     ect : {
+        prettify : {
+            indent_size  : 4,
+            extra_liners : ''
+        },
         src  : src.ect,
         dest : dest.ect
     },
     css : {
         src          : src.css,
+        sass         : {
+            outputStyle : 'compressed'
+        },
         cssnext      : {
             autoprefixer : ['last 3 versions', "ie 8"]
         },
