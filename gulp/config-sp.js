@@ -13,32 +13,32 @@ var PATH = {
     src
 ------------------------------------------------------------------*/
 var src = {
-    ect      : PATH.src + '/src/template/main/*.ect',
-    css      : PATH.src + '/src/sass/**/*.scss',
-    iconfont : [PATH.src + '/src/img/font/*.svg'],
-    font     : PATH.src + '/src/img/font/template.scss',
-    html     : PATH.src + '/src/img/font/template.html',
+    ect      : PATH.src + '/template/main/*.ect',
+    css      : PATH.src + '/sass/**/*.scss',
+    iconfont : [PATH.src + '/img/font/*.svg'],
+    font     : PATH.src + '/img/font/template.scss',
+    html     : PATH.src + '/img/font/template.html',
     js       : [
         'bower_components/jquery/dist/jquery.js',
         'bower_components/lodash/lodash.js',
         'bower_components/underscore.string/dist/underscore.string.js',
-        PATH.src + '/src/js/router/*.js',
-        PATH.src + '/src/js/model/*.js',
-        PATH.src + '/src/js/collection/*.js',
-        PATH.src + '/src/js/view/*.js',
-        PATH.src + '/src/js/component_manager.js',
-        PATH.src + '/src/js/application.js'
+        PATH.src + '/js/router/*.js',
+        PATH.src + '/js/model/*.js',
+        PATH.src + '/js/collection/*.js',
+        PATH.src + '/js/view/*.js',
+        PATH.src + '/js/component_manager.js',
+        PATH.src + '/js/application.js'
     ],
     js_hint  : [
-        PATH.src + '/src/js/**/*.js',
+        PATH.src + '/js/**/*.js',
         PATH.ignore_src + '/js/vendor/*.js'
     ],
     js_validate : [
-        PATH.src + '/src/js/**/*.js',
+        PATH.src + '/js/**/*.js',
         PATH.ignore_src + '/js/vendor/*.js'
     ],
     scsslint : [
-        PATH.src + '/src/sass/**/*.scss',
+        PATH.src + '/sass/**/*.scss',
         PATH.ignore_src + '/sass/foundation/_style-normalize.scss',
         PATH.ignore_src + '/sass/setup/_sprites.scss'
     ]
@@ -51,7 +51,7 @@ var dest = {
     ect       : PATH.build_root + '',
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',
-    font      : PATH.src + '/src/sass/ui/',
+    font      : PATH.src + '/sass/ui/',
     html      : './',
     js_concat : PATH.build_root + '/js/'
 };
@@ -101,7 +101,7 @@ module.exports = {
         html : {
             src  : src.html,
             rename_options : {
-                basename　: PATH.src + '/src/img/font/font-preview'
+                basename　: PATH.src + '/img/font/font-preview'
             },
             dest : dest.html
         }
