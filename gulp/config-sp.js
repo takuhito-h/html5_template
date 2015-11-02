@@ -3,45 +3,57 @@
     config-sp
 
 ------------------------------------------------------------------------------------------------*/
+var PATH = {
+    src        : 'app-sp/src/',
+    ignore_src : '!app-sp/src/',
+    build_root : 'app-sp/'
+};
+
+/*------------------------------------------------------------------
+    src
+------------------------------------------------------------------*/
 var src = {
-    ect      : 'app-sp/src/template/main/*.ect',
-    css      : 'app-sp/src/sass/**/*.scss',
-    iconfont : ['app-sp/src/img/font/*.svg'],
-    font     : 'app-sp/src/img/font/template.scss',
-    html     : 'app-sp/src/img/font/template.html',
+    ect      : PATH.src + 'src/template/main/*.ect',
+    css      : PATH.src + 'src/sass/**/*.scss',
+    iconfont : [PATH.src + 'src/img/font/*.svg'],
+    font     : PATH.src + 'src/img/font/template.scss',
+    html     : PATH.src + 'src/img/font/template.html',
     js       : [
         'bower_components/jquery/dist/jquery.js',
         'bower_components/lodash/lodash.js',
         'bower_components/underscore.string/dist/underscore.string.js',
-        'app-sp/src/js/router/*.js',
-        'app-sp/src/js/model/*.js',
-        'app-sp/src/js/collection/*.js',
-        'app-sp/src/js/view/*.js',
-        'app-sp/src/js/component_manager.js',
-        'app-sp/src/js/application.js'
+        PATH.src + 'src/js/router/*.js',
+        PATH.src + 'src/js/model/*.js',
+        PATH.src + 'src/js/collection/*.js',
+        PATH.src + 'src/js/view/*.js',
+        PATH.src + 'src/js/component_manager.js',
+        PATH.src + 'src/js/application.js'
     ],
     js_hint  : [
-        'app-sp/src/js/**/*.js',
-        '!app-sp/src/js/vendor/*.js'
+        PATH.src + 'src/js/**/*.js',
+        PATH.ignore_src + '/js/vendor/*.js'
     ],
     js_validate : [
-        'app-sp/src/js/**/*.js',
-        '!app-sp/src/js/vendor/*.js'
+        PATH.src + 'src/js/**/*.js',
+        PATH.ignore_src + '/js/vendor/*.js'
     ],
     scsslint : [
-        'app-sp/src/sass/**/*.scss',
-        '!app-sp/src/sass/foundation/_style-normalize.scss',
-        '!app-sp/src/sass/setup/_sprites.scss'
+        PATH.src + 'src/sass/**/*.scss',
+        PATH.ignore_src + '/sass/foundation/_style-normalize.scss',
+        PATH.ignore_src + '/sass/setup/_sprites.scss'
     ]
 };
 
+/*------------------------------------------------------------------
+    dest
+------------------------------------------------------------------*/
 var dest = {
-    ect       : 'app-sp/',
-    css       : 'app-sp/css/',
-    iconfont  : 'app-sp/font/',
-    font      : 'app-sp/src/sass/ui/',
+    ect       : PATH.build_root + '',
+    css       : PATH.build_root + 'css/',
+    iconfont  : PATH.build_root + 'font/',
+    font      : PATH.build_root + 'src/sass/ui/',
     html      : './',
-    js_concat : 'app-sp/js/'
+    js_concat : PATH.build_root + 'js/'
 };
 
 /*------------------------------------------------------------------
@@ -82,7 +94,7 @@ module.exports = {
         html : {
             src  : src.html,
             rename_options : {
-                basename　: 'app-sp/src/img/font/font-preview'
+                basename　: PATH.src + 'src/img/font/font-preview'
             },
             dest : dest.html
         }
@@ -100,5 +112,17 @@ module.exports = {
     },
     scsslint : {
         src : src.scsslint
+    },
+    watch : {
+        ect      : PATH.src + 'template/**/*.ect',
+        iconfont : PATH.src + 'img/font/*.svg',
+        css      : PATH.src + 'sass/**/**/*.scss',
+        js       : [PATH.src + 'js/**/*.js', PATH.ignore_src + 'js/jst.js'],
+        jst      : PATH.src + 'js/template/*.html.tmpl'
+    },
+    json_server : {
+        data    : "gulp/mock.json",
+        port    : 12345,
+        baseUrl : "/api"
     }
 };
