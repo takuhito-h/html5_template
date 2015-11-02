@@ -3,6 +3,11 @@
     config-sp
 
 ------------------------------------------------------------------------------------------------*/
+var webpack = require("webpack");
+
+/*------------------------------------------------------------------
+    PATH
+------------------------------------------------------------------*/
 var PATH = {
     src        : 'app-sp/src',
     ignore_src : '!app-sp/src',
@@ -131,5 +136,25 @@ module.exports = {
         data    : "gulp/mock.json",
         port    : 12345,
         baseUrl : "/api"
+    },
+    webpack : {
+        entry  : './' + PATH.src + '/js/application.js',
+        output : {
+            filename : './' + PATH.build_root + '/js/script.min.js'
+        },
+        module : {
+            loaders : [
+                { test : /\.jsx$/, loader: 'jsx-loader' }
+            ]
+        },
+        resolve : {
+            extensions : ['', '.js', '.jsx'],
+            modulesDirectories: ["node_modules", "bower_components"]
+        },
+        plugins : [
+            new webpack.ResolverPlugin([
+                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+            ], ["normal", "loader"])
+        ]
     }
 };

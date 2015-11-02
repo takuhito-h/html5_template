@@ -1,37 +1,38 @@
 (function(global){
     "use strict";
 
+    var _ = require('lodash');
+
+    var COMPONENT_DEFS = require("./_setting_component_defs");
+
     /*------------------------------------------------------------------
-        コンポーネントの設定
+        COMPONENT_DEFSを元にコンポーネント読み込み
     ------------------------------------------------------------------*/
-    var COMPONENT_DEFS = {
-        /*galleryModal : {
-            view     : "galleryModal",
-            query    : ".js-gallery-modal-wrapper",
-            settings : {}
-        }*/
-    };
+    function ComponentsRead(){
+        var returnComponents = {};
+
+        _.each(COMPONENT_DEFS, function(val, name){
+            returnComponents[name] = require("./view/" + name);
+        });
+
+        return returnComponents;
+    }
 
     /*------------------------------------------------------------------
         COMPONENT_DEFSを元にviewインスタンスを生成
     ------------------------------------------------------------------*/
     function ComponentsRun(){
-        _.each(COMPONENT_DEFS, function(val, name){
+        var components = ComponentsRead();
 
-            _.each(document.querySelectorAll(val.query), function(element, i){
-                new global.openers.view[val.view]({
-                    el: element,
-                    options: val.settings
+        _.each(COMPONENT_DEFS, function(val, name){
+            _.each(document.querySelectorAll(val.target), function(element, i){
+                new components[name]({
+                    el      : element,
+                    options : val.settings
                 });
             });
-
         });
     }
 
-    if(global.openers === undefined){
-        global.openers = {};
-    }
-
-    global.openers.componentsRun = ComponentsRun;
-
+    module.exports = ComponentsRun;
 })(window);
