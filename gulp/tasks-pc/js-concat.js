@@ -22,10 +22,10 @@ gulp.task('js:pc', function() {
         .pipe(isRelease ? gutil.noop() : sourcemaps.init({
             loadMaps : true
         }))
-            .pipe(concat(config.file_name))
-            .pipe(uglify())
+        .pipe(concat(config.file_name))
+        .pipe(isRelease ? uglify() : gutil.noop())
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))
-            .pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.dest))
     ;
 
 });
