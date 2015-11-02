@@ -39,5 +39,5 @@ gulp.task('build-css:sp', function() {
     js
 ------------------------------------------------------------------*/
 gulp.task('build-js:sp', function() {
-    gulp.start(['jsvalidate:sp', 'js:sp']);
+    gulp.start(['jsvalidate:sp', 'webpack:sp']);
 });

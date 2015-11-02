@@ -39,5 +39,5 @@ gulp.task('build-css:pc', function() {
     js
 ------------------------------------------------------------------*/
 gulp.task('build-js:pc', function() {
-    gulp.start(['jsvalidate:pc', 'js:pc']);
+    gulp.start(['jsvalidate:pc', 'webpack:pc']);
 });
