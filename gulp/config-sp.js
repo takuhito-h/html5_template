@@ -51,7 +51,7 @@ var dest = {
     ect       : PATH.build_root + '',
     css       : PATH.build_root + 'css/',
     iconfont  : PATH.build_root + 'font/',
-    font      : PATH.build_root + 'src/sass/ui/',
+    font      : PATH.src + 'src/sass/ui/',
     html      : './',
     js_concat : PATH.build_root + 'js/'
 };
