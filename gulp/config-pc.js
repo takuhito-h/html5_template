@@ -127,5 +127,23 @@ module.exports = {
         js       : [PATH.src + '/js/**/*.js', PATH.ignore_src + '/js/jst.js'],
         jst      : PATH.src + '/js/template/*.html.tmpl'
     },
+    webpack : {
+        entry  : './' + PATH.src + '/js/application.js',
+        output : {
+            filename : './' + PATH.build_root + '/javascripts/script.min.js'
+        },
+        module : {
+            loaders : [
+                { test : /\.jsx$/, loader: 'jsx-loader' }
+            ]
+        },
+        resolve : {
+            extensions : ['', '.js', '.jsx'],
+            alias      : {
+                "jquery"  : "../../../bower_components/jquery/dist/jquery.js",
+                "flat-ui" : "../../../bower_components/flat-ui/dist/js/flat-ui.js"
+            }
+        },
+        plugins : []
     }
 };
