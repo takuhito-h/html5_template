@@ -1,11 +1,16 @@
 var requireDir = require('require-dir');
 
 /*------------------------------------------------------------------
+    tasks-common
+------------------------------------------------------------------*/
+requireDir('./gulp/tasks-common', { recurse : true });
+
+/*------------------------------------------------------------------
     tasks-pc
 ------------------------------------------------------------------*/
-requireDir('./gulp/tasks-pc', { recurse: true });
+requireDir('./gulp/tasks-pc', { recurse : true });
 
 /*------------------------------------------------------------------
     tasks-sp
 ------------------------------------------------------------------*/
-requireDir('./gulp/tasks-sp', { recurse: true });
+requireDir('./gulp/tasks-sp', { recurse : true });

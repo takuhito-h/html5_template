@@ -1,11 +1,15 @@
 /*------------------------------------------------------------------------------------------------
 
-    default
+    web-server
 
 ------------------------------------------------------------------------------------------------*/
-var gulp = require('gulp');
+var gulp      = require('gulp');
+var webserver = require('gulp-connect-php');
+var config    = require('../config-common').web_server;
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('default', ['watch:pc', 'watch:sp']);
+gulp.task('webserver', function() {
+    webserver.server(config.setting);
+});

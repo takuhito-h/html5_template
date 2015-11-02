@@ -127,9 +127,5 @@ module.exports = {
         js       : [PATH.src + '/js/**/*.js', PATH.ignore_src + '/js/jst.js'],
         jst      : PATH.src + '/js/template/*.html.tmpl'
     },
-    json_server : {
-        data    : "gulp/mock.json",
-        port    : 12345,
-        baseUrl : "/api"
     }
 };

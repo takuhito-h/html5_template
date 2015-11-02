@@ -1,20 +1,11 @@
 /*------------------------------------------------------------------------------------------------
 
-    json-mock
+    default
 
 ------------------------------------------------------------------------------------------------*/
-var gulp       = require('gulp');
-var jsonserver = require('gulp-json-srv');
-var watch      = require('gulp-watch');
-var config     = require('../config-pc').json_server;
+var gulp = require('gulp');
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('json-mock', function() {
-    var server = jsonserver.start(config);
-
-    watch('gulp/mock.json', function(){
-        server.reload();
-    });
-});
+gulp.task('default', ['webserver', 'jsonmock', 'build:pc', 'build:sp', 'watch:pc', 'watch:sp']);

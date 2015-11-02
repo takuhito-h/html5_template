@@ -6,15 +6,15 @@
 var gulp       = require('gulp');
 var jsonserver = require('gulp-json-srv');
 var watch      = require('gulp-watch');
-var config     = require('../config-sp').json_server;
+var config     = require('../config-common').json_server;
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('json-mock', function() {
-    var server = jsonserver.start(config);
+gulp.task('jsonmock', function() {
+    var server = jsonserver.start(config.setting);
 
-    watch('gulp/mock.json', function(){
+    watch(config.watch_path, function(){
         server.reload();
     });
 });
