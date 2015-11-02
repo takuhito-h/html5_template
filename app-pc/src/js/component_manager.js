@@ -1,6 +1,8 @@
 (function(global){
     "use strict";
 
+    var _ = require('lodash');
+
     var COMPONENT_DEFS = require("./_setting_component_defs");
 
     /*------------------------------------------------------------------
@@ -23,13 +25,12 @@
         var components = ComponentsRead();
 
         _.each(COMPONENT_DEFS, function(val, name){
-            _.each(document.querySelectorAll(val.query), function(element, i){
-                new components[val.view]({
-                    el: element,
-                    options: val.settings
+            _.each(document.querySelectorAll(val.target), function(element, i){
+                new components[name]({
+                    el      : element,
+                    options : val.settings
                 });
             });
-
         });
     }
 

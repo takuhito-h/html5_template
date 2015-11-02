@@ -3,6 +3,11 @@
     config-pc
 
 ------------------------------------------------------------------------------------------------*/
+var webpack = require("webpack");
+
+/*------------------------------------------------------------------
+    PATH
+------------------------------------------------------------------*/
 var PATH = {
     src        : 'app-pc/src',
     ignore_src : '!app-pc/src',
@@ -130,7 +135,7 @@ module.exports = {
     webpack : {
         entry  : './' + PATH.src + '/js/application.js',
         output : {
-            filename : './' + PATH.build_root + '/javascripts/script.min.js'
+            filename : './' + PATH.build_root + '/js/script.min.js'
         },
         module : {
             loaders : [
@@ -139,11 +144,12 @@ module.exports = {
         },
         resolve : {
             extensions : ['', '.js', '.jsx'],
-            alias      : {
-                "jquery"  : "../../../bower_components/jquery/dist/jquery.js",
-                "flat-ui" : "../../../bower_components/flat-ui/dist/js/flat-ui.js"
-            }
+            modulesDirectories: ["node_modules", "bower_components"]
         },
-        plugins : []
+        plugins : [
+            new webpack.ResolverPlugin([
+                new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+            ], ["normal", "loader"])
+        ]
     }
 };
