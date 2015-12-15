@@ -1,7 +1,7 @@
 var exec    = require('child_process').exec;
 var command = 'gulp build';
 
-describe('gulp', function(){
+describe('gulp build', function(){
     it('gulp command', function(done){
         exec(command, {
             timeout : 1000
