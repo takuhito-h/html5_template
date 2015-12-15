@@ -6,8 +6,6 @@ describe('gulp build', function(){
         exec(command, {
             timeout : 1000
         }, function(error, stdout, stderr){
-            console.log(error, stdout, stderr);
-
             done();
         });
     });
