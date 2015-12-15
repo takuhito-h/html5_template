@@ -2,7 +2,7 @@
 
 個人的なhtml5制作の為のテンプレートファイル。
 
-##使用アーキテクチャ
+## アーキテクチャ
 ### フロントエンドビルドツール
 *   Gulp
 
@@ -12,8 +12,21 @@
 ### CSS
 *   Normalize.css
 *   SCSS
-*   Autoprefixer
+*   cssnext
 
 ### Javascript
-*   jQuery
+*   WebPack
 *   html5shiv.js
+*   lodash
+*   underscore.string
+*   Backbone
+*   Marionette
+*   jQuery
+
+### WebFont
+*   iconfont
+
+### Linting
+*   JSValidate
+*   JSHint
+*   SCSSLint
