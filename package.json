@@ -35,6 +35,7 @@
   },
   "private": true,
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "postinstall": "bower install && gulp build"
   }
 }
