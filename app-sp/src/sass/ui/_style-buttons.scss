@@ -32,7 +32,7 @@
         background-image: linear-gradient(to left top, #918f8f 0%, #b0b0b0 100%);
     }
 
-    &:before {
+    &::before {
         opacity: 0.5;
         border-radius: 12px;
         content: "";

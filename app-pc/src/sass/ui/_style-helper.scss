@@ -9,7 +9,7 @@
 //  clearfix
 //------------------------------------------------------------------
 .clearfix{
-    &:after{
+    &::after{
         content: "";
         display: table;
         clear: both;
@@ -140,9 +140,9 @@
 //  「NEW!」を表示する
 //--------------------------------------------------------------------
 .is-newcontent{
-    &:after{
+    &::after{
         content: "NEW!";
-        color: #f33;
+        color: #ff3333;
         font-size: 80%;
         font-weight: normal;
     }
