@@ -2,6 +2,8 @@
 
     "use strict";
 
+    var Backbone = require("backbone");
+
     var TemplateModel = Backbone.Model.extend({
     });
 
