@@ -1,7 +1,7 @@
 (function(global){
     "use strict";
 
-    var _ = require('lodash');
+    var _ = require("lodash");
 
     var COMPONENT_DEFS = require("./_setting_component_defs");
 
