@@ -79,7 +79,7 @@ module.exports = {
             outputStyle : 'compressed'
         },
         cssnext      : {
-            autoprefixer : ['last 3 versions', "ie 8"]
+            browsers : ['last 3 versions']
         },
         dest         : dest.css
     },
