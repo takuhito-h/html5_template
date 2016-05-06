@@ -20,11 +20,6 @@ body{
     overflow-y: scroll;
 }
 
-// for IE6
-* html body{
-    font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-}
-
 //------------------------------------------------------------------
 //  リセット
 //------------------------------------------------------------------
@@ -94,7 +89,7 @@ a{
 a:hover,
 input[type="submit"]:hover,
 button:hover{
-    @include opacity(0.6);
+    opacity: 0.6;
 }
 
 button:active,
