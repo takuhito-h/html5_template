@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: "<%= fontName %>";
-    src: url('<%= fontPath %><%= fontName %>.eot?c=<%= timeStamp %>');
-    src: url('<%= fontPath %><%= fontName %>.eot?#iefix&c=<%= timeStamp %>') format('eot'),
-        url('<%= fontPath %><%= fontName %>.woff?c=<%= timeStamp %>') format('woff'),
-        url('<%= fontPath %><%= fontName %>.ttf?c=<%= timeStamp %>') format('truetype'),
-        url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>?c=<%= timeStamp %>') format('svg');
+    src: url('<%= fontPath %><%= fontName %>.eot?c=<%= timeStamp %>'); /* IE9 Compat Modes */
+    src: url('<%= fontPath %><%= fontName %>.eot?#iefix&c=<%= timeStamp %>') format('eot'), /* IE6-IE8 */
+        url('<%= fontPath %><%= fontName %>.woff?c=<%= timeStamp %>') format('woff'), /* Pretty Modern Browsers */
+        url('<%= fontPath %><%= fontName %>.ttf?c=<%= timeStamp %>') format('truetype'), /* Safari, Android, iOS */
+        url('<%= fontPath %><%= fontName %>.svg#<%= fontName %>?c=<%= timeStamp %>') format('svg'); /* Legacy iOS */
     font-weight: normal;
     font-style: normal;
 }
