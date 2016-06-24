@@ -57,7 +57,7 @@ var dest = {
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',
     font      : PATH.src + '/sass/ui/',
-    html      : './',
+    html      : PATH.src + '/img/font/',
     js_concat : PATH.build_root + '/js/'
 };
 
@@ -106,7 +106,7 @@ module.exports = {
         html : {
             src  : src.html,
             rename_options : {
-                basename　: PATH.src + '/img/font/font-preview'
+                basename　: 'font-preview'
             },
             dest : dest.html
         }
