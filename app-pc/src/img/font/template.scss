@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @font-face {
     font-family: "<%= fontName %>";
     src: url('<%= fontPath %><%= fontName %>.eot?c=<%= timeStamp %>');
@@ -34,5 +36,5 @@
 }
 
 <% _.each(glyphs, function(glyph) { %>
-.<%= className %>-<%= glyph.name.slice(5) %>:before { content: "\<%= glyph.codepoint.toString(16).toUpperCase() %>" }
+.<%= className %>-<%= glyph.name.slice(5) %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
 <% }); %>

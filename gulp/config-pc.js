@@ -90,7 +90,7 @@ module.exports = {
             fontName       : 'icon',
             startCodepoint : 0xF001,
         },
-        codepoint_options : {
+        consolidate_options : {
             fontName  : 'icon',
             fontPath  : '../font/', // フォントパスをCSSからの相対パスで指定
             className : 'icon', // CSSのフォントのクラス名を指定
