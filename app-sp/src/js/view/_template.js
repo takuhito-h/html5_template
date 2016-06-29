@@ -8,14 +8,5 @@
         }
     });
 
-    if(global.openers === undefined){
-        global.openers = {};
-    }
-
-    if(global.openers.view === undefined){
-        global.openers.view = {};
-    }
-
-    global.openers.view.template = Template;
-
+    module.exports = Template;
 })(window);*/
