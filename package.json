@@ -36,6 +36,6 @@
   "private": true,
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "postinstall": "bower install && gulp build"
+    "postinstall": "bower install && gulp build:pc && gulp build:sp"
   }
 }
