@@ -15,10 +15,9 @@ module.exports = {
     },
     json_server : {
         setting : {
-            data    : "gulp/mock.json",
             port    : 12345,
             baseUrl : "/api"
         },
-        watch_path : 'gulp/mock.json'
+        data : 'gulp/mock.json'
     }
 };

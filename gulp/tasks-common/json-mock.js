@@ -12,9 +12,12 @@ var config     = require('../config-common').json_server;
     task
 ------------------------------------------------------------------*/
 gulp.task('jsonmock', function() {
-    var server = jsonserver.start(config.setting);
+    var server = jsonserver.create(config.setting);
 
-    watch(config.watch_path, function(){
+    watch(config.data, function(){
         server.reload();
     });
+
+    return gulp.src(config.data)
+        .pipe(server.pipe());
 });
