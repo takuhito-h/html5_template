@@ -3,15 +3,15 @@
     css
 
 ------------------------------------------------------------------------------------------------*/
-var gulp       = require('gulp');
-var gutil      = require('gulp-util');
-var sass       = require('gulp-sass');
-var sassGlob   = require("gulp-sass-glob");
-var cssnext    = require('gulp-cssnext');
-var sourcemaps = require('gulp-sourcemaps');
-var config     = require('../config-pc').css;
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import sass from 'gulp-sass';
+import sassGlob from 'gulp-sass-glob';
+import cssnext from 'gulp-cssnext';
+import sourcemaps from 'gulp-sourcemaps';
 
-var isRelease = gutil.env.release ? gutil.env.release : false;
+const config = require('../config-pc').css;
+const isRelease = gutil.env.release ? gutil.env.release : false;
 
 /*------------------------------------------------------------------
     task

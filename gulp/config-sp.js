@@ -3,7 +3,7 @@
     config-sp
 
 ------------------------------------------------------------------------------------------------*/
-var webpack = require("webpack");
+import webpack from 'webpack';
 
 /**
  * 各種ディレクトリのパスを設定する。
@@ -12,7 +12,7 @@ var webpack = require("webpack");
  * build_root : ビルドファイルの設置先ディレクトリを設定。
  * @type {Object}
  */
-var PATH = {
+const PATH = {
     src        : 'app-sp/src',
     ignore_src : '!app-sp/src',
     build_root : 'app-sp'
@@ -22,7 +22,7 @@ var PATH = {
  * 各種ソースファイルのパスを設定。
  * @type {Object}
  */
-var src = {
+const src = {
     ect      : PATH.src + '/template/main/*.ect',
     css      : PATH.src + '/sass/**/*.scss',
     iconfont : [PATH.src + '/img/font/*.svg'],
@@ -58,7 +58,7 @@ var src = {
  * 各種ビルド結果のファイルを出力するディレクトリを設定。
  * @type {Object}
  */
-var dest = {
+const dest = {
     ect       : PATH.build_root + '',
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',

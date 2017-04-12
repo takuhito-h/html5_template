@@ -3,10 +3,11 @@
     ect
 
 ------------------------------------------------------------------------------------------------*/
-var gulp     = require('gulp');
-var ect      = require('gulp-ect');
-var prettify = require('gulp-prettify');
-var config   = require('../config-sp').ect;
+import gulp from 'gulp';
+import ect from 'gulp-ect';
+import prettify from 'gulp-prettify';
+
+const config = require('../config-sp').ect;
 
 /*------------------------------------------------------------------
     task

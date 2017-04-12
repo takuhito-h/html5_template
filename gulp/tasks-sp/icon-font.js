@@ -3,12 +3,13 @@
     icon-font
 
 ------------------------------------------------------------------------------------------------*/
-var _           = require('lodash');
-var gulp        = require('gulp');
-var rename      = require("gulp-rename");
-var iconfont    = require('gulp-iconfont');
-var consolidate = require('gulp-consolidate');
-var config      = require('../config-sp').iconfont;
+import _  from 'lodash';
+import gulp from 'gulp';
+import rename from 'gulp-rename';
+import iconfont from 'gulp-iconfont';
+import consolidate from 'gulp-consolidate';
+
+const config = require('../config-sp').iconfont;
 
 /*------------------------------------------------------------------
     task

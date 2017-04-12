@@ -3,9 +3,10 @@
     js-validate
 
 ------------------------------------------------------------------------------------------------*/
-var gulp       = require('gulp');
-var jsvalidate = require('gulp-jsvalidate');
-var config     = require('../config-pc').js_validate;
+import gulp from 'gulp';
+import jsvalidate from 'gulp-jsvalidate';
+
+const config = require('../config-pc').js_validate;
 
 /*------------------------------------------------------------------
     task

@@ -3,9 +3,10 @@
     web-server
 
 ------------------------------------------------------------------------------------------------*/
-var gulp      = require('gulp');
-var webserver = require('gulp-connect-php');
-var config    = require('../config-common').web_server;
+import gulp from 'gulp';
+import webserver from 'gulp-connect-php';
+
+const config = require('../config-common').web_server;
 
 /*------------------------------------------------------------------
     task

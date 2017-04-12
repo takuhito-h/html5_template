@@ -3,16 +3,17 @@
     json-mock
 
 ------------------------------------------------------------------------------------------------*/
-var gulp       = require('gulp');
-var jsonserver = require('gulp-json-srv');
-var watch      = require('gulp-watch');
-var config     = require('../config-common').json_server;
+import gulp from 'gulp';
+import jsonserver from 'gulp-json-srv';
+import watch from 'gulp-watch';
+
+const config = require('../config-common').json_server;
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('jsonmock', function() {
-    var server = jsonserver.create(config.setting);
+    const server = jsonserver.create(config.setting);
 
     watch(config.data, function(){
         server.reload();

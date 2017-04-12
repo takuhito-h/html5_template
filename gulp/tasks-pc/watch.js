@@ -3,9 +3,10 @@
     watch
 
 ------------------------------------------------------------------------------------------------*/
-var gulp   = require('gulp');
-var watch  = require('gulp-watch');
-var config = require('../config-pc').watch;
+import gulp from 'gulp';
+import watch from 'gulp-watch';
+
+const config = require('../config-pc').watch;
 
 /*------------------------------------------------------------------
     task

@@ -3,13 +3,13 @@
     webpack
 
 ------------------------------------------------------------------------------------------------*/
-var gulp    = require('gulp');
-var gutil   = require('gulp-util');
-var webpack = require('webpack-stream');
-var uglify  = require('gulp-uglify');
-var config  = require('../config-sp').webpack;
+import gulp from 'gulp';
+import gutil from 'gulp-util';
+import webpack from 'webpack-stream';
+import uglify from 'gulp-uglify';
 
-var isRelease = gutil.env.release ? gutil.env.release : false;
+const config  = require('../config-sp').webpack;
+const isRelease = gutil.env.release ? gutil.env.release : false;
 
 /*------------------------------------------------------------------
     task

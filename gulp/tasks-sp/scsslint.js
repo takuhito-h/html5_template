@@ -3,9 +3,10 @@
     scsslint
 
 ------------------------------------------------------------------------------------------------*/
-var gulp     = require('gulp');
-var scsslint = require('gulp-scss-lint');
-var config   = require('../config-sp').scsslint;
+import gulp from 'gulp';
+import scsslint from 'gulp-scss-lint';
+
+const config = require('../config-sp').scsslint;
 
 /*------------------------------------------------------------------
     task
