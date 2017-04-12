@@ -6,6 +6,7 @@
 var gulp       = require('gulp');
 var gutil      = require('gulp-util');
 var sass       = require('gulp-sass');
+var sassGlob   = require("gulp-sass-glob");
 var cssnext    = require('gulp-cssnext');
 var sourcemaps = require('gulp-sourcemaps');
 var config     = require('../config-sp').css;
@@ -19,6 +20,7 @@ gulp.task('css:sp', function() {
 
     return gulp.src(config.src)
         .pipe(sourcemaps.init())
+            .pipe(sassGlob())
             .pipe(sass(config.sass).on('error', sass.logError))
             .pipe(cssnext(config.cssnext))
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))

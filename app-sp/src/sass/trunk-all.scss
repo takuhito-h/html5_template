@@ -15,10 +15,7 @@
 //--------------------------------------------------------------------
 //  Layout Import
 //--------------------------------------------------------------------
-@import "layout/style-wrapper";
-@import "layout/style-header";
-@import "layout/style-main";
-@import "layout/style-footer";
+@import "layout/**";
 
 //------------------------------------------------------------------
 //  UI Helper
@@ -30,7 +27,7 @@
 //------------------------------------------------------------------
 //  UI Box
 //----------------------------------------------------------------*/
-@import "ui/style-components";
+@import "ui/components/**";
 @import "ui/style-boxes";
 @import "ui/style-lists";
 
