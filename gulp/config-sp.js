@@ -106,7 +106,7 @@ module.exports = {
         font : {
             src : src.font,
             rename_options : {
-                basename　: '_style-icon'
+                basename　: '_icon'
             },
             dest : dest.font
         },
