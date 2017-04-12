@@ -164,13 +164,7 @@ module.exports = {
         plugins : [
             new webpack.ResolverPlugin([
                 new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
-            ], ["normal", "loader"]),
-            new webpack.optimize.UglifyJsPlugin({
-                comments: false,
-                compress: {
-                    warnings: false
-                }
-            })
+            ], ["normal", "loader"])
         ]
     }
 };
