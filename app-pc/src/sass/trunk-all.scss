@@ -10,7 +10,7 @@
 //  Foundation Import
 //--------------------------------------------------------------------
 @import "../../../bower_components/modularized-normalize-scss/normalize";
-@import "foundation/style-base";
+@import "foundation/base";
 
 //--------------------------------------------------------------------
 //  Layout Import
@@ -20,22 +20,22 @@
 //------------------------------------------------------------------
 //  UI Helper
 //----------------------------------------------------------------*/
-@import "ui/style-sprites";
-// @import "ui/style-icon";
-@import "ui/style-helper";
+@import "ui/sprites";
+// @import "ui/icon";
+@import "ui/helper";
 
 //------------------------------------------------------------------
 //  UI Box
 //----------------------------------------------------------------*/
 @import "ui/components/**";
-@import "ui/style-boxes";
-@import "ui/style-lists";
+@import "ui/boxes";
+@import "ui/lists";
 
 //------------------------------------------------------------------
 //  UI Parts
 //----------------------------------------------------------------*/
-@import "ui/style-buttons";
-@import "ui/style-forms";
-@import "ui/style-headings";
-@import "ui/style-menus";
-@import "ui/style-tables";
+@import "ui/buttons";
+@import "ui/forms";
+@import "ui/headings";
+@import "ui/menus";
+@import "ui/tables";

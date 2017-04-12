@@ -27,7 +27,7 @@ app-sp/js/*.map
 app-sp/img/sprite.png
 
 font-preview.html
-_style-icon.scss
+_icon.scss
 
 # sprite用の生成scssを除外
 src/sass/setup/_sprites.scss
