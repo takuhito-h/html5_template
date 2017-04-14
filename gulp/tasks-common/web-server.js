@@ -5,8 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import webserver from 'gulp-connect-php';
-
-const config = require('../config-common').web_server;
+import { web_server as config } from '../config-common';
 
 /*------------------------------------------------------------------
     task

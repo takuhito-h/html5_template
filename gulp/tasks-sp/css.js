@@ -9,8 +9,8 @@ import sass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import cssnext from 'gulp-cssnext';
 import sourcemaps from 'gulp-sourcemaps';
+import { css as config } from '../config-sp';
 
-const config = require('../config-sp').css;
 const isRelease = gutil.env.release ? gutil.env.release : false;
 
 /*------------------------------------------------------------------

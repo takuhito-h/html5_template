@@ -6,8 +6,7 @@
 import gulp from 'gulp';
 import jsonserver from 'gulp-json-srv';
 import watch from 'gulp-watch';
-
-const config = require('../config-common').json_server;
+import { json_server as config } from '../config-common';
 
 /*------------------------------------------------------------------
     task

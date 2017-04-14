@@ -8,8 +8,7 @@ import gulp from 'gulp';
 import rename from 'gulp-rename';
 import iconfont from 'gulp-iconfont';
 import consolidate from 'gulp-consolidate';
-
-const config = require('../config-pc').iconfont;
+import { iconfont as config } from '../config-pc';
 
 /*------------------------------------------------------------------
     task

@@ -5,8 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import jshint from 'gulp-jshint';
-
-const config = require('../config-pc').js_hint;
+import { js_hint as config } from '../config-pc';
 
 /*------------------------------------------------------------------
     task

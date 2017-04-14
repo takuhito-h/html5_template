@@ -7,8 +7,8 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import webpack from 'webpack-stream';
 import uglify from 'gulp-uglify';
+import { webpack as config } from '../config-pc';
 
-const config  = require('../config-pc').webpack;
 const isRelease = gutil.env.release ? gutil.env.release : false;
 
 /*------------------------------------------------------------------

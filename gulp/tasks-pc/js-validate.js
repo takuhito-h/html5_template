@@ -5,8 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import jsvalidate from 'gulp-jsvalidate';
-
-const config = require('../config-pc').js_validate;
+import { js_validate as config } from '../config-pc';
 
 /*------------------------------------------------------------------
     task

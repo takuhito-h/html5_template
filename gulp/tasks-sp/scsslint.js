@@ -5,8 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import scsslint from 'gulp-scss-lint';
-
-const config = require('../config-sp').scsslint;
+import { scsslint as config } from '../config-sp';
 
 /*------------------------------------------------------------------
     task

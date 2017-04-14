@@ -5,8 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import watch from 'gulp-watch';
-
-const config = require('../config-sp').watch;
+import { watch as config } from '../config-sp';
 
 /*------------------------------------------------------------------
     task

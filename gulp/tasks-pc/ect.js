@@ -6,8 +6,7 @@
 import gulp from 'gulp';
 import ect from 'gulp-ect';
 import prettify from 'gulp-prettify';
-
-const config = require('../config-pc').ect;
+import { ect as config } from '../config-pc';
 
 /*------------------------------------------------------------------
     task
