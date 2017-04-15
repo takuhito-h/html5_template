@@ -28,17 +28,6 @@ const src = {
     iconfont : [PATH.src + '/img/font/*.svg'],
     font     : PATH.src + '/img/font/template.scss',
     html     : PATH.src + '/img/font/template.html',
-    js       : [
-        'bower_components/jquery/dist/jquery.js',
-        'bower_components/lodash/lodash.js',
-        'bower_components/underscore.string/dist/underscore.string.js',
-        PATH.src + '/js/router/*.js',
-        PATH.src + '/js/model/*.js',
-        PATH.src + '/js/collection/*.js',
-        PATH.src + '/js/view/*.js',
-        PATH.src + '/js/component_manager.js',
-        PATH.src + '/js/application.js'
-    ],
     js_hint  : [
         PATH.src + '/js/**/*.js',
         PATH.ignore_src + '/src/js/vendor/*.js'
@@ -63,8 +52,7 @@ const dest = {
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',
     font      : PATH.src + '/sass/ui/',
-    html      : PATH.src + '/img/font/',
-    js_concat : PATH.build_root + '/js'
+    html      : PATH.src + '/img/font/'
 };
 
 /**
@@ -117,11 +105,6 @@ module.exports = {
             },
             dest : dest.html
         }
-    },
-    js_concat : {
-        src : src.js,
-        file_name : 'script.min.js',
-        dest      : dest.js_concat
     },
     js_hint : {
         src : src.js_hint
