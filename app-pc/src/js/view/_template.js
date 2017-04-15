@@ -1,9 +1,9 @@
 /*
 "use strict";
 
-const Marionette = require("backbone.marionette");
+import Marionette from "backbone.marionette";
 
-const Template = Marionette.ItemView.extend({
+export default Marionette.ItemView.extend({
     initialize : function(){
     }
 });

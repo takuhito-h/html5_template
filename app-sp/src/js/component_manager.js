@@ -1,13 +1,13 @@
 "use strict";
 
-const _ = require("lodash");
-const COMPONENT_DEFS = require("./_setting_component_defs");
+import _ from "lodash";
+import COMPONENT_DEFS from "./_setting_component_defs";
 
 /*------------------------------------------------------------------
     COMPONENT_DEFSを元にコンポーネント読み込み
 ------------------------------------------------------------------*/
-function ComponentsRead(){
-    const returnComponents = {};
+const ComponentsRead = function(){
+    var returnComponents = {};
 
     _.each(COMPONENT_DEFS, function(val, name){
         returnComponents[name] = require("./view/" + name);
@@ -19,7 +19,7 @@ function ComponentsRead(){
 /*------------------------------------------------------------------
     COMPONENT_DEFSを元にviewインスタンスを生成
 ------------------------------------------------------------------*/
-function ComponentsRun(){
+const ComponentsRun = function (){
     const components = ComponentsRead();
 
     _.each(COMPONENT_DEFS, function(val, name){

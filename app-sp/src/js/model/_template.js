@@ -1,10 +1,8 @@
 /*
 "use strict";
 
-const Backbone = require('backbone');
+import Backbone from "backbone";
 
-const TemplateModel = Backbone.Model.extend({
+export default Backbone.Model.extend({
 });
-
-module.exports = AlertTest;
 */

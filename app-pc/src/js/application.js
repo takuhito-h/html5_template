@@ -1,5 +1,5 @@
 "use strict";
 
-const componentsRun = require("./component_manager");
+import manager from "./component_manager";
 
-componentsRun();
+manager();

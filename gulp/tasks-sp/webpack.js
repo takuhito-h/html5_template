@@ -14,7 +14,7 @@ const isRelease = gutil.env.release ? gutil.env.release : false;
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webpack:sp', ['jsvalidate:sp'], function () {
+gulp.task('webpack:sp', function () {
     return gulp
         .src('')
         .pipe(webpack(config))

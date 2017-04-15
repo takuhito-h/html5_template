@@ -14,7 +14,7 @@ const isRelease = gutil.env.release ? gutil.env.release : false;
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webpack:pc', ['jsvalidate:pc'], function () {
+gulp.task('webpack:pc', function () {
     return gulp
         .src('')
         .pipe(webpack(config))
