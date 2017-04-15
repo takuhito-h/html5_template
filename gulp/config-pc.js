@@ -159,7 +159,7 @@ module.exports = {
         },
         resolve : {
             extensions : ['', '.js', '.jsx'],
-            modulesDirectories: ["node_modules", "bower_components"]
+            modulesDirectories: ["node_modules"]
         },
         plugins : [
             new webpack.ResolverPlugin([
