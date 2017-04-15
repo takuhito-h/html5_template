@@ -2,6 +2,7 @@
 Thumbs.db
 .sass-cache
 npm-debug.log
+yarn-error.log
 
 .bundle/
 node_modules/
