@@ -1,7 +1,7 @@
 "use strict";
 
 import _ from "lodash";
-import COMPONENT_DEFS from "./_setting_component_defs";
+import COMPONENT_DEFS from "./_setting_component_defs.json";
 
 /*------------------------------------------------------------------
     COMPONENT_DEFSを元にコンポーネント読み込み

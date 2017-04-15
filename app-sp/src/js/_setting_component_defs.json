@@ -1,0 +1,5 @@
+{
+    "alertTest" : {
+        "target" : ".js-alert-test"
+    }
+}

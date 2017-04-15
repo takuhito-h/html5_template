@@ -152,6 +152,10 @@ module.exports = {
         module : {
             loaders : [
                 {
+                    test: /\.json$/,
+                    loader: 'json'
+                },
+                {
                     test : /\.jsx$/,
                     loader: 'jsx-loader'
                 },
@@ -163,7 +167,8 @@ module.exports = {
             ]
         },
         resolve : {
-            extensions : ['', '.js', '.jsx']
+            extensions : ['', '.js', '.jsx'],
+            modulesDirectories: ["node_modules"]
         }
     }
 };
