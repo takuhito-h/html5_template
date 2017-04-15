@@ -1,9 +1,9 @@
 /*(function(global){
     "use strict";
 
-    var Marionette = require("backbone.marionette");
+    const Marionette = require("@bower/backbone.marionette");
 
-    var Template = Marionette.ItemView.extend({
+    const Template = Marionette.ItemView.extend({
         initialize: function(){
         }
     });

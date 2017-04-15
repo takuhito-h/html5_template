@@ -1,20 +1,10 @@
-/*(function(global){
+/*
+"use strict";
 
-    "use strict";
+const Backbone = require("backbone");
 
-    var Backbone = require("backbone");
+const TemplateModel = Backbone.Model.extend({
+});
 
-    var TemplateModel = Backbone.Model.extend({
-    });
-
-    if(global.openers === undefined){
-        global.openers = {};
-    }
-
-    if(global.openers.model === undefined){
-        global.openers.model = {};
-    }
-
-    global.openers.model.templateModel = TemplateModel;
-
-})(window);*/
+module.exports = TemplateModel;
+*/

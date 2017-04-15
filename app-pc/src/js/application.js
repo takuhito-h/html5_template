@@ -1,11 +1,5 @@
-(function(global){
-    "use strict";
+"use strict";
 
-    var componentsRun = require("./component_manager");
+const componentsRun = require("./component_manager");
 
-    /*------------------------------------------------------------------
-        コンポーネント実行
-    ------------------------------------------------------------------*/
-    componentsRun();
-
-})(window);
+componentsRun();

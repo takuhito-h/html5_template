@@ -1,12 +1,12 @@
-/*(function(global){
-    "use strict";
+/*
+"use strict";
 
-    var Marionette = require("backbone.marionette");
+const Marionette = require("backbone.marionette");
 
-    var Template = Marionette.ItemView.extend({
-        initialize: function(){
-        }
-    });
+const Template = Marionette.ItemView.extend({
+    initialize : function(){
+    }
+});
 
-    module.exports = Template;
-})(window);*/
+module.exports = Template;
+*/
