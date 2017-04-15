@@ -20,10 +20,10 @@ gulp.task('watch:pc', function () {
     });
 
     watch(config.css, function(){
-        gulp.start(['build-css:pc']);
+        gulp.start(['css:pc']);
     });
 
     watch(config.js, function(){
-        gulp.start(['build-js:pc']);
+        gulp.start(['webpack:pc']);
     });
 });

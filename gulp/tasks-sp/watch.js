@@ -20,10 +20,10 @@ gulp.task('watch:sp', function () {
     });
 
     watch(config.css, function(){
-        gulp.start(['build-css:sp']);
+        gulp.start(['css:sp']);
     });
 
     watch(config.js, function(){
-        gulp.start(['build-js:sp']);
+        gulp.start(['webpack:sp']);
     });
 });
