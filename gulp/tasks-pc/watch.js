@@ -5,25 +5,25 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import watch from 'gulp-watch';
-import { watch as config } from '../config-pc';
+import setting from '../setting-pc/watch.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('watch:pc', function () {
-    watch(config.ect, function(){
+    watch(setting.ect, function(){
         gulp.start(['ect:pc']);
     });
 
-    watch(config.iconfont, function(){
+    watch(setting.iconfont, function(){
         gulp.start(['iconfont:pc']);
     });
 
-    watch(config.css, function(){
+    watch(setting.css, function(){
         gulp.start(['css:pc']);
     });
 
-    watch(config.js, function(){
+    watch(setting.js, function(){
         gulp.start(['webpack:pc']);
     });
 });

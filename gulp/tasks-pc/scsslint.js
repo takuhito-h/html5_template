@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import scsslint from 'gulp-scss-lint';
-import { scsslint as config } from '../config-pc';
+import setting from '../setting-pc/js-hint.js';
 
 /*------------------------------------------------------------------
     task
@@ -13,7 +13,7 @@ import { scsslint as config } from '../config-pc';
 gulp.task('scsslint:pc', function() {
 
     return gulp
-        .src(config.src)
+        .src(setting.src)
         .pipe(scsslint())
     ;
 

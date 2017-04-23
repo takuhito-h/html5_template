@@ -9,7 +9,7 @@ import sass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import cssnext from 'gulp-cssnext';
 import sourcemaps from 'gulp-sourcemaps';
-import { css as config } from '../config-pc';
+import setting from '../setting-pc/css.js';
 
 const isRelease = gutil.env.release ? gutil.env.release : false;
 
@@ -18,13 +18,13 @@ const isRelease = gutil.env.release ? gutil.env.release : false;
 ------------------------------------------------------------------*/
 gulp.task('css:pc', function() {
 
-    return gulp.src(config.src)
+    return gulp.src(setting.src)
         .pipe(sourcemaps.init())
             .pipe(sassGlob())
-            .pipe(sass(config.sass).on('error', sass.logError))
-            .pipe(cssnext(config.cssnext))
+            .pipe(sass(setting.sass).on('error', sass.logError))
+            .pipe(cssnext(setting.cssnext))
         .pipe(isRelease ? gutil.noop() : sourcemaps.write('./'))
-            .pipe(gulp.dest(config.dest))
+            .pipe(gulp.dest(setting.dest))
     ;
 
 });

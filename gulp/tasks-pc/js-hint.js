@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import jshint from 'gulp-jshint';
-import { js_hint as config } from '../config-pc';
+import setting from '../setting-pc/js-hint.js';
 
 /*------------------------------------------------------------------
     task
@@ -13,7 +13,7 @@ import { js_hint as config } from '../config-pc';
 gulp.task('jshint:pc', function() {
 
     return gulp
-        .src(config.src)
+        .src(setting.src)
         .pipe(jshint())
         .pipe(jshint.reporter('jshint-stylish'))
     ;

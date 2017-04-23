@@ -6,18 +6,18 @@
 import gulp from 'gulp';
 import jsonserver from 'gulp-json-srv';
 import watch from 'gulp-watch';
-import { json_server as config } from '../config-common';
+import setting from '../setting-common/json-server.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('jsonmock', function() {
-    const server = jsonserver.create(config.setting);
+    const server = jsonserver.create(setting.setting);
 
-    watch(config.data, function(){
+    watch(setting.data, function(){
         server.reload();
     });
 
-    return gulp.src(config.data)
+    return gulp.src(setting.data)
         .pipe(server.pipe());
 });

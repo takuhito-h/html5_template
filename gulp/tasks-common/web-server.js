@@ -5,11 +5,11 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import webserver from 'gulp-connect-php';
-import { web_server as config } from '../config-common';
+import setting from '../setting-common/web-server.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('webserver', function() {
-    webserver.server(config.setting);
+    webserver.server(setting.setting);
 });

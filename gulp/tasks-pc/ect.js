@@ -6,15 +6,15 @@
 import gulp from 'gulp';
 import ect from 'gulp-ect';
 import prettify from 'gulp-prettify';
-import { ect as config } from '../config-pc';
+import setting from '../setting-pc/ect.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('ect:pc', function(){
-    gulp.src(config.src)
+    gulp.src(setting.src)
         .pipe(ect())
-        .pipe(prettify(config.prettify))
-        .pipe(gulp.dest(config.dest))
+        .pipe(prettify(setting.prettify))
+        .pipe(gulp.dest(setting.dest))
     ;
 });

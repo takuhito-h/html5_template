@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import jsvalidate from 'gulp-jsvalidate';
-import { js_validate as config } from '../config-pc';
+import setting from '../setting-pc/js-hint.js';
 
 /*------------------------------------------------------------------
     task
@@ -13,7 +13,7 @@ import { js_validate as config } from '../config-pc';
 gulp.task('jsvalidate:pc', function() {
 
     return gulp
-        .src(config.src)
+        .src(setting.src)
         .pipe(jsvalidate())
     ;
 
