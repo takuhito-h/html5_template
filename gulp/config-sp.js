@@ -38,7 +38,6 @@ const src = {
     ],
     scsslint : [
         PATH.src + '/sass/**/*.scss',
-        PATH.ignore_src + '/sass/foundation/_style-normalize.scss',
         PATH.ignore_src + '/sass/setup/_sprites.scss'
     ]
 };
@@ -51,7 +50,7 @@ const dest = {
     ect       : PATH.build_root + '',
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',
-    font      : PATH.src + '/sass/ui/',
+    font      : PATH.src + '/sass/object/',
     html      : PATH.src + '/img/font/'
 };
 

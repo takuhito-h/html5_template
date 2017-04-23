@@ -1,41 +1,33 @@
 @charset "utf-8";
 
 //------------------------------------------------------------------
-//  Setting Import
+//  setting
 //----------------------------------------------------------------*/
-@import "setup/settings";
+@import "setup/setting";
 @import "setup/utility";
 
 //--------------------------------------------------------------------
-//  Foundation Import
+//  foundation
 //--------------------------------------------------------------------
 @import "../../../node_modules/modularized-normalize-scss/normalize";
 @import "foundation/base";
 
 //--------------------------------------------------------------------
-//  Layout Import
+//  layout
 //--------------------------------------------------------------------
 @import "layout/**";
 
 //------------------------------------------------------------------
-//  UI Helper
+//  component
 //----------------------------------------------------------------*/
-@import "ui/sprites";
-// @import "ui/icon";
-@import "ui/helper";
+@import "object/component/**";
 
 //------------------------------------------------------------------
-//  UI Box
+//  project
 //----------------------------------------------------------------*/
-@import "ui/components/**";
-@import "ui/boxes";
-@import "ui/lists";
+@import "object/project/**";
 
 //------------------------------------------------------------------
-//  UI Parts
+//  utility
 //----------------------------------------------------------------*/
-@import "ui/buttons";
-@import "ui/forms";
-@import "ui/headings";
-@import "ui/menus";
-@import "ui/tables";
+@import "object/utility/**";

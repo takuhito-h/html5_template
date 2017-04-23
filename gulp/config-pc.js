@@ -30,16 +30,15 @@ const src = {
     html     : PATH.src + '/img/font/template.html',
     js_hint  : [
         PATH.src + '/js/**/*.js',
-        PATH.ignore_src + '/src/js/vendor/*.js'
+        PATH.ignore_src + '/js/vendor/*.js'
     ],
     js_validate : [
         PATH.src + '/js/**/*.js',
-        PATH.ignore_src + '/src/js/vendor/*.js'
+        PATH.ignore_src + '/js/vendor/*.js'
     ],
     scsslint : [
         PATH.src + '/sass/**/*.scss',
-        PATH.ignore_src + '/src/sass/foundation/_style-normalize.scss',
-        PATH.ignore_src + '/src/sass/setup/_sprites.scss'
+        PATH.ignore_src + '/sass/setup/_sprites.scss'
     ]
 };
 
@@ -51,7 +50,7 @@ const dest = {
     ect       : PATH.build_root,
     css       : PATH.build_root + '/css/',
     iconfont  : PATH.build_root + '/font/',
-    font      : PATH.src + '/sass/ui/',
+    font      : PATH.src + '/sass/object/component/',
     html      : PATH.src + '/img/font/'
 };
 
@@ -88,7 +87,7 @@ module.exports = {
         consolidate_options : {
             fontName  : 'icon',
             fontPath  : '../font/', // フォントパスをCSSからの相対パスで指定
-            className : 'icon', // CSSのフォントのクラス名を指定
+            className : 'c-icon', // CSSのフォントのクラス名を指定
             timeStamp : Date.now()
         },
         font : {
