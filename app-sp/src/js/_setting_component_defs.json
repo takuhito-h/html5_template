@@ -1,5 +1,8 @@
 {
     "alertTest" : {
         "target" : ".js-alert-test"
+    },
+    "lazyLoad" : {
+        "target" : ".js-lazyload"
     }
 }
