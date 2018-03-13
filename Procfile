@@ -1,1 +1,1 @@
-web: serve app-pc
+web: serve app-pc --auth
