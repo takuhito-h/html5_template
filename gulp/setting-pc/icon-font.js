@@ -5,7 +5,8 @@ export default {
     "dest" : path.build_root + "/font/",
     "options" : {
         "fontName"       : "icon",
-        "startCodepoint" : 0xF001,
+        "startUnicode" : 0xF001,
+        "normalize" : true
     },
     "consolidate_options" : {
         "fontName"  : "icon",

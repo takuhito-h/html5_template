@@ -8,22 +8,26 @@ export default {
     "module" : {
         "loaders" : [
             {
-                "test": /\.json$/,
-                "loader" : "json"
-            },
-            {
                 "test" : /\.jsx$/,
-                "loader" : "jsx-loader"
+                "use" : [
+                    {
+                        "loader" : "jsx-loader"
+                    }
+                ]
             },
             {
                 "test" : /\.js(x?)$/,
                 "exclude" : /node_modules/,
-                "loader" : "babel-loader"
+                "use" : [
+                    {
+                        "loader" : "babel-loader"
+                    }
+                ]
             }
         ]
     },
     "resolve" : {
-        "extensions" : ["", ".js", ".jsx"],
-        "modulesDirectories" : ["node_modules"]
+        "extensions" : [".js", ".jsx"],
+        "modules" : ["node_modules"]
     }
 };

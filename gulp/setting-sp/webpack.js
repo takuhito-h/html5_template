@@ -6,24 +6,28 @@ export default {
         "filename" : "./" + path.build_root + "/js/script.min.js"
     },
     "module" : {
-        "loaders" : [
-            {
-                "test": /\.json$/,
-                "loader" : "json"
-            },
+        "rules" : [
             {
                 "test" : /\.jsx$/,
-                "loader" : "jsx-loader"
+                "use" : [
+                    {
+                        "loader" : "jsx-loader"
+                    }
+                ]
             },
             {
                 "test" : /\.js(x?)$/,
                 "exclude" : /node_modules/,
-                "loader" : "babel-loader"
+                "use" : [
+                    {
+                        "loader" : "babel-loader"
+                    }
+                ]
             }
         ]
     },
     "resolve" : {
-        "extensions" : ["", ".js", ".jsx"],
-        "modulesDirectories" : ["node_modules"]
+        "extensions" : [".js", ".jsx"],
+        "modules" : ["node_modules"]
     }
 };
