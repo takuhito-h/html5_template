@@ -41,10 +41,16 @@
   },
   "private": true,
   "scripts": {
+    "start": "nf start",
     "test": "./node_modules/.bin/mocha",
     "postinstall": "gulp build:pc && gulp build:sp"
   },
   "dependencies": {
+    "foreman": "^2.0.0",
     "serve": "^6.5.3"
-  }
+  },
+  "cacheDirectories": [
+    "bower_components",
+    "node_modules"
+  ]
 }
