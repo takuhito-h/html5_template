@@ -1,32 +1,23 @@
 "use strict";
 
 import _ from "lodash";
-import COMPONENT_DEFS from "./_setting_component_defs.json";
 
-/*------------------------------------------------------------------
-    COMPONENT_DEFSを元にコンポーネント読み込み
-------------------------------------------------------------------*/
-const ComponentsRead = function(){
-    var returnComponents = {};
+/**
+ * component_settingを元にviewインスタンスを生成
+ */
+export default class ComponentsManager {
+    constructor(component_setting) {
+        this.components = {};
+        this.component_setting = component_setting;
 
-    _.each(COMPONENT_DEFS, function(val, name){
-        returnComponents[name] = require("./view/" + name);
-    });
-
-    return returnComponents;
-}
-
-/*------------------------------------------------------------------
-    COMPONENT_DEFSを元にviewインスタンスを生成
-------------------------------------------------------------------*/
-const ComponentsRun = function (){
-    const components = ComponentsRead();
-
-    _.each(COMPONENT_DEFS, function(val, name){
-        _.each(document.querySelectorAll(val.target), function(element, i){
-            new components[name](element, val.settings);
+        _.each(this.component_setting, (value, name) => {
+            this.components[name] = require("./view/" + name);
+            this.run(value, name);
         });
-    });
-}
-
-module.exports = ComponentsRun;
+    }
+    run(value, name) {
+        _.each(document.querySelectorAll(value.target), (element, i) => {
+            new this.components[name](element, value.settings);
+        });
+    }
+};
