@@ -1,12 +1,11 @@
 /*
 "use strict";
 
-import Marionette from "backbone.marionette";
-
-export default Marionette.ItemView.extend({
-    initialize : function(){
+const Template = class {
+    constructor(element, setting) {
+        console.log(element);
     }
-});
+};
 
 module.exports = Template;
 */

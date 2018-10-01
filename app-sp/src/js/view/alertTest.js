@@ -1,11 +1,9 @@
 "use strict";
 
-import Marionette from "backbone.marionette";
-
-const AlertTest = Marionette.View.extend({
-    initialize : function(){
-        alert("aa");
+const AlertTest = class{
+    constructor(element, setting) {
+        console.log(element, setting);
     }
-});
+};
 
 module.exports = AlertTest;

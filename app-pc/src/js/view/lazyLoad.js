@@ -1,14 +1,13 @@
 "use strict";
 
-import Marionette from "backbone.marionette";
 import LazyLoadJs from "vanilla-lazyload";
 
-const Lazyload = Marionette.View.extend({
-    initialize : function(){
+const Lazyload = class{
+    constructor(element, setting) {
         var myLazyLoad = new LazyLoadJs({
-            container : this.el
+            container: element
         });
     }
-});
+};
 
 module.exports = Lazyload;

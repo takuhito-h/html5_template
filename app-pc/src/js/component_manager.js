@@ -24,10 +24,7 @@ const ComponentsRun = function (){
 
     _.each(COMPONENT_DEFS, function(val, name){
         _.each(document.querySelectorAll(val.target), function(element, i){
-            new components[name]({
-                el      : element,
-                options : val.settings
-            });
+            new components[name](element, val.settings);
         });
     });
 }
