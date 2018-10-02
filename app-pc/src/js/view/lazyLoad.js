@@ -4,7 +4,7 @@ import LazyLoadJs from "vanilla-lazyload";
 
 const Lazyload = class{
     constructor(element, setting) {
-        var myLazyLoad = new LazyLoadJs({
+        const myLazyLoad = new LazyLoadJs({
             container: element
         });
     }
