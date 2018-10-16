@@ -45,7 +45,8 @@
   },
   "dependencies": {
     "foreman": "^3.0.1",
-    "serve": "^10.0.2"
+    "serve": "^10.0.2",
+    "smooth-scroll": "^14.2.1"
   },
   "cacheDirectories": [
     "bower_components",

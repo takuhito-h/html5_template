@@ -4,5 +4,8 @@
     },
     "lazyLoad" : {
         "target" : ".js-lazyload"
+    },
+    "smoothScroll" : {
+        "target" : "body"
     }
 }
