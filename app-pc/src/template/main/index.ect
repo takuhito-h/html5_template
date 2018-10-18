@@ -1,7 +1,12 @@
 <% block "title": %>トップページ<% end %>
 <% extend "../layout/default.ect" %>
 <% include "../partials/header.ect" %>
+<div class="modal-default js-modal-wrapper">
+    <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
+    <div class="box-default">aa</div>
+</div>
 <main class="l-main js-lazyload" role="main">
+    <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">open</a>
     <h1><%= @projectName %></h1>
     <p class="js-alert-test">ここはトップページです</p>
     <br>

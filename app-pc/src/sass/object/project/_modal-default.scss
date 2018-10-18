@@ -1,0 +1,45 @@
+//--------------------------------------------------------------------------------------------------
+//
+//  modal-default
+//
+//--------------------------------------------------------------------------------------------------
+.modal-default {
+    transition: opacity 1s, visibility 0s ease 1s;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+
+    &.is-show{
+        transition-delay: 0s;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .background{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        background-color: rgba(0,0,0,0.5);
+    }
+
+    .box-default {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        background-color: #fff;
+        margin: auto;
+        padding: 50px;
+        width: 800px;
+    }
+}
