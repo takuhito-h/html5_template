@@ -10,48 +10,58 @@ body{
 }
 
 .l-drawer{
-    transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+    visibility: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+    box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-    overflow-y: scroll;
     background: #fff;
     width: 78.125%;
-    min-height: 100%;
+    height: 100%;
 
     &.modi-left{
         transform: translate3d(-100%, 0, 0);
     }
 
     .is-drawer-active &{
+        transition-delay: 0s;
+        visibility: visible;
         transform: translate3d(0, 0, 0);
         box-shadow: 0 0 21px rgba(0,0,0,0.4);
     }
-}
 
-.drawer-close{
-    display: none;
-    position: fixed;
-    left: 78.125%;
-    top: 0;
-    z-index: 10000;
-    box-sizing: border-box;
-    font-size: 2rem;
-    text-decoration: none;
-    text-align: center;
-    line-height: 60px;
-    background-color: #ddd;
-    width: 60px;
-    height: 60px;
+    .drawer-close{
+        display: none;
+        position: fixed;
+        right: -60px;
+        top: 0;
+        z-index: 10000;
+        box-sizing: border-box;
+        font-size: 2rem;
+        text-decoration: none;
+        text-align: center;
+        line-height: 60px;
+        background-color: #ddd;
+        width: 60px;
+        height: 60px;
 
-    .is-drawer-active &{
-        display: block;
+        .is-drawer-active &{
+            display: block;
+        }
+    }
+
+    .drawer-list{
+        overflow-y: scroll;
+        height: 100%;
     }
 }
 
 .l-drawer-bg{
-    display: none;
+    transition: opacity 0.4s, visibility 0s ease 0.4s;
+    opacity: 0;
+    visibility: hidden;
     position: fixed;
     top: 0;
     right: 0;
@@ -61,6 +71,8 @@ body{
     background-color: rgba(0, 0, 0, 0.65);
 
     .is-drawer-active &{
-        display: block;
+        transition-delay: 0s;
+        visibility: visible;
+        opacity: 1;
     }
 }
