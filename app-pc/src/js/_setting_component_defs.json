@@ -10,5 +10,8 @@
     },
     "modal" : {
         "target" : "body"
+    },
+    "drawer" : {
+        "target" : "body"
     }
 }
