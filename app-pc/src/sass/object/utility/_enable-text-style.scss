@@ -7,32 +7,32 @@
 
     h1{
         font-weight: bold;
-        margin: 0.67em 0;
+        margin: 0.67rem 0;
     }
 
     h2{
         font-weight: bold;
-        margin: 0.83em 0;
+        margin: 0.83rem 0;
     }
 
     h3{
         font-weight: bold;
-        margin: 1em 0;
+        margin: 1rem 0;
     }
 
     h4{
         font-weight: bold;
-        margin: 1.33em 0;
+        margin: 1.33rem 0;
     }
 
     h5{
         font-weight: bold;
-        margin: 1.67em 0;
+        margin: 1.67rem 0;
     }
 
     h6{
         font-weight: bold;
-        margin: 2.33em 0;
+        margin: 2.33rem 0;
     }
 
     ul{
@@ -52,11 +52,11 @@
 
     blockquote{
         border-left: 5px solid #8f8781;
-        margin: 1em 0;
-        padding: 0.9em 20px;
+        margin: 1rem 0;
+        padding: 0.9rem 20px;
 
         > p{
-            margin-bottom: 0.8em;
+            margin-bottom: 0.8rem;
         }
 
         > small{
@@ -64,5 +64,4 @@
             color: #999;
         }
     }
-
 }
