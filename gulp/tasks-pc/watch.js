@@ -11,8 +11,8 @@ import setting from '../setting-pc/watch.js';
     task
 ------------------------------------------------------------------*/
 gulp.task('watch:pc', function () {
-    watch(setting.ect, function(){
-        gulp.start(['ect:pc']);
+    watch(setting.nunjucks, function(){
+        gulp.start(['nunjucks:pc']);
     });
 
     watch(setting.iconfont, function(){

@@ -39,7 +39,7 @@ gulp.task('iconfont:pc', function(){
     gulp.src(setting.src)
         .pipe(iconfont(setting.options))
         .on('glyphs', function(glyphs, options) {
-            var consolidate_options = _.merge(setting.consolidate_options, {
+            const consolidate_options = _.merge(setting.consolidate_options, {
                 glyphs : glyphs
             });
 

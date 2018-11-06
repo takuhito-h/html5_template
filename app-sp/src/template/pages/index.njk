@@ -1,16 +1,9 @@
-<% block "title": %>トップページ<% end %>
-<% extend "../layout/default.ect" %>
-<% include "../partials/header.ect" %>
-<div class="modal-default js-modal-wrapper">
-    <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
-    <div class="box-default">aa</div>
-</div>
+{% block title -%}トップページ{% endblock -%}
+{% extends "_layouts/default.njk" %}
+{% include "_partials/header.njk" -%}
+{% block contents -%}
 <main class="l-main js-lazyload" role="main">
-    <% include "../component/breadcrumb.ect" %>
-    <% include "../component/contents-area.ect" %>
-    <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">open</a>
-    <a href="#" class="js-drawer-show">drawer open</a>
-    <h1><%= @projectName %></h1>
+    <h1></h1>
     <p class="js-alert-test">ここはトップページです</p>
     <br>
     <br>
@@ -74,4 +67,5 @@
     <br>
     <img data-src="http://s.yimg.jp/images/auc/pc/top/image/2.0.0/logo_yahuoku_01.png" alt="" width="268" height="60" id="anchor-logo">
 </main>
-<% include "../partials/footer.ect" %>
+{%- endblock %}
+{% include "_partials/footer.njk" -%}

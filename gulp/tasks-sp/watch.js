@@ -11,8 +11,8 @@ import setting from '../setting-sp/watch.js';
     task
 ------------------------------------------------------------------*/
 gulp.task('watch:sp', function () {
-    watch(setting.ect, function(){
-        gulp.start(['ect:sp']);
+    watch(setting.nunjucks, function(){
+        gulp.start(['nunjucks:sp']);
     });
 
     watch(setting.iconfont, function(){

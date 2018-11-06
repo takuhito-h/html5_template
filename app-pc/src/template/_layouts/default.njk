@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title><% content "title" %></title>
+    <title>{% block title -%}{% endblock %}</title>
 
     <!--//////////////     viewport設定     //////////////-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,12 +33,12 @@
     <link rel="stylesheet" href="css/trunk-all.css">
 </head>
 <body>
-    <% include "../setting/facebook-sdk.ect" %>
-    <% include "../component/drawer.ect" %>
+    {% include "_settings/facebook-sdk.njk" -%}
+    {% include "_partials/drawer.njk" -%}
     <div class="l-wrapper">
-        <% content %>
+        {% block contents -%}{% endblock -%}
     </div>
     <script src="js/script.min.js" async defer></script>
-    <% include "../setting/analytics.ect" %>
+    {% include "_settings/analytics.njk" -%}
 </body>
 </html>
