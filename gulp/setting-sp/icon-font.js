@@ -16,7 +16,7 @@ export default {
     },
     "css" : {
         "src" : path.src + '/img/font/template.scss',
-        "dest" : path.src + '/sass/object/component/',
+        "dest" : path.src + '/css/object/component/',
         "rename_options" : {
             "basename"　: "_icon"
         }

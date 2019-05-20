@@ -1,7 +1,7 @@
 import path from "./_path.json";
 
 export default {
-    "src" : path.src + "/sass/**/*.scss",
+    "src" : path.src + "/css/**/*.scss",
     "dest" : path.build_root + "/css",
     "sass" : {
         "outputStyle" : "compressed"

@@ -1,7 +1,7 @@
 import path from "./_path.json";
 
 export default {
-    "src"  : path.src + "/template/main/*.ect",
+    "src"  : path.src + "/html/main/*.ect",
     "dest" : path.build_root,
     "prettify" : {
         "indent_size" : 4,
