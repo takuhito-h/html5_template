@@ -6,7 +6,7 @@ import _ from "lodash";
  * component_settingを元にviewインスタンスを生成
  */
 export default class ComponentsManager {
-    constructor(component_setting) {
+    constructor(path, component_setting) {
         this.components = {};
         this.component_setting = component_setting;
 

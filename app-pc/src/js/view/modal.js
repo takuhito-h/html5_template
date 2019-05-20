@@ -15,17 +15,17 @@ const Modal = class{
         this.$modalClose.on("click", this.close);
     }
     open(ev) {
-        var $clickEle = $(ev.currentTarget);
-        var targetModalClass = $clickEle.data("modal-target");
-        var $targetModal = $(targetModalClass);
+        const $clickEle = $(ev.currentTarget);
+        const targetModalClass = $clickEle.data("modal-target");
+        const $targetModal = $(targetModalClass);
 
         $targetModal.addClass("is-show");
         ev.preventDefault();
     }
     close(ev) {
-        var $clickEle = $(ev.currentTarget);
-        var targetModalClass = $clickEle.data("modal-target");
-        var $targetModal = $(targetModalClass);
+        const $clickEle = $(ev.currentTarget);
+        const targetModalClass = $clickEle.data("modal-target");
+        const $targetModal = $(targetModalClass);
 
         $targetModal.removeClass("is-show");
         ev.preventDefault();

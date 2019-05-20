@@ -4,27 +4,28 @@ import $ from "jquery";
 
 const Drawer = class{
     constructor(element, setting) {
-        this.rootElement = $(element);
-        this.targetQuery = {
-            show: ".js-drawer-show",
-            hide: ".js-drawer-hide"
+        this.setting = {
+            "target_query": {
+                show: ".js-drawer-show",
+                hide: ".js-drawer-hide"
+            },
+            "switch_class": "is-drawer-active"
         };
-        this.switchClass = "is-drawer-active";
 
-        this.$showDrawer = $(this.targetQuery.show);
-        this.$hideDrawer = $(this.targetQuery.hide);
+        this.$root_element = $(element);
+        this.$show_drawer = $(this.setting.target_query.show);
+        this.$hide_drawer = $(this.setting.target_query.hide);
 
-        this.$showDrawer.on("click", ev => this.show(ev));
-        this.$hideDrawer.on("click", ev => this.hide(ev));
+        this.$show_drawer.on("click", ev => this.show(ev));
+        this.$hide_drawer.on("click", ev => this.hide(ev));
     }
     show(ev) {
-        console.log(this);
-        this.rootElement.addClass(this.switchClass);
+        this.$root_element.addClass(this.setting.switch_class);
 
         ev.preventDefault();
     }
     hide(ev) {
-        this.rootElement.removeClass(this.switchClass);
+        this.$root_element.removeClass(this.setting.switch_class);
 
         ev.preventDefault();
     }
