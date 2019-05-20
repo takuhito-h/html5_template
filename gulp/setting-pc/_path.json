@@ -1,5 +1,5 @@
 {
-    "src" : "app-pc/src",
-    "ignore_src" : "!app-pc/src",
+    "src" : "src/pc",
+    "ignore_src" : "!src/pc",
     "build_root" : "app-pc"
 }

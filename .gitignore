@@ -31,4 +31,4 @@ font-preview.html
 _icon.scss
 
 # sprite用の生成scssを除外
-src/sass/setup/_sprites.scss
+sass/setup/_sprites.scss

@@ -1,5 +1,5 @@
 {
-    "src" : "app-sp/src",
-    "ignore_src" : "!app-sp/src",
+    "src" : "src/sp",
+    "ignore_src" : "!src/sp",
     "build_root" : "app-sp"
 }
