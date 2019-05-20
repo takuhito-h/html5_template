@@ -1,7 +1,7 @@
 import path from "./_path.json";
 
 export default {
-    "src"  : [path.src + "/img/font/*.svg"],
+    "src"  : [path.src + "/font/*.svg"],
     "dest" : path.build_root + "/font/",
     "options" : {
         "fontName"       : "icon",
@@ -15,15 +15,15 @@ export default {
         "timeStamp" : Date.now()
     },
     "css" : {
-        "src" : path.src + '/img/font/template.scss',
+        "src" : path.src + '/font/template.scss',
         "dest" : path.src + '/css/object/component/',
         "rename_options" : {
             "basename"　: "_icon"
         }
     },
     "html" : {
-        "src"  : path.src + '/img/font/template.html',
-        "dest" : path.src + '/img/font/',
+        "src"  : path.src + '/font/template.html',
+        "dest" : path.src + '/font/',
         "rename_options" : {
             "basename"　: "font-preview"
         }
