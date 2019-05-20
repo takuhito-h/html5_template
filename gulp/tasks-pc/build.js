@@ -8,4 +8,4 @@ import gulp from 'gulp';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('build:pc', ['ect:pc', 'iconfont:pc', 'css:pc', 'webpack:pc']);
+gulp.task('build:pc', ['nunjucks:pc', 'iconfont:pc', 'css:pc', 'webpack:pc']);
