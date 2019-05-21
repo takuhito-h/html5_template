@@ -1,12 +1,13 @@
 import path from "./_path.json";
 
 export default {
+    "mode" : "production",
     "entry" : "./" + path.src + "/js/application.js",
     "output" : {
         "filename" : "./" + path.build_root + "/js/script.min.js"
     },
     "module" : {
-        "loaders" : [
+        "rules" : [
             {
                 "test" : /\.jsx$/,
                 "use" : [

@@ -35,7 +35,7 @@
     "streamqueue": "^1.1.1",
     "vanilla-lazyload": "^10.4.2",
     "webpack": "^4.1.1",
-    "webpack-stream": "^4.0.2"
+    "webpack-stream": "^5.2.1"
   },
   "private": true,
   "scripts": {
