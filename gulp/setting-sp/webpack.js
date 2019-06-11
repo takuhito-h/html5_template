@@ -1,10 +1,10 @@
 import path from "./_path.json";
 
 export default {
-    "mode" : "production",
-    "entry" : "./" + path.src + "/js/application.js",
+    "mode" : "development",
+    "entry" : ["@babel/polyfill", "./" + path.src + "/js/application.js"],
     "output" : {
-        "filename" : "./" + path.build_root + "/js/script.min.js"
+        "filename" : "script.min.js"
     },
     "module" : {
         "rules" : [

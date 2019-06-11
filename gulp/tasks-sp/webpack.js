@@ -16,9 +16,7 @@ const isRelease = gutil.env.release ? gutil.env.release : false;
     task
 ------------------------------------------------------------------*/
 gulp.task('webpack:sp', function () {
-    return gulp
-        .src('src/sp/js/application.js')
-        .pipe(webpackStream(setting, webpack))
-        .pipe(isRelease ? uglify() : gutil.noop())
+    return webpackStream(setting, webpack)
+        .pipe(gulp.dest("app-sp/js/"))
     ;
 });

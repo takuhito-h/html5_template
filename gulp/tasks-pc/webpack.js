@@ -16,9 +16,7 @@ const isRelease = gutil.env.release ? gutil.env.release : false;
     task
 ------------------------------------------------------------------*/
 gulp.task('webpack:pc', function () {
-    return gulp
-        .src('src/pc/js/*.js')
-        .pipe(webpackStream(setting, webpack))
-        .pipe(isRelease ? uglify() : gutil.noop())
+    return webpackStream(setting, webpack)
+        .pipe(gulp.dest("app-pc/js/"))
     ;
 });
