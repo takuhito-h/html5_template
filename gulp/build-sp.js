@@ -8,4 +8,4 @@ import gulp from 'gulp';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('build:sp', ['nunjucks:sp', 'iconfont:sp', 'css:sp', 'webpack:sp']);
+gulp.task('build:sp', gulp.series('nunjucks:sp', 'iconfont:sp', 'css:sp', 'webpack:sp'));

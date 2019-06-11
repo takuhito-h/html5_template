@@ -36,7 +36,7 @@ const create_html = function(options){
     task
 ------------------------------------------------------------------*/
 gulp.task('iconfont:sp', function(){
-    gulp.src(setting.src)
+    return gulp.src(setting.src)
         .pipe(iconfont(setting.options))
         .on('glyphs', function(glyphs, options) {
             const consolidate_options = _.merge(setting.consolidate_options, {

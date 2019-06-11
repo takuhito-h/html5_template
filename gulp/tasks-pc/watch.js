@@ -4,26 +4,19 @@
 
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
-import watch from 'gulp-watch';
 import setting from '../setting-pc/watch.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('watch:pc', function () {
-    watch(setting.nunjucks, function(){
-        gulp.start(['nunjucks:pc']);
-    });
+gulp.task('watch:pc', function(done){
+    gulp.watch(setting.nunjucks, gulp.task('nunjucks:pc'));
 
-    watch(setting.iconfont, function(){
-        gulp.start(['iconfont:pc']);
-    });
+    gulp.watch(setting.iconfont, gulp.task('iconfont:pc'));
 
-    watch(setting.css, function(){
-        gulp.start(['css:pc']);
-    });
+    gulp.watch(setting.css, gulp.task('css:pc'));
 
-    watch(setting.js, function(){
-        gulp.start(['webpack:pc']);
-    });
+    gulp.watch(setting.js, gulp.task('webpack:pc'));
+
+    done();
 });

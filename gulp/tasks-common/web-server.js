@@ -10,6 +10,8 @@ import setting from '../setting-common/web-server.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webserver', function() {
+gulp.task('webserver', function(done) {
     webserver.server(setting.setting);
+
+    done();
 });

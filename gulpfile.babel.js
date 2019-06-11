@@ -14,3 +14,10 @@ requireDir('./gulp/tasks-pc', { recurse : true });
     tasks-sp
 ------------------------------------------------------------------*/
 requireDir('./gulp/tasks-sp', { recurse : true });
+
+/*------------------------------------------------------------------
+    build
+------------------------------------------------------------------*/
+require('./gulp/build-pc');
+require('./gulp/build-sp');
+require('./gulp/default');

@@ -4,26 +4,19 @@
 
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
-import watch from 'gulp-watch';
 import setting from '../setting-sp/watch.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('watch:sp', function () {
-    watch(setting.nunjucks, function(){
-        gulp.start(['nunjucks:sp']);
-    });
+gulp.task('watch:sp', function(done){
+    gulp.watch(setting.nunjucks, gulp.task('nunjucks:sp'));
 
-    watch(setting.iconfont, function(){
-        gulp.start(['iconfont:sp']);
-    });
+    gulp.watch(setting.iconfont, gulp.task('iconfont:sp'));
 
-    watch(setting.css, function(){
-        gulp.start(['css:sp']);
-    });
+    gulp.watch(setting.css, gulp.task('css:sp'));
 
-    watch(setting.js, function(){
-        gulp.start(['webpack:sp']);
-    });
+    gulp.watch(setting.js, gulp.task('webpack:sp'));
+
+    done();
 });
