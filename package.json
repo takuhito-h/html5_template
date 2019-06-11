@@ -23,7 +23,6 @@
     "gulp-sourcemaps": "^2.5.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.6",
-    "gulp-watch": "^5.0.0",
     "gulp.spritesmith": "^6.2.0",
     "jquery": "^3.2.1",
     "jshint": "^2.9.1",
