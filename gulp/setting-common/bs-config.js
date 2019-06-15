@@ -12,5 +12,6 @@
  |
  */
 module.exports = {
-    "server": true
+    "proxy": "localhost:8000",
+    "open": false
 };

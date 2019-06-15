@@ -10,8 +10,8 @@ import setting from '../setting-common/web-server.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webserver', function(done) {
+gulp.task('webserver', gulp.parallel(function (done) {
     webserver.server(setting.setting);
 
     done();
-});
+}, 'bs-init'));

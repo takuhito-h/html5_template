@@ -1,6 +1,6 @@
 export default {
     "setting" : {
-        "base" : "app/",
-        "port" : 8000
+        "base" : "./",
+        "port": 8000
     }
 };
