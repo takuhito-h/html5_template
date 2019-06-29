@@ -24,7 +24,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.0.9",
     "gulp-scss-lint": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.5",
     "gulp-util": "^3.0.8",
     "gulp.spritesmith": "^6.10.1",
     "jquery": "^3.4.1",
