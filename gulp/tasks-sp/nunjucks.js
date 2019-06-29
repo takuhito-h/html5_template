@@ -2,7 +2,7 @@
 
 import gulp from 'gulp';
 import nunjucks from 'gulp-nunjucks-render';
-import setting from '../setting-pc/nunjucks.js';
+import setting from '../setting-sp/nunjucks.js';
 
 gulp.task('nunjucks:sp', function(){
     return gulp.src(setting.src.html + '**/*.njk')
