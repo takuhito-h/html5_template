@@ -18,14 +18,14 @@ export default {
         "src" : path.src + '/font/template.scss',
         "dest" : path.src + '/css/object/component/',
         "rename_options" : {
-            "basename"　: "_icon"
+            "basename" : "_icon"
         }
     },
     "html" : {
         "src"  : path.src + '/font/template.html',
         "dest" : path.src + '/font/',
         "rename_options" : {
-            "basename"　: "font-preview"
+            "basename" : "font-preview"
         }
     }
 };
