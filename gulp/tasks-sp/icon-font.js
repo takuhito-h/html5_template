@@ -33,20 +33,24 @@ const create_html = function(options){
 };
 
 /*------------------------------------------------------------------
+    アイコンフォント用の各種ファイルを作成
+------------------------------------------------------------------*/
+const create_files = function(glyphs, options){
+    const consolidate_options = _.merge(setting.consolidate_options, {
+        glyphs : glyphs
+    });
+
+    create_css(consolidate_options);
+    create_html(consolidate_options);
+};
+
+/*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
 gulp.task('iconfont:sp', function(){
     return gulp.src(setting.src)
         .pipe(iconfont(setting.options))
-        .on('glyphs', function(glyphs, options) {
-            const consolidate_options = _.merge(setting.consolidate_options, {
-                glyphs : glyphs
-            });
-
-            create_css(consolidate_options);
-
-            create_html(consolidate_options);
-        })
+        .on('glyphs', create_files)
         .pipe(gulp.dest(setting.dest))
     ;
 });
