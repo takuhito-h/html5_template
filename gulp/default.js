@@ -8,4 +8,4 @@ import gulp from 'gulp';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('default', gulp.series('webserver', 'build:pc', 'build:sp', 'watch:pc', 'watch:sp'));
+gulp.task('default', gulp.parallel('webserver', 'build:pc', 'build:sp', 'watch:pc', 'watch:sp'));
