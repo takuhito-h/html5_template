@@ -9835,14 +9835,6 @@ streamifier@^0.1.1:
   resolved "https://registry.yarnpkg.com/streamifier/-/streamifier-0.1.1.tgz#97e98d8fa4d105d62a2691d1dc07e820db8dfc4f"
   integrity sha1-l+mNj6TRBdYqJpHR3AfoINuN/E8=
 
-streamqueue@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/streamqueue/-/streamqueue-1.1.2.tgz#6c99c7c20d62b57f5819296bf9ec942542380192"
-  integrity sha512-CHUpqa+1BM99z7clQz9W6L9ZW4eXRRQCR0H+utVAGGvNo2ePlJAFjhdK0IjunaBbY/gWKJawk5kpJeyz0EXxRA==
-  dependencies:
-    isstream "^0.1.2"
-    readable-stream "^2.3.3"
-
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"

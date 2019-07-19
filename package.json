@@ -31,7 +31,6 @@
     "mocha": "^6.1.4",
     "modularized-normalize-scss": "^4.0.0",
     "require-dir": "^1.2.0",
-    "streamqueue": "^1.1.2",
     "vanilla-lazyload": "^12.0.0",
     "webpack": "^4.34.0",
     "webpack-stream": "^5.2.1"
