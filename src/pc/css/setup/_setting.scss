@@ -11,3 +11,11 @@ $default-text-size: 12px;
 $default-link-color: #fff;
 
 $wrapper-width: 1000px;
+
+$breakpoints: (
+    'down-sm': 'screen and (max-width: 639px)',
+    'sm': 'screen and (min-width: 640px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
