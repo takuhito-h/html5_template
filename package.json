@@ -41,6 +41,7 @@
     "webpack-stream": "^6.1.0"
   },
   "private": true,
+  "license": "UNLICENSED",
   "scripts": {
     "start": "nf start",
     "test": "./node_modules/.bin/mocha",
