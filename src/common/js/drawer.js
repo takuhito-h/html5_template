@@ -2,7 +2,7 @@
 
 import $ from "jquery";
 
-const Drawer = class{
+export default class{
     constructor(element, setting) {
         this.setting = {
             "target_query": {
@@ -30,5 +30,3 @@ const Drawer = class{
         ev.preventDefault();
     }
 };
-
-module.exports = Drawer;

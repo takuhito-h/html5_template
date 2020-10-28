@@ -1,6 +1,5 @@
-"use strict";
+import alertTest from "../../common/js/alertTest";
 
-import manager from "./component_manager";
-import COMPONENT_DEFS from "./_setting_component_defs.json";
-
-new manager("./view/", COMPONENT_DEFS);
+new alertTest(".js-alert", {
+    target: "hoge"
+});

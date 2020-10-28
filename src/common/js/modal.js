@@ -1,8 +1,6 @@
-"use strict";
-
 import $ from "jquery";
 
-const Modal = class{
+export default class{
     constructor(element, setting) {
         this.targetClass = {
             open: ".js-modal-open",
@@ -31,5 +29,3 @@ const Modal = class{
         ev.preventDefault();
     }
 };
-
-module.exports = Modal;

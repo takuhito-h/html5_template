@@ -1,9 +1,5 @@
-"use strict";
-
-const AlertTest = class{
+export default class {
     constructor(element, setting) {
         console.log(element, setting);
     }
 };
-
-module.exports = AlertTest;
