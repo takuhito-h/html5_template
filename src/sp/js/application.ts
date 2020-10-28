@@ -1,4 +1,4 @@
-import alertTest from "../../common/js/alertTest";
+import alertTest from "alertTest";
 
 new alertTest(".js-alert", {
     target: "hoge"

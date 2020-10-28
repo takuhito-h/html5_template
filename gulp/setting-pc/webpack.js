@@ -2,33 +2,31 @@ import path from "./_path.json";
 
 export default {
     "mode" : "development",
-    "entry" : ["@babel/polyfill", "./" + path.src + "/js/application.js"],
+    "entry" : [
+        "./" + path.src + "/js/application.ts"
+    ],
     "output" : {
         "filename" : "script.min.js"
     },
     "module" : {
         "rules" : [
             {
-                "test" : /\.jsx$/,
-                "use" : [
-                    {
-                        "loader" : "jsx-loader"
-                    }
-                ]
-            },
-            {
-                "test" : /\.js(x?)$/,
+                "test" : /\.(?:ts|tsx)$/,
                 "exclude" : /node_modules/,
-                "use" : [
-                    {
-                        "loader" : "babel-loader"
+                "use" : {
+                    "loader" : "ts-loader",
+                    "options" : {
+                        "transpileOnly" : true
                     }
-                ]
+                },
             }
         ]
     },
     "resolve" : {
-        "extensions" : [".js", ".jsx"],
-        "modules" : ["node_modules"]
+        "extensions" : [".mjs", ".js", ".jsx", ".ts", ".tsx", ".json"],
+        "modules" : [
+            "node_modules",
+            "common/js"
+        ]
     }
 };

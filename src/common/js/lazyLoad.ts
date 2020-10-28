@@ -1,5 +1,3 @@
-"use strict";
-
 import LazyLoadJs from "vanilla-lazyload";
 
 export default class{
