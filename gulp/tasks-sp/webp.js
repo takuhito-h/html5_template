@@ -8,9 +8,6 @@ import gulpWebp from 'gulp-webp';
 import rename from 'gulp-rename';
 import setting from '../setting-sp/webp.js';
 
-console.log(setting.img);
-console.log(setting.webpDir);
-
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
