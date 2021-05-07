@@ -2867,12 +2867,7 @@ caniuse-db@^1.0.30000153, caniuse-db@^1.0.30000214, caniuse-db@^1.0.30000529, ca
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30001012.tgz#a792225f33a49068c9c2f5c44f759151f2111d61"
   integrity sha512-fm4VZQo0F1WYTmJcaTsqGhRuqcbkUW1/1hx8n5xdkbJSyaJV3jZ1vPXHYNcn376cAcuhxUIcE9TpHlSAYtN6bA==
 
-caniuse-lite@^1.0.30001135:
-  version "1.0.30001208"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001208.tgz"
-  integrity sha512-OE5UE4+nBOro8Dyvv0lfx+SRtfVIOM9uhKqFmJeUbGriqhhStgp1A0OyBpgy3OUF8AhYCT+PVwPC1gMl2ZcQMA==
-
-caniuse-lite@^1.0.30001208:
+caniuse-lite@^1.0.30001135, caniuse-lite@^1.0.30001208:
   version "1.0.30001208"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001208.tgz#a999014a35cebd4f98c405930a057a0d75352eb9"
   integrity sha512-OE5UE4+nBOro8Dyvv0lfx+SRtfVIOM9uhKqFmJeUbGriqhhStgp1A0OyBpgy3OUF8AhYCT+PVwPC1gMl2ZcQMA==
@@ -11937,9 +11932,9 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 ua-parser-js@^0.7.18:
-  version "0.7.22"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
-  integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
+  version "0.7.28"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
 uglify-js@^3.1.4:
   version "3.7.0"
