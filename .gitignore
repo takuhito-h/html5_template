@@ -1,9 +1,11 @@
+# システムごとの不要ファイル
 .DS_Store
 Thumbs.db
 .sass-cache
 npm-debug.log
 yarn-error.log
 
+# 言語ごとのパッケージディレクトリ
 .bundle/
 node_modules/
 bower_components/
@@ -27,8 +29,8 @@ app-sp/js/*.js
 app-sp/js/*.map
 app-sp/img/sprite.png
 
-font-preview.html
-_icon.scss
+**/font/font-preview.html
+**/object/component/_icon.scss
 
 # sprite用の生成scssを除外
 sass/setup/_sprites.scss
