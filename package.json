@@ -45,7 +45,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "start": "nf start",
+    "start": "gulp",
     "test": "./node_modules/.bin/mocha",
     "postinstall": "gulp build:pc && gulp build:sp"
   },
