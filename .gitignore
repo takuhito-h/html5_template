@@ -1,14 +1,11 @@
 # システムごとの不要ファイル
 .DS_Store
 Thumbs.db
-.sass-cache
 npm-debug.log
 yarn-error.log
 
 # 言語ごとのパッケージディレクトリ
-.bundle/
 node_modules/
-bower_components/
 vendor/
 
 # ビルド後のファイルを無視
