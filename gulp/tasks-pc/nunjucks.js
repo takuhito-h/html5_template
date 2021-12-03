@@ -5,7 +5,7 @@ import nunjucks from 'gulp-nunjucks-render';
 import setting from '../setting-pc/nunjucks.js';
 
 gulp.task('nunjucks:pc', function(){
-    return gulp.src(setting.src.html + '**/*.njk')
+    return gulp.src(setting.src.html)
         .pipe(nunjucks({
             path: setting.src.template
         }))
