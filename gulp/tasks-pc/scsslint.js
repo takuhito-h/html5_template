@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import scsslint from 'gulp-scss-lint';
-import setting from '../setting-pc/js-hint.js';
+import setting from '../setting-pc/scsslint.js';
 
 /*------------------------------------------------------------------
     task

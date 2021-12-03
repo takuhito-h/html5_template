@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
 import jsvalidate from 'gulp-jsvalidate';
-import setting from '../setting-pc/js-hint.js';
+import setting from '../setting-pc/js-validate.js';
 
 /*------------------------------------------------------------------
     task
