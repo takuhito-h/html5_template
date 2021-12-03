@@ -3,28 +3,30 @@
     css
 
 ------------------------------------------------------------------------------------------------*/
-import gulp from 'gulp';
-import gutil from 'gulp-util';
+import { task, src, dest } from 'gulp';
+import env from 'dotenv'
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob';
 import cssnext from 'gulp-cssnext';
 import setting from '../setting-pc/css.js';
 
-const destSourceMaps = gutil.env.release ? false : true;
+env.config();
+
+const destSourceMaps = process.env.APP_ENV === 'local' ? false : true;
 const sass = gulpSass(dartSass);
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('css:pc', function() {
+task('css:pc', function() {
 
-    return gulp.src(setting.src, { sourcemaps: destSourceMaps })
+    return src(setting.src, { sourcemaps: destSourceMaps })
         .pipe(sassGlob())
         .pipe(sass(setting.sass)
             .on('error', sass.logError))
         .pipe(cssnext(setting.cssnext))
-        .pipe(gulp.dest(setting.dest, { sourcemaps: './' }))
+        .pipe(dest(setting.dest, { sourcemaps: './' }))
     ;
 
 });
