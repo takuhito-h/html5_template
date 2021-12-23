@@ -3,6 +3,7 @@
 //  基礎設定
 //
 //------------------------------------------------------------------------------------------------
+@use "setup/setting" as s;
 
 //--------------------------------------------------------------------
 //  基礎
@@ -13,7 +14,7 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #4b4b4b;;
-    font-size: $default-text-size;
+    font-size: s.$default-text-size;
     font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
     line-height: 1.5;
     overflow-y: scroll;

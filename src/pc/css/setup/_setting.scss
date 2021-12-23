@@ -15,6 +15,7 @@ $wrapper-width: 1000px;
 $breakpoints: (
     'down-sm': 'screen and (max-width: 639px)',
     'sm': 'screen and (min-width: 640px)',
+    'down-md': 'screen and (max-width: 767px)',
     'md': 'screen and (min-width: 768px)',
     'lg': 'screen and (min-width: 1000px)',
     'xl': 'screen and (min-width: 1200px)',
