@@ -9,7 +9,7 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import sassGlob from 'gulp-sass-glob-use-forward';
 import cssnext from 'gulp-cssnext';
-import setting from '../setting-pc/css.js';
+import setting from '../setting-sp/css.js';
 
 env.config();
 
