@@ -7,7 +7,7 @@ import { task, src, dest } from 'gulp';
 import env from 'dotenv'
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import sassGlob from 'gulp-sass-glob';
+import sassGlob from 'gulp-sass-glob-use-forward';
 import cssnext from 'gulp-cssnext';
 import setting from '../setting-pc/css.js';
 

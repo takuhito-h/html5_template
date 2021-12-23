@@ -4,6 +4,7 @@ export default {
     "src" : path.src + "/css/**/*.scss",
     "dest" : path.build_root + "/css",
     "sass" : {
+        "includePaths": ["src/sp/css"],
         "outputStyle" : "compressed"
     },
     "cssnext" : {
