@@ -1,11 +1,20 @@
 /*------------------------------------------------------------------------------------------------
 
-    default
+    js-validate
 
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
+import jsvalidate from 'gulp-jsvalidate';
+import setting from '../setting/js-validate.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('default', gulp.parallel('webserver', 'build', 'watch'));
+gulp.task('jsvalidate', function() {
+
+    return gulp
+        .src(setting.src)
+        .pipe(jsvalidate())
+    ;
+
+});
