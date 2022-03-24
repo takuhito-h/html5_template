@@ -12,12 +12,12 @@ const browserSyncServer = browserSync.create();
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('bs-init', function(done) {
+gulp.task('bs-init', (done) => {
     browserSyncServer.init(setting);
     done();
 });
 
-gulp.task('bs-reload', function (done) {
+gulp.task('bs-reload', (done) => {
     browserSyncServer.reload();
     done();
 });

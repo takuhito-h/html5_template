@@ -11,7 +11,7 @@ import setting from '../setting/webpack.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webpack', function () {
+gulp.task('webpack', (done) => {
     return webpackStream(setting, webpack)
         .pipe(gulp.dest("app/js/"))
     ;

@@ -11,7 +11,7 @@ import imageminPngquant from "imagemin-pngquant";
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task("imagemin", function () {
+gulp.task("imagemin", () => {
     return gulp
         .src(["*/*/img/**/*.{png,jpg,gif,svg}"])
         .pipe(

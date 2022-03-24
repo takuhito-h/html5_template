@@ -11,7 +11,7 @@ import setting from '../setting/webp.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webp', function() {
+gulp.task('webp', (done) => {
     return gulp
         .src(setting.img, {
             allowEmpty : true,

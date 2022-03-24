@@ -19,7 +19,7 @@ const sass = gulpSass(dartSass);
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task('css', function() {
+task('css', () => {
 
     return src(setting.src, { sourcemaps: destSourceMaps })
         .pipe(sassGlob())

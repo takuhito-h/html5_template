@@ -24,7 +24,7 @@ const create_css = function(options){
 /*------------------------------------------------------------------
     シンボルフォント一覧用のHTMLを作成
 ------------------------------------------------------------------*/
-const create_html = function(options){
+const create_html = (options) => {
     gulp.src(setting.html.src)
         .pipe(consolidate('lodash', options))
         .pipe(rename(setting.html.rename_options))
@@ -35,7 +35,7 @@ const create_html = function(options){
 /*------------------------------------------------------------------
     アイコンフォント用の各種ファイルを作成
 ------------------------------------------------------------------*/
-const create_files = function(glyphs, options){
+const create_files = (glyphs, options) => {
     const consolidate_options = _.merge(setting.consolidate_options, {
         glyphs : glyphs
     });
@@ -47,7 +47,7 @@ const create_files = function(glyphs, options){
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('iconfont', function(){
+gulp.task('iconfont', () => {
     return gulp.src(setting.src)
         .pipe(iconfont(setting.options))
         .on('glyphs', create_files)

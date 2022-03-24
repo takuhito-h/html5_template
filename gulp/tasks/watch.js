@@ -9,7 +9,7 @@ import setting from '../setting/watch.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('watch', function (done) {
+gulp.task('watch', (done) => {
     gulp.watch(setting.nunjucks, gulp.series('nunjucks', 'bs-reload'));
 
     gulp.watch(setting.iconfont, gulp.series('iconfont', 'bs-reload'));
