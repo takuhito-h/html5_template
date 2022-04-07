@@ -1,8 +1,8 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.16.0",
-        "@babel/preset-env": "^7.16.0",
-        "browser-sync": "^2.27.7",
+        "@babel/core": "^7.17.9",
+        "@babel/preset-env": "^7.16.11",
+        "browser-sync": "^2.27.9",
         "dotenv": "^16.0.0",
         "gulp": "^4.0.2",
         "gulp-connect-php": "1.0.3",
@@ -23,8 +23,8 @@
         "lodash": "^4.17.21",
         "modularized-normalize-scss": "^4.0.0",
         "require-dir": "^1.2.0",
-        "sass": "^1.49.9",
-        "webpack": "^5.70.0",
+        "sass": "^1.50.0",
+        "webpack": "^5.71.0",
         "webpack-stream": "^7.0.0",
         "smooth-scroll": "^16.1.3"
     },
