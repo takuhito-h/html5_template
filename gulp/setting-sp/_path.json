@@ -1,6 +1,0 @@
-{
-    "src" : "src/sp",
-    "ignore_src" : "!src/sp",
-    "build_root" : "app-sp",
-    "img_src" : "app-sp/img"
-}

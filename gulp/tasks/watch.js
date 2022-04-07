@@ -1,23 +1,22 @@
 /*------------------------------------------------------------------------------------------------
 
-    browser-sync
+    watch
 
 ------------------------------------------------------------------------------------------------*/
 import gulp from 'gulp';
-import browserSync from 'browser-sync';
-import setting from '../setting-common/bs-config.js';
-
-const browserSyncServer = browserSync.create();
+import setting from '../setting/watch.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('bs-init', (done) => {
-    browserSyncServer.init(setting);
-    done();
-});
+gulp.task('watch', (done) => {
+    gulp.watch(setting.nunjucks, gulp.series('nunjucks', 'bs-reload'));
 
-gulp.task('bs-reload', (done) => {
-    browserSyncServer.reload();
+    gulp.watch(setting.iconfont, gulp.series('iconfont', 'bs-reload'));
+
+    gulp.watch(setting.css, gulp.series('css', 'bs-reload'));
+
+    gulp.watch(setting.js, gulp.series('webpack', 'bs-reload'));
+
     done();
 });

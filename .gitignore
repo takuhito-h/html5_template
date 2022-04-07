@@ -9,22 +9,13 @@ node_modules/
 vendor/
 
 # ビルド後のファイルを無視
-app-pc/*.html
-app-pc/css/*.css
-app-pc/css/*.map
-app-pc/font/icon.*
-app-pc/js/*.js
-app-pc/js/*.map
-app-pc/img/sprite.png
-
-# ビルド後のファイルを無視
-app-sp/*.html
-app-sp/css/*.css
-app-sp/css/*.map
-app-sp/font/icon.*
-app-sp/js/*.js
-app-sp/js/*.map
-app-sp/img/sprite.png
+app/*.html
+app/css/*.css
+app/css/*.map
+app/font/icon.*
+app/js/*.js
+app/js/*.map
+app/img/sprite.png
 
 **/font/font-preview.html
 **/object/component/_icon.scss

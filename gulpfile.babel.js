@@ -1,23 +1,17 @@
-import requireDir from 'require-dir';
+import requireDir from "require-dir";
 
 /*------------------------------------------------------------------
     tasks-common
 ------------------------------------------------------------------*/
-requireDir('./gulp/tasks-common', { recurse : true });
+requireDir("./gulp/tasks-common", { recurse: true });
 
 /*------------------------------------------------------------------
     tasks-pc
 ------------------------------------------------------------------*/
-requireDir('./gulp/tasks-pc', { recurse : true });
-
-/*------------------------------------------------------------------
-    tasks-sp
-------------------------------------------------------------------*/
-requireDir('./gulp/tasks-sp', { recurse : true });
+requireDir("./gulp/tasks", { recurse: true });
 
 /*------------------------------------------------------------------
     build
 ------------------------------------------------------------------*/
-require('./gulp/build-pc');
-require('./gulp/build-sp');
-require('./gulp/default');
+require("./gulp/build");
+require("./gulp/default");
