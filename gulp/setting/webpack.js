@@ -3,7 +3,6 @@ import path from "./_path.json";
 export default {
     "mode" : "development",
     "entry" : [
-        "@babel/polyfill",
         "./" + path.src + "/js/application.js"
     ],
     "output" : {
