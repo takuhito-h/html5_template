@@ -4,8 +4,7 @@
 
 ------------------------------------------------------------------------------------------------*/
 import { watch, series } from 'gulp';
-import { css, iconfont, nunjucks, webpack } from "./index";
-import { bsReload } from "../tasks-common/browser-sync";
+import { css, iconfont, nunjucks, webpack, bsReload } from "../index";
 import setting from '../setting/watch.js';
 
 /*------------------------------------------------------------------
