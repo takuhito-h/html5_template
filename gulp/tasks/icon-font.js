@@ -3,10 +3,10 @@
     icon-font
 
 ------------------------------------------------------------------------------------------------*/
-import { task, src, dest } from 'gulp';
+import { src, dest } from 'gulp';
 import _ from 'lodash';
 import rename from 'gulp-rename';
-import iconfont from 'gulp-iconfont';
+import gulpIconfont from 'gulp-iconfont';
 import consolidate from 'gulp-consolidate';
 import setting from '../setting/icon-font.js';
 
@@ -47,10 +47,10 @@ const create_files = (glyphs, options) => {
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task('iconfont', () => {
+export function iconfont() {
     return src(setting.src)
-        .pipe(iconfont(setting.options))
+        .pipe(gulpIconfont(setting.options))
         .on('glyphs', create_files)
         .pipe(dest(setting.dest))
     ;
-});
+};

@@ -3,7 +3,7 @@
     imagemin
 
 ------------------------------------------------------------------------------------------------*/
-import { task, src, dest } from 'gulp';
+import { src, dest } from 'gulp';
 import imagemin from "gulp-imagemin";
 import imageminMozjpeg from "imagemin-mozjpeg";
 import imageminPngquant from "imagemin-pngquant";
@@ -11,7 +11,7 @@ import imageminPngquant from "imagemin-pngquant";
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task("imagemin", () => {
+const imageminTask = () => {
     return src(["*/*/img/**/*.{png,jpg,gif,svg}"])
         .pipe(
             imagemin([
@@ -52,4 +52,6 @@ task("imagemin", () => {
             ])
         )
         .pipe(dest("./"));
-});
+};
+
+export { imageminTask as imagemin };

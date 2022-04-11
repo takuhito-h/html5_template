@@ -3,7 +3,6 @@
     browser-sync
 
 ------------------------------------------------------------------------------------------------*/
-import { task } from 'gulp';
 import browserSync from 'browser-sync';
 import setting from '../setting-common/bs-config.js';
 
@@ -12,12 +11,14 @@ const browserSyncServer = browserSync.create();
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task('bs-init', (done) => {
+const bsInit = (done) => {
     browserSyncServer.init(setting);
     done();
-});
+};
 
-task('bs-reload', (done) => {
+const bsReload = (done) => {
     browserSyncServer.reload();
     done();
-});
+};
+
+export { bsInit, bsReload };

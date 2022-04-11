@@ -3,7 +3,7 @@
     webp
 
 ------------------------------------------------------------------------------------------------*/
-import { task, src, dest } from 'gulp';
+import { src, dest } from 'gulp';
 import gulpWebp from 'gulp-webp';
 import rename from 'gulp-rename';
 import setting from '../setting/webp.js';
@@ -11,7 +11,7 @@ import setting from '../setting/webp.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task('webp', (done) => {
+export function webp() {
     return src(setting.img, {
             allowEmpty : true,
         })
@@ -21,4 +21,4 @@ task('webp', (done) => {
         .pipe(gulpWebp())
         .pipe(dest(setting.webpDir))
     ;
-});
+};

@@ -3,15 +3,15 @@
     watch
 
 ------------------------------------------------------------------------------------------------*/
-import { task, src, dest } from 'gulp';
-import nunjucks from 'gulp-nunjucks-render';
+import { src, dest } from 'gulp';
+import nunjucksRender from 'gulp-nunjucks-render';
 import setting from '../setting/nunjucks.js';
 
-task('nunjucks', () => {
+export function nunjucks() {
     return src(setting.src.html)
-        .pipe(nunjucks({
+        .pipe(nunjucksRender({
             path: setting.src.template
         }))
         .pipe(dest(setting.dest.root))
     ;
-});
+};

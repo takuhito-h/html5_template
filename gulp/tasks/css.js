@@ -3,7 +3,7 @@
     css
 
 ------------------------------------------------------------------------------------------------*/
-import { task, src, dest } from 'gulp';
+import { src, dest } from 'gulp';
 import env from 'dotenv'
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -19,7 +19,7 @@ const sass = gulpSass(dartSass);
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-task('css', () => {
+export function css() {
 
     return src(setting.src, { sourcemaps: destSourceMaps })
         .pipe(sassGlob())
@@ -29,4 +29,4 @@ task('css', () => {
         .pipe(dest(setting.dest, { sourcemaps: './' }))
     ;
 
-});
+};
