@@ -3,8 +3,8 @@
     icon-font
 
 ------------------------------------------------------------------------------------------------*/
+import { task, src, dest } from 'gulp';
 import _ from 'lodash';
-import gulp from 'gulp';
 import rename from 'gulp-rename';
 import iconfont from 'gulp-iconfont';
 import consolidate from 'gulp-consolidate';
@@ -14,10 +14,10 @@ import setting from '../setting/icon-font.js';
     シンボルフォント用のcssを作成
 ------------------------------------------------------------------*/
 const create_css = function(options){
-    gulp.src(setting.css.src)
+    src(setting.css.src)
         .pipe(consolidate('lodash', options))
         .pipe(rename(setting.css.rename_options))
-        .pipe(gulp.dest(setting.css.dest))
+        .pipe(dest(setting.css.dest))
     ;
 };
 
@@ -25,10 +25,10 @@ const create_css = function(options){
     シンボルフォント一覧用のHTMLを作成
 ------------------------------------------------------------------*/
 const create_html = (options) => {
-    gulp.src(setting.html.src)
+    src(setting.html.src)
         .pipe(consolidate('lodash', options))
         .pipe(rename(setting.html.rename_options))
-        .pipe(gulp.dest(setting.html.dest))
+        .pipe(dest(setting.html.dest))
     ;
 };
 
@@ -47,10 +47,10 @@ const create_files = (glyphs, options) => {
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('iconfont', () => {
-    return gulp.src(setting.src)
+task('iconfont', () => {
+    return src(setting.src)
         .pipe(iconfont(setting.options))
         .on('glyphs', create_files)
-        .pipe(gulp.dest(setting.dest))
+        .pipe(dest(setting.dest))
     ;
 });
