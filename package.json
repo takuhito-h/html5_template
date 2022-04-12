@@ -31,7 +31,6 @@
     "license": "UNLICENSED",
     "scripts": {
         "start": "gulp",
-        "test": "./node_modules/.bin/mocha",
         "postinstall": "gulp build"
     }
 }
