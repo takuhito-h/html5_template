@@ -6,29 +6,19 @@
 
 ## アーキテクチャ
 ### フロントエンドビルドツール
-*   Gulp
+* Gulp
 
 ### HTML
-*   ECT
+* Nunjucks
 
 ### CSS
-*   Normalize.css
-*   SCSS
-*   cssnext
+* Normalize.css
+* SCSS
+* cssnext
 
 ### Javascript
-*   WebPack
-*   html5shiv.js
-*   lodash
-*   underscore.string
-*   Backbone
-*   Marionette
-*   jQuery
+* WebPack
+* jQuery
 
 ### WebFont
-*   iconfont
-
-### Linting
-*   JSValidate
-*   JSHint
-*   SCSSLint
+* iconfont
