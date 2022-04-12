@@ -3,15 +3,20 @@
     web-server
 
 ------------------------------------------------------------------------------------------------*/
-import gulp from 'gulp';
+import { parallel } from 'gulp';
+import { bsInit } from './browser-sync';
 import webserver from 'gulp-connect-php';
 import setting from '../setting-common/web-server.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('webserver', gulp.parallel((done) => {
-    webserver.server(setting.setting);
+const webServerTask = () => {
+    parallel((done) => {
+        webserver.server(setting.setting);
 
-    done();
-}, 'bs-init'));
+        done();
+    }, bsInit)
+};
+
+export { webServerTask as webServer };

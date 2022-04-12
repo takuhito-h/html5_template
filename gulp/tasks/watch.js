@@ -3,20 +3,23 @@
     watch
 
 ------------------------------------------------------------------------------------------------*/
-import gulp from 'gulp';
+import { watch, series } from 'gulp';
+import { css, iconfont, nunjucks, webpack, bsReload } from "../index";
 import setting from '../setting/watch.js';
 
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task('watch', (done) => {
-    gulp.watch(setting.nunjucks, gulp.series('nunjucks', 'bs-reload'));
+const watchTask = (done) => {
+    watch(setting.nunjucks, series(nunjucks, bsReload));
 
-    gulp.watch(setting.iconfont, gulp.series('iconfont', 'bs-reload'));
+    watch(setting.iconfont, series(iconfont, bsReload));
 
-    gulp.watch(setting.css, gulp.series('css', 'bs-reload'));
+    watch(setting.css, series(css, bsReload));
 
-    gulp.watch(setting.js, gulp.series('webpack', 'bs-reload'));
+    watch(setting.js, series(webpack, bsReload));
 
     done();
-});
+};
+
+export { watchTask as watch };

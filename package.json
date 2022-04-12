@@ -22,7 +22,6 @@
         "jquery": "^3.6.0",
         "lodash": "^4.17.21",
         "modularized-normalize-scss": "^4.0.0",
-        "require-dir": "^1.2.0",
         "sass": "^1.50.0",
         "webpack": "^5.71.0",
         "webpack-stream": "^7.0.0",

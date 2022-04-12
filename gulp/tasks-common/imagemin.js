@@ -3,7 +3,7 @@
     imagemin
 
 ------------------------------------------------------------------------------------------------*/
-import gulp from "gulp";
+import { src, dest } from 'gulp';
 import imagemin from "gulp-imagemin";
 import imageminMozjpeg from "imagemin-mozjpeg";
 import imageminPngquant from "imagemin-pngquant";
@@ -11,9 +11,8 @@ import imageminPngquant from "imagemin-pngquant";
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-gulp.task("imagemin", () => {
-    return gulp
-        .src(["*/*/img/**/*.{png,jpg,gif,svg}"])
+const imageminTask = () => {
+    return src(["*/*/img/**/*.{png,jpg,gif,svg}"])
         .pipe(
             imagemin([
                 imageminPngquant({
@@ -52,5 +51,7 @@ gulp.task("imagemin", () => {
                 imagemin.gifsicle(),
             ])
         )
-        .pipe(gulp.dest("./"));
-});
+        .pipe(dest("./"));
+};
+
+export { imageminTask as imagemin };
