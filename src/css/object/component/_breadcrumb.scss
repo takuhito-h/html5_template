@@ -1,3 +1,5 @@
+@use "setup/utility" as u;
+
 //------------------------------------------------------------------------------------------------
 //
 //  パンくずリスト
@@ -6,6 +8,10 @@
 .c-breadcrumb{
     > li{
         display: inline;
+
+        @include u.mq(down-md) {
+            margin: 15px 0 5px;
+        }
 
         &:not(:last-child){
             &:after{
