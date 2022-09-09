@@ -1,6 +1,6 @@
 export default {
-    "setting" : {
-        "base" : "./",
-        "port": 8000
+    setting : {
+        base : "./",
+        port: 8000
     }
 };

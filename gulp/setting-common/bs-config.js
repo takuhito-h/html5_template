@@ -12,6 +12,6 @@
  |
  */
 module.exports = {
-    "proxy": "localhost:8000",
-    "open": false
+    proxy : "localhost:8000",
+    open : false
 };

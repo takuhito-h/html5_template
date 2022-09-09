@@ -1,27 +1,27 @@
 import path from "./_path.json";
 
 export default {
-    "mode" : "development",
-    "entry" : [
+    mode : "development",
+    entry : [
         "./" + path.src + "/js/application.js"
     ],
-    "output" : {
-        "filename" : "script.min.js"
+    output : {
+        filename : "script.min.js"
     },
-    "module" : {
-        "rules" : [
+    module : {
+        rules : [
             {
-                "test" : /\.jsx$/,
-                "use" : [
+                test : /\.jsx$/,
+                use : [
                     {
                         "loader" : "jsx-loader"
                     }
                 ]
             },
             {
-                "test" : /\.jsx$/,
-                "exclude" : /node_modules/,
-                "use" : [
+                test : /\.jsx$/,
+                exclude : /node_modules/,
+                use : [
                     {
                         "loader" : "jsx-loader"
                     }
@@ -29,9 +29,9 @@ export default {
             }
         ]
     },
-    "resolve" : {
-        "extensions" : [".js", ".jsx"],
-        "modules" : [
+    resolve : {
+        extensions : [".js", ".jsx"],
+        modules : [
             "node_modules",
             "js/module"
         ]
