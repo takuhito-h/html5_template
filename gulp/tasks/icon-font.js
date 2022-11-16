@@ -47,10 +47,12 @@ const create_files = (glyphs, options) => {
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-export function iconfont() {
+const iconfontTask = () => {
     return src(setting.src)
         .pipe(gulpIconfont(setting.options))
         .on('glyphs', create_files)
         .pipe(dest(setting.dest))
     ;
-};
+}
+
+export { iconfontTask as iconfont };

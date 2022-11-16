@@ -11,7 +11,7 @@ import setting from '../setting/webp.js';
 /*------------------------------------------------------------------
     task
 ------------------------------------------------------------------*/
-export function webp() {
+const webpTask = () => {
     return src(setting.img, {
             allowEmpty : true,
         })
@@ -21,4 +21,6 @@ export function webp() {
         .pipe(gulpWebp())
         .pipe(dest(setting.webpDir))
     ;
-};
+}
+
+export { webpTask as webp };
