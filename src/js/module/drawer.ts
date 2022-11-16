@@ -1,7 +1,17 @@
 import $ from "jquery";
 
 export default class{
-    constructor(element, setting) {
+    private setting: {
+        target_query : {
+            show: string,
+            hide: string
+        },
+        switch_class: string
+    };
+    private $root_element: any;
+    private $show_drawer: any;
+    private $hide_drawer: any;
+    constructor(element:string, setting) {
         this.setting = {
             "target_query": {
                 show: ".js-drawer-show",

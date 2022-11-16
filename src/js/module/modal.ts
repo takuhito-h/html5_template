@@ -1,6 +1,12 @@
 import $ from "jquery";
 
 export default class{
+    private targetClass: {
+        open: string,
+        close: string
+    };
+    private $modalOpen: any;
+    private $modalClose: any;
     constructor(element, setting) {
         this.targetClass = {
             open: ".js-modal-open",

@@ -4,7 +4,7 @@ import ESLintPlugin from "eslint-webpack-plugin";
 export default {
     mode : "development",
     entry : [
-        "./" + path.src + "/js/application.js"
+        "./" + path.src + "/js/application.ts"
     ],
     output : {
         filename : "script.min.js"

@@ -1,5 +1,5 @@
-export default class {
+export default class{
     constructor(element, setting) {
         console.log(element, setting);
     }
-};
+}
