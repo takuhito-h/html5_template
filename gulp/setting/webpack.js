@@ -1,4 +1,5 @@
 import path from "./_path.json";
+import ESLintPlugin from "eslint-webpack-plugin";
 
 export default {
     mode : "development",
@@ -11,29 +12,31 @@ export default {
     module : {
         rules : [
             {
-                test : /\.jsx$/,
-                use : [
-                    {
-                        "loader" : "jsx-loader"
+                test : /\.(?:ts|tsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "ts-loader",
+                    options: {
+                        transpileOnly : true
                     }
-                ]
-            },
-            {
-                test : /\.jsx$/,
-                exclude : /node_modules/,
-                use : [
-                    {
-                        "loader" : "jsx-loader"
-                    }
-                ],
+                }
             }
         ]
     },
+    plugins: [
+        new ESLintPlugin({
+            extensions: [".js", ".ts"],
+            exclude: "node_modules",
+            failOnError: false,
+            failOnWarning: false,
+        })
+    ],
     resolve : {
-        extensions : [".js", ".jsx"],
+        extensions : [".js", ".ts"],
         modules : [
             "node_modules",
             "js/module"
         ]
-    }
+    },
+    devtool: "eval-source-map"
 };

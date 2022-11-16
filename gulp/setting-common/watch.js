@@ -1,4 +1,4 @@
-import path from "./_path.json";
+import path from "../setting/_path.json";
 
 export default {
     nunjucks : path.src + "/html/**/*.njk",

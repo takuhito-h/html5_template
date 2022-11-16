@@ -11,7 +11,7 @@
  |
  |
  */
-module.exports = {
+export default {
     proxy : "localhost:8000",
     open : false
 };

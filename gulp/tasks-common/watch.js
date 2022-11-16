@@ -5,7 +5,7 @@
 ------------------------------------------------------------------------------------------------*/
 import { watch, series } from 'gulp';
 import { css, iconfont, nunjucks, webpack, bsReload } from "../index";
-import setting from '../setting/watch.js';
+import setting from '../setting-common/watch.js';
 
 /*------------------------------------------------------------------
     task
