@@ -37,4 +37,4 @@ export default class{
 
         ev.preventDefault();
     }
-};
+}

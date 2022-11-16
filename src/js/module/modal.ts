@@ -34,4 +34,4 @@ export default class{
         $targetModal.removeClass("is-show");
         ev.preventDefault();
     }
-};
+}
