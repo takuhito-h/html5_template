@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import nunjucks from '@vituum/vite-plugin-nunjucks';
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import viteImagemin from 'vite-plugin-imagemin';
-import ViteWebp from 'vite-plugin-webp-generator';
 import fastGlob from 'fast-glob';
 import path from 'node:path';
 
@@ -43,10 +42,7 @@ export default defineConfig({
                     },
                 ],
             },
-        }),
-        ViteWebp({
-            extensions: ['png', 'jpg']
-        }),
+        })
     ],
     build: {
         emptyOutDir: true,
