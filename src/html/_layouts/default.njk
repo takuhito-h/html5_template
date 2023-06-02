@@ -30,15 +30,16 @@
     <!--//////////////     お気に入りアイコン設定     //////////////-->
     <link rel="shortcut icon" type="image/x-icon" href="">
 
-    <link rel="stylesheet" href="css/trunk-all.css">
+    <script src="js/application.ts"></script>
+    <link rel="stylesheet" href="css/trunk-all.scss">
 </head>
 <body>
-    {% include "_settings/facebook-sdk.njk" -%}
-    {% include "_partials/drawer.njk" -%}
+    {% include "../_settings/facebook-sdk.njk" -%}
+    {% include "../_partials/drawer.njk" -%}
     <div class="l-wrapper">
         {% block contents -%}{% endblock -%}
     </div>
     <script src="js/script.min.js" async defer></script>
-    {% include "_settings/analytics.njk" -%}
+    {% include "../_settings/analytics.njk" -%}
 </body>
 </html>

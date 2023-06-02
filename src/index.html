@@ -1,14 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="js/application.ts"></script>
-    <link rel="stylesheet" href="css/trunk-all.scss">
-</head>
-<body>
-    <h1>hoge</h1>
-</body>
-</html>
+{% block title -%}トップページ{% endblock -%}
+{% extends "html/_layouts/default.njk" %}
+{% block contents -%}
+    {% include "html/_partials/header.njk" -%}
+    <div class="modal-default js-modal-wrapper">
+        <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
+        <div class="box-default">aa</div>
+    </div>
+    <main class="l-main js-lazyload" role="main">
+        {% include "html/_partials/breadcrumb.njk" -%}
+        {% include "html/_partials/contents-area.njk" -%}
+        <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">open</a>
+        <a href="#" class="js-drawer-show">drawer open</a>
+        <p class="js-alert-test">ここはトップページです</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+    {% include "html/_partials/footer.njk" -%}
+{% endblock -%}
