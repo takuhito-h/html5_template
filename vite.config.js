@@ -48,7 +48,10 @@ export default defineConfig({
         emptyOutDir: true,
         outDir: path.join(__dirname, 'public'),
         rollupOptions: {
-            input: fastGlob.sync(['src/*.html', 'src/pages/**/*.html'], { dot: false }),
+            input: fastGlob.sync(
+                ['src/*.html', 'src/pages/**/*.html'],
+                { dot: false }
+            ),
         },
     },
 });
