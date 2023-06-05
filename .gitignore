@@ -9,9 +9,7 @@ node_modules/
 vendor/
 
 # ビルド後のファイルを無視
-public/**
-!public/**/
-!public/**/.gitkeep
+public/
 
 **/font/font-preview.html
 **/object/component/_icon.scss
