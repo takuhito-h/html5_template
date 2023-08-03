@@ -12,7 +12,3 @@ vendor/
 public/
 
 **/font/font-preview.html
-**/object/component/_icon.scss
-
-# sprite用の生成scssを除外
-sass/setup/_sprites.scss
