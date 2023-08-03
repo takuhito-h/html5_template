@@ -9,13 +9,7 @@ node_modules/
 vendor/
 
 # ビルド後のファイルを無視
-app/*.html
-app/css/*.css
-app/css/*.map
-app/font/icon.*
-app/js/*.js
-app/js/*.map
-app/img/sprite.png
+public/
 
 **/font/font-preview.html
 **/object/component/_icon.scss
