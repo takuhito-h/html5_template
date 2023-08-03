@@ -6,7 +6,7 @@
 
 ## アーキテクチャ
 ### フロントエンドビルドツール
-* Gulp
+* vite
 
 ### HTML
 * Nunjucks
@@ -14,10 +14,9 @@
 ### CSS
 * Normalize.css
 * SCSS
-* cssnext
 
 ### Javascript
-* WebPack
+* TypeScript
 * jQuery
 
 ### WebFont
