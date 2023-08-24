@@ -8,6 +8,15 @@ yarn-error.log
 node_modules/
 vendor/
 
+# Yarn v3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # ビルド後のファイルを無視
 public/
 

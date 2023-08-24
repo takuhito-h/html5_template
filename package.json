@@ -1,18 +1,18 @@
 {
     "devDependencies": {
-        "@types/jquery": "^3.5.16",
-        "@typescript-eslint/eslint-plugin": "^6.2.1",
-        "@typescript-eslint/parser": "^6.2.1",
+        "@types/jquery": "^3.5.17",
+        "@typescript-eslint/eslint-plugin": "^6.4.1",
+        "@typescript-eslint/parser": "^6.4.1",
         "@vituum/vite-plugin-nunjucks": "^1.0.0",
-        "eslint": "^8.46.0",
+        "eslint": "^8.47.0",
         "fast-glob": "^3.3.1",
         "jquery": "^3.7.0",
         "modularized-normalize-scss": "^4.0.0",
         "npm-run-all": "^4.1.5",
-        "sass": "^1.64.2",
+        "sass": "^1.66.1",
         "sharp-cli": "^4.1.1",
         "typescript": "^5.1.6",
-        "vite": "^4.4.8",
+        "vite": "^4.4.9",
         "vite-plugin-imagemin": "^0.6.1",
         "vite-plugin-sass-glob-import": "^2.0.0",
         "vite-plugin-webp-generator": "^0.0.5"
@@ -25,10 +25,11 @@
         "build": "run-s build:vite build:webp",
         "build:vite": "vite build",
         "build:webp": "sharp -i ./src/img/**/*.jpg ./src/img/**/*.png -f webp -o ./public/assets/",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "postinstall": "yarn build"
     },
     "volta": {
-        "node": "16.14.2",
+        "node": "18.17.1",
         "yarn": "1.22.18"
     }
 }
