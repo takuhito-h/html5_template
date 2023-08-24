@@ -24,12 +24,12 @@
         "dev": "vite",
         "build": "run-s build:vite build:webp",
         "build:vite": "vite build",
-        "build:webp": "sharp -i ./src/img/**/*.jpg ./src/img/**/*.png -f webp -o ./public/assets/",
-        "preview": "vite preview",
-        "postinstall": "yarn build"
+        "build:webp": "sharp -i ./src/img/**/*.{jpg,png} -f webp -o ./public/assets/",
+        "preview": "vite preview"
     },
     "volta": {
         "node": "18.17.1",
-        "yarn": "1.22.18"
-    }
+        "yarn": "3.6.3"
+    },
+    "packageManager": "yarn@3.6.3"
 }
