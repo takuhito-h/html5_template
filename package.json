@@ -1,21 +1,21 @@
 {
     "devDependencies": {
-        "@types/jquery": "^3.5.29",
-        "@typescript-eslint/eslint-plugin": "^6.13.2",
-        "@typescript-eslint/parser": "^6.13.2",
+        "@types/jquery": "^3.5.30",
+        "@typescript-eslint/eslint-plugin": "^8.0.1",
+        "@typescript-eslint/parser": "^8.0.1",
         "@vituum/vite-plugin-nunjucks": "^1.1.0",
-        "eslint": "^8.55.0",
+        "eslint": "^9.8.0",
         "fast-glob": "^3.3.2",
         "jquery": "^3.7.1",
         "modularized-normalize-scss": "^4.0.0",
         "npm-run-all": "^4.1.5",
-        "sass": "^1.69.5",
-        "sharp-cli": "^4.2.0",
-        "typescript": "^5.3.3",
-        "vite": "^5.0.6",
+        "sass": "^1.77.8",
+        "sharp-cli": "^5.0.0",
+        "typescript": "^5.5.4",
+        "vite": "^5.3.5",
         "vite-plugin-imagemin": "^0.6.1",
         "vite-plugin-sass-glob-import": "^3.0.2",
-        "vite-plugin-webp-generator": "^0.0.5"
+        "vite-plugin-webp-generator": "^0.1.0"
     },
     "private": true,
     "license": "UNLICENSED",
@@ -28,8 +28,8 @@
         "preview": "vite preview"
     },
     "volta": {
-        "node": "18.17.1",
-        "yarn": "3.6.3"
+        "node": "22.5.1",
+        "yarn": "4.3.1"
     },
-    "packageManager": "yarn@3.6.3"
+    "packageManager": "yarn@4.3.1"
 }
