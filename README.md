@@ -18,6 +18,3 @@
 ### Javascript
 * TypeScript
 * jQuery
-
-### WebFont
-* iconfont
