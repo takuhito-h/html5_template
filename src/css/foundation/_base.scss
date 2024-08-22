@@ -13,7 +13,7 @@ body{
     background: #f7f7f7;
     color: #4b4b4b;
     font-family: "メイリオ", "Meiryo", verdana, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
-    font-size: s.$default-text-size;
+    font-size: --default-text-size;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;

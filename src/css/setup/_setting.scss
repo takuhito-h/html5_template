@@ -3,15 +3,15 @@
 //  SASS設定用
 //
 //------------------------------------------------------------------------------------------------
+:root {
+    --default-text-size: 12px;
+    --default-link-color: #fff;
+    --wrapper-width: 1000px;
+}
 
 //--------------------------------------------------------------------
 //  variables
 //--------------------------------------------------------------------
-$default-text-size: 12px;
-$default-link-color: #fff;
-
-$wrapper-width: 1000px;
-
 $breakpoints: (
     'down-sm': 'screen and (max-width: 639px)',
     'sm': 'screen and (min-width: 640px)',
