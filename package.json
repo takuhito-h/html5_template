@@ -21,7 +21,7 @@
     "license": "UNLICENSED",
     "type": "module",
     "scripts": {
-        "dev": "vite",
+        "start": "vite",
         "build": "run-s build:vite build:webp",
         "build:vite": "vite build",
         "build:webp": "sharp -i ./src/img/**/*.{jpg,png} -f webp -o ./public/assets/",
