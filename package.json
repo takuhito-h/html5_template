@@ -3,7 +3,6 @@
         "@types/jquery": "^3.5.30",
         "@typescript-eslint/eslint-plugin": "^8.0.1",
         "@typescript-eslint/parser": "^8.0.1",
-        "@vituum/vite-plugin-nunjucks": "^1.1.0",
         "eslint": "^9.8.0",
         "fast-glob": "^3.3.2",
         "jquery": "^3.7.1",
@@ -14,6 +13,7 @@
         "typescript": "^5.5.4",
         "vite": "^5.3.5",
         "vite-plugin-imagemin": "^0.6.1",
+        "vite-plugin-nunjucks": "0.2.0",
         "vite-plugin-sass-glob-import": "^3.0.2",
         "vite-plugin-webp-generator": "^0.1.0"
     },

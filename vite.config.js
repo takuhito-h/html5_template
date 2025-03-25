@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import nunjucks from '@vituum/vite-plugin-nunjucks';
+import nunjucks from 'vite-plugin-nunjucks';
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import viteImagemin from 'vite-plugin-imagemin';
 import fastGlob from 'fast-glob';

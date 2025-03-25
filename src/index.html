@@ -1,14 +1,14 @@
 {% block title -%}トップページ{% endblock -%}
-{% extends "html/_layouts/default.njk" %}
+{% extends "src/html/_layouts/default.njk" %}
 {% block contents -%}
-    {% include "html/_partials/header.njk" -%}
+    {% include "src/html/_partials/header.njk" -%}
     <div class="modal-default js-modal-wrapper">
         <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
         <div class="box-default">aa</div>
     </div>
     <main class="l-main js-lazyload" role="main">
-        {% include "html/_partials/breadcrumb.njk" -%}
-        {% include "html/_partials/contents-area.njk" -%}
+        {% include "src/html/_partials/breadcrumb.njk" -%}
+        {% include "src/html/_partials/contents-area.njk" -%}
         <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">open</a>
         <a href="#" class="js-drawer-show">drawer open</a>
         <p class="js-alert-test">ここはトップページです</p>
@@ -102,5 +102,5 @@
         <br>
         <img src="https://images.unsplash.com/photo-1519668992307-c9ee50758b12?q=80&w=3273&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" width="1200" height="500" loading="lazy">
     </main>
-    {% include "html/_partials/footer.njk" -%}
+    {% include "src/html/_partials/footer.njk" -%}
 {% endblock -%}
