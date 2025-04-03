@@ -51,7 +51,7 @@ export default defineConfig({
             input: fastGlob.sync(
                 ['src/*.html', 'src/pages/**/*.html'],
                 { dot: false }
-            ),
+            ).map(file => path.resolve(__dirname, file)),
         },
     },
 });
