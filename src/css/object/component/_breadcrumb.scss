@@ -1,4 +1,4 @@
-@use "../../setup/utility" as u;
+@use "../../foundation/mixin" as m;
 
 //------------------------------------------------------------------------------------------------
 //
@@ -9,7 +9,7 @@
     > li{
         display: inline;
 
-        @include u.mq(down-md) {
+        @include m.mq(down-md) {
             margin: 15px 0 5px;
         }
 

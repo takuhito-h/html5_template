@@ -4,13 +4,25 @@
 //
 //------------------------------------------------------------------------------------------------
 @use "sass:map";
-@use "../setup/setting" as s;
 
 //--------------------------------------------------------------------------------------
 //  Mixin - メディアクエリ用
 //--------------------------------------------------------------------------------------
-@mixin mq($breakpoint: md) {
-    @media #{map.get(s.$breakpoints, $breakpoint)} {
+$mq-breakpoints: (
+    'xs': 321px,
+    'sm': 576px,
+    'md': 768px,
+    'lg': 1024px,
+    'xl': 1280px,
+    // 'xxl': 1920px,
+) !default;
+
+@mixin mq($breakpoint: md, $rule: min) {
+    $breakpoint: #{map.get($mq-breakpoints, $breakpoint)};
+    @if $rule == max {
+        $breakpoint: $breakpoint - 1px;
+    }
+    @media screen and (#{$rule}-width: $breakpoint) {
         @content;
     }
 }
