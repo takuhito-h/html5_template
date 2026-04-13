@@ -18,6 +18,7 @@ vendor/
 !.yarn/versions
 
 # ビルド後のファイルを無視
-public/
+dist/
+.astro/
 
 **/font/font-preview.html

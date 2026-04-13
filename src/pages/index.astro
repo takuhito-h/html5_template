@@ -1,0 +1,37 @@
+---
+import Default from '../layouts/Default.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Drawer from '../components/Drawer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import ContentsArea from '../components/ContentsArea.astro';
+
+const breadcrumbItems = [
+    { name: 'トップ', href: '/' },
+    { name: 'カテゴリ', href: '/category/' },
+    { name: 'ページタイトル' },
+];
+---
+
+<Default title="トップページ">
+    <Drawer slot="drawer" />
+
+    <div class="modal-default js-modal-wrapper">
+        <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
+        <div class="box-default">モーダルコンテンツ</div>
+    </div>
+
+    <Header />
+
+    <main class="l-main" role="main">
+        <Breadcrumb items={breadcrumbItems} />
+        <ContentsArea />
+
+        <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">モーダルを開く</a>
+        <a href="#" class="js-drawer-show">ドロワーを開く</a>
+
+        <img src="/img/test.jpg" alt="" loading="lazy">
+    </main>
+
+    <Footer />
+</Default>

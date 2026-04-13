@@ -1,0 +1,94 @@
+---
+import '../css/trunk-all.scss';
+
+interface Props {
+    title: string;
+    description?: string;
+    ogUrl?: string;
+    ogImage?: string;
+    ogDescription?: string;
+    ogSiteName?: string;
+    twitterSite?: string;
+    gtmId?: string;
+}
+
+const {
+    title,
+    description = '',
+    ogUrl = '',
+    ogImage = '',
+    ogDescription = '',
+    ogSiteName = '',
+    twitterSite = '',
+    gtmId = '',
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{title}</title>
+
+    {/* 検索エンジン向け設定 */}
+    <meta name="description" content={description}>
+
+    {/* Twitter Card */}
+    <meta name="twitter:card" content="summary">
+    {twitterSite && <meta name="twitter:site" content={twitterSite}>}
+
+    {/* OGP */}
+    <meta property="og:type" content="website">
+    {ogUrl && <meta property="og:url" content={ogUrl}>}
+    <meta property="og:title" content={title}>
+    {ogImage && <meta property="og:image" content={ogImage}>}
+    {ogDescription && <meta property="og:description" content={ogDescription}>}
+    {ogSiteName && <meta property="og:site_name" content={ogSiteName}>}
+    <meta property="og:locale" content="ja_JP">
+
+    {/* Favicon */}
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+    {/* Google Tag Manager */}
+    {gtmId && (
+        <script is:inline define:vars={{ gtmId }}>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer',gtmId);
+        </script>
+    )}
+</head>
+<body>
+    {/* Google Tag Manager (noscript) */}
+    {gtmId && (
+        <noscript>
+            <iframe
+                src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"
+            ></iframe>
+        </noscript>
+    )}
+
+    {/* Drawer はラッパー外に配置 */}
+    <slot name="drawer" />
+
+    <div class="l-wrapper">
+        <slot />
+    </div>
+</body>
+</html>
+
+<script>
+    import { Drawer } from '../scripts/drawer';
+    import { Modal } from '../scripts/modal';
+
+    new Drawer();
+    new Modal();
+</script>

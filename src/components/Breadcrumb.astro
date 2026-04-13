@@ -1,0 +1,24 @@
+---
+interface BreadcrumbItem {
+    name: string;
+    href?: string;
+}
+
+interface Props {
+    items: BreadcrumbItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+    {items.map((item, index) => (
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            {item.href
+                ? <a href={item.href}><span itemprop="name">{item.name}</span></a>
+                : <span itemprop="name">{item.name}</span>
+            }
+            <meta itemprop="position" content={String(index + 1)}>
+        </li>
+    ))}
+</ul>
