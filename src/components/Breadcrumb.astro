@@ -11,7 +11,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class="c-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
     {items.map((item, index) => (
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
             {item.href
@@ -26,7 +26,7 @@ const { items } = Astro.props;
 <style lang="scss">
     @use "../css/foundation/mixin" as m;
 
-    .c-breadcrumb {
+    .breadcrumb {
         > li {
             display: inline;
 

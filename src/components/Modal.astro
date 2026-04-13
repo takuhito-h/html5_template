@@ -7,7 +7,7 @@ const { id } = Astro.props;
 const wrapperId = `js-modal-${id}`;
 ---
 
-<div class={`c-modal-default js-modal-wrapper`} id={wrapperId}>
+<div class={`modal-default js-modal-wrapper`} id={wrapperId}>
     <div class="background js-modal-close" data-modal-target={`#${wrapperId}`}></div>
     <div class="box-default">
         <slot />
@@ -20,7 +20,7 @@ const wrapperId = `js-modal-${id}`;
 </script>
 
 <style lang="scss">
-    .c-modal-default {
+    .modal-default {
         transition: opacity 1s, visibility 0s ease 1s;
         opacity: 0;
         visibility: hidden;
