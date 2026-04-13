@@ -1,0 +1,20 @@
+---
+interface Props {
+    id: string;
+}
+
+const { id } = Astro.props;
+const wrapperId = `js-modal-${id}`;
+---
+
+<div class={`c-modal-default js-modal-wrapper`} id={wrapperId}>
+    <div class="background js-modal-close" data-modal-target={`#${wrapperId}`}></div>
+    <div class="box-default">
+        <slot />
+    </div>
+</div>
+
+<script>
+    import { Modal } from '../scripts/modal';
+    new Modal();
+</script>

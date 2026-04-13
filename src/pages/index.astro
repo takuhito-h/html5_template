@@ -6,6 +6,7 @@ import Footer from '../components/Footer.astro';
 import Drawer from '../components/Drawer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ContentsArea from '../components/ContentsArea.astro';
+import Modal from '../components/Modal.astro';
 import testImg from '../assets/img/test.jpg';
 
 const breadcrumbItems = [
@@ -18,10 +19,7 @@ const breadcrumbItems = [
 <Default title="トップページ">
     <Drawer slot="drawer" />
 
-    <div class="c-modal-default js-modal-wrapper">
-        <div class="background js-modal-close" data-modal-target=".js-modal-wrapper"></div>
-        <div class="box-default">モーダルコンテンツ</div>
-    </div>
+    <Modal id="default">モーダルコンテンツ</Modal>
 
     <Header />
 
@@ -29,7 +27,7 @@ const breadcrumbItems = [
         <Breadcrumb items={breadcrumbItems} />
         <ContentsArea />
 
-        <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">モーダルを開く</a>
+        <a href="#" class="js-modal-open" data-modal-target="#js-modal-default">モーダルを開く</a>
         <a href="#" class="js-drawer-show">ドロワーを開く</a>
 
         <Image src={testImg} alt="" loading="lazy" />
@@ -37,8 +35,3 @@ const breadcrumbItems = [
 
     <Footer />
 </Default>
-
-<script>
-    import { Modal } from '../scripts/modal';
-    new Modal();
-</script>
