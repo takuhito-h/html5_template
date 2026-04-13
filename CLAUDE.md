@@ -68,6 +68,20 @@ copy/                         # 静的コピーしたいファイル（必要に
 - `trunk-all.scss` はグロブインポートのため、ファイルを追加するだけで自動的に読み込まれる
 - CSS リセットには sanitize.css を使用している（独自リセットは書かない）
 
+#### FLOCSS クラス命名規則
+
+| レイヤー | プレフィックス | 例 |
+|----------|--------------|-----|
+| Layout | `l-` | `l-header`, `l-footer` |
+| Component | `c-` | `c-button`, `c-product-card` |
+| Project | `p-[ページ名]-` | `p-home-banner`, `p-about-hero` |
+| Utility | `u-` | `u-hidden`, `u-mt-16` |
+
+- **Project レイヤー**のクラスは `p-[ページ名]-[ブロック名]` の形式とする
+  - SCSSファイル名（例: `_home.scss`）のページ名を `p-` の直後に付ける
+  - 例: `home.scss` → `.p-home-banner`, `.p-home-new-arrival`
+- Project の SCSS ファイルは `src/css/object/project/` に `_[ページ名].scss` で作成する
+
 ### TypeScript / JavaScript
 - UI モジュールは `src/js/module/` に配置し、`application.ts` から import して使用する
 - jQuery を使用しているため、DOM 操作には jQuery を優先する
