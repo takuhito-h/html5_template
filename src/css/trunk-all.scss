@@ -10,20 +10,13 @@
 //--------------------------------------------------------------------
 //  layout
 //--------------------------------------------------------------------
-@use "layout/drawer";
-@use "layout/footer";
-@use "layout/header";
-@use "layout/main";
-@use "layout/wrapper";
 
 //--------------------------------------------------------------------
 //  component
 //--------------------------------------------------------------------
-@use "object/component/breadcrumb";
 @use "object/component/button";
 @use "object/component/heading";
 @use "object/component/list";
-@use "object/component/modal-default";
 @use "object/component/table";
 
 //--------------------------------------------------------------------
@@ -34,7 +27,6 @@
 //--------------------------------------------------------------------
 //  utility
 //--------------------------------------------------------------------
-@use "object/utility/enable-text-style";
 @use "object/utility/margin";
 @use "object/utility/padding";
 
