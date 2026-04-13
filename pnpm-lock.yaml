@@ -26,12 +26,6 @@ importers:
       eslint:
         specifier: ^10.2.0
         version: 10.2.0(jiti@2.6.1)
-      sanitize.css:
-        specifier: 13.0.0
-        version: 13.0.0
-      sass:
-        specifier: ^1.99.0
-        version: 1.99.0
       tailwindcss:
         specifier: ^4.2.2
         version: 4.2.2
@@ -2120,9 +2114,6 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sanitize.css@13.0.0:
-    resolution: {integrity: sha512-ZRwKbh/eQ6w9vmTjkuG0Ioi3HBwPFce0O+v//ve+aOq1oeCy7jMV2qzzAlpsNuqpqCBjjriM1lbtZbF/Q8jVyA==}
-
   sass@1.99.0:
     resolution: {integrity: sha512-kgW13M54DUB7IsIRM5LvJkNlpH+WhMpooUcaWGFARkF1Tc82v9mIWkCbCYf+MBvpIUBSeSOTilpZjEPr2VYE6Q==}
     engines: {node: '>=14.0.0'}
@@ -4094,7 +4085,8 @@ snapshots:
 
   ignore@7.0.5: {}
 
-  immutable@5.1.5: {}
+  immutable@5.1.5:
+    optional: true
 
   import-meta-resolve@4.2.0: {}
 
@@ -4812,8 +4804,6 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.60.1
       fsevents: 2.3.3
 
-  sanitize.css@13.0.0: {}
-
   sass@1.99.0:
     dependencies:
       chokidar: 4.0.3
@@ -4821,6 +4811,7 @@ snapshots:
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
+    optional: true
 
   sax@1.6.0: {}
 

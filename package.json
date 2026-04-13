@@ -6,8 +6,6 @@
         "@typescript-eslint/parser": "^8.58.1",
         "astro": "^5.0.0",
         "eslint": "^10.2.0",
-        "sanitize.css": "13.0.0",
-        "sass": "^1.99.0",
         "tailwindcss": "^4.2.2",
         "typescript": "^5.8.0"
     },

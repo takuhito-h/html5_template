@@ -24,15 +24,9 @@ const { items } = Astro.props;
 </ul>
 
 <style lang="scss">
-    @use "../css/foundation/mixin" as m;
-
     .breadcrumb {
         > li {
             display: inline;
-
-            @include m.mq(md, max) {
-                margin: 15px 0 5px;
-            }
 
             &:not(:last-child) {
                 &:after {
