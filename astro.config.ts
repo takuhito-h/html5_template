@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import sassGlobImport from 'vite-plugin-sass-glob-import';
 
 export default defineConfig({
     output: 'static',
@@ -7,11 +6,10 @@ export default defineConfig({
         assets: 'assets',
     },
     vite: {
-        plugins: [sassGlobImport()],
         css: {
             preprocessorOptions: {
                 scss: {
-                    // node_modules を Sass の読み込みパスに追加
+                    // node_modules を Sass の読み込みパスに追加（sanitize.css 用）
                     loadPaths: ['node_modules'],
                 },
             },

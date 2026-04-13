@@ -10,7 +10,7 @@ Astro + Sass + TypeScript 構成で、静的ファイル出力・自動画像最
 | 役割 | 技術 |
 |------|------|
 | フレームワーク | Astro 5（static モード） |
-| スタイル | Sass + sanitize.css（vite-plugin-sass-glob-import） |
+| スタイル | Sass + sanitize.css |
 | スクリプト | TypeScript（Vanilla TS、jQuery なし） |
 | 画像最適化 | Astro `<Image>` コンポーネント（WebP 変換・圧縮を自動処理） |
 | パッケージマネージャ | pnpm 10.33.0 |
@@ -23,6 +23,7 @@ pnpm start      # 開発サーバー起動 (http://localhost:4321/)
 pnpm build      # ビルド（dist/ に出力。画像の WebP 変換・圧縮も自動実行）
 pnpm preview    # ビルド済みファイルのプレビュー
 pnpm check      # TypeScript / Astro の型チェック
+pnpm lint       # ESLint による静的解析
 ```
 
 ## ディレクトリ構成
@@ -70,7 +71,7 @@ dist/                         # ビルド成果物（コミット不要）
 ### Sass / CSS
 - CSS アーキテクチャは FLOCSS に準拠（foundation / layout / object）
 - 新しいスタイルファイルは適切なカテゴリのディレクトリに配置する
-- `trunk-all.scss` はグロブインポートのため、ファイルを追加するだけで自動的に読み込まれる
+- `trunk-all.scss` に新しいファイルを明示的に `@use` で追加する（layout → component → project → utility → library の順）
 - CSS リセットには sanitize.css を使用している（独自リセットは書かない）
 
 #### FLOCSS クラス命名規則

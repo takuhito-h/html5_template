@@ -7,9 +7,7 @@
         "eslint": "^10.2.0",
         "sanitize.css": "13.0.0",
         "sass": "^1.99.0",
-        "typescript": "^5.8.0",
-        "vite": "^6.0.0",
-        "vite-plugin-sass-glob-import": "^6.0.3"
+        "typescript": "^5.8.0"
     },
     "private": true,
     "license": "UNLICENSED",
@@ -18,7 +16,8 @@
         "start": "astro dev",
         "build": "astro build",
         "preview": "astro preview",
-        "check": "astro check"
+        "check": "astro check",
+        "lint": "eslint src"
     },
     "volta": {
         "node": "25.2.1",
