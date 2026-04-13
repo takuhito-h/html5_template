@@ -15,8 +15,19 @@ const wrapperId = `js-modal-${id}`;
 </div>
 
 <script>
-    import { Modal } from '../scripts/modal';
-    new Modal();
+    document.querySelectorAll<HTMLElement>('.js-modal-open')
+        .forEach(el => el.addEventListener('click', e => {
+            e.preventDefault();
+            const target = (e.currentTarget as HTMLElement).dataset.modalTarget;
+            if (target) document.querySelector(target)?.classList.add('is-show');
+        }));
+
+    document.querySelectorAll<HTMLElement>('.js-modal-close')
+        .forEach(el => el.addEventListener('click', e => {
+            e.preventDefault();
+            const target = (e.currentTarget as HTMLElement).dataset.modalTarget;
+            if (target) document.querySelector(target)?.classList.remove('is-show');
+        }));
 </script>
 
 <style lang="scss">

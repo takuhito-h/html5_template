@@ -12,8 +12,19 @@
 </div>
 
 <script>
-    import { Drawer } from '../scripts/drawer';
-    new Drawer();
+    const switchClass = 'is-drawer-active';
+
+    document.querySelectorAll<HTMLElement>('.js-drawer-show')
+        .forEach(el => el.addEventListener('click', e => {
+            e.preventDefault();
+            document.body.classList.add(switchClass);
+        }));
+
+    document.querySelectorAll<HTMLElement>('.js-drawer-hide')
+        .forEach(el => el.addEventListener('click', e => {
+            e.preventDefault();
+            document.body.classList.remove(switchClass);
+        }));
 </script>
 
 <style is:global lang="scss">
