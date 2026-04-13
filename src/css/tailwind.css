@@ -1,0 +1,3 @@
+/* Preflight（リセット CSS）を除き、ユーティリティのみ読み込む */
+/* sanitize.css との競合を避けるため @layer base は含めない */
+@import "tailwindcss/utilities";

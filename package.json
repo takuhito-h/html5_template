@@ -1,12 +1,14 @@
 {
     "devDependencies": {
         "@astrojs/check": "^0.9.0",
+        "@tailwindcss/vite": "^4.2.2",
         "@typescript-eslint/eslint-plugin": "^8.58.1",
         "@typescript-eslint/parser": "^8.58.1",
         "astro": "^5.0.0",
         "eslint": "^10.2.0",
         "sanitize.css": "13.0.0",
         "sass": "^1.99.0",
+        "tailwindcss": "^4.2.2",
         "typescript": "^5.8.0"
     },
     "private": true,
@@ -25,6 +27,10 @@
     },
     "packageManager": "pnpm@10.33.0",
     "pnpm": {
-        "onlyBuiltDependencies": ["@parcel/watcher", "esbuild", "sharp"]
+        "onlyBuiltDependencies": [
+            "@parcel/watcher",
+            "esbuild",
+            "sharp"
+        ]
     }
 }
