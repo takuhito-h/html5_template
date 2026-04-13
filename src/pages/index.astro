@@ -1,10 +1,12 @@
 ---
+import { Image } from 'astro:assets';
 import Default from '../layouts/Default.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Drawer from '../components/Drawer.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 import ContentsArea from '../components/ContentsArea.astro';
+import testImg from '../assets/img/test.jpg';
 
 const breadcrumbItems = [
     { name: 'トップ', href: '/' },
@@ -30,7 +32,7 @@ const breadcrumbItems = [
         <a href="#" class="js-modal-open" data-modal-target=".js-modal-wrapper">モーダルを開く</a>
         <a href="#" class="js-drawer-show">ドロワーを開く</a>
 
-        <img src="/img/test.jpg" alt="" loading="lazy">
+        <Image src={testImg} alt="" loading="lazy" />
     </main>
 
     <Footer />
