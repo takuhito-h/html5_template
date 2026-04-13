@@ -9,7 +9,7 @@
     > li{
         display: inline;
 
-        @include m.mq(down-md) {
+        @include m.mq(md, max) {
             margin: 15px 0 5px;
         }
 

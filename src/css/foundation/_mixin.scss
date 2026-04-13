@@ -18,11 +18,11 @@ $mq-breakpoints: (
 ) !default;
 
 @mixin mq($breakpoint: md, $rule: min) {
-    $breakpoint: #{map.get($mq-breakpoints, $breakpoint)};
+    $bp-value: map.get($mq-breakpoints, $breakpoint);
     @if $rule == max {
-        $breakpoint: $breakpoint - 1px;
+        $bp-value: $bp-value - 1px;
     }
-    @media screen and (#{$rule}-width: $breakpoint) {
+    @media screen and (#{$rule}-width: $bp-value) {
         @content;
     }
 }
