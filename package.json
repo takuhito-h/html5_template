@@ -5,7 +5,6 @@
         "@typescript-eslint/parser": "^8.58.1",
         "eslint": "^10.2.0",
         "fast-glob": "^3.3.3",
-        "jquery": "^4.0.0",
         "npm-run-all": "^4.1.5",
         "sanitize.css": "13.0.0",
         "sass": "^1.99.0",
@@ -16,6 +15,9 @@
         "vite-plugin-nunjucks": "0.2.0",
         "vite-plugin-sass-glob-import": "^6.0.3",
         "vite-plugin-webp-generator": "^0.1.0"
+    },
+    "dependencies": {
+        "jquery": "^4.0.0"
     },
     "private": true,
     "license": "UNLICENSED",
@@ -31,5 +33,5 @@
         "node": "25.2.1",
         "yarn": "4.12.0"
     },
-    "packageManager": "yarn@4.10.3"
+    "packageManager": "yarn@4.12.0"
 }
